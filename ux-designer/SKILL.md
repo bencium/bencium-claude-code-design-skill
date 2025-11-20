@@ -49,89 +49,240 @@ Expert UI/UX design skill that helps create unique, accessible, and thoughtfully
 
 2. **Material Honesty**
    - Digital materials have unique properties - embrace them
-   - Buttons should feel pressable, cards should feel substantial
-   - Animations should reflect real-world physics while embracing digital possibilities
-   - **Prefer flat minimal design with no depth (no shadows, gradients, glass effects)**
+   - Buttons should communicate affordance through color, spacing, and typography (not shadows)
+   - Cards use borders and background differentiation (not depth effects)
+   - Animations follow real-world physics principles adapted to digital responsiveness
 
-3. **Obsessive Detail**
-   - Consider every pixel, every interaction, every transition
-   - Excellence emerges from hundreds of thoughtful decisions
-   - Collectively project a feeling of quality
+   **Examples:**
+   - Clickable: Use distinct colors, hover state changes, cursor feedback
+   - Containers: Use subtle borders (1px), background color shifts, or generous padding
+   - Hierarchy: Use scale, weight, and spacing rather than elevation
 
-4. **Coherent Design Language**
+3. **Functional Layering (Not Visual Depth)**
+   - Create hierarchy through typography scale, color contrast, and spatial relationships
+   - Layer information conceptually (primary → secondary → tertiary)
+   - Reject skeuomorphic shadows/gradients that imitate physical depth
+   - Embrace functional depth: modals over content, dropdowns over UI
+
+4. **Obsessive Detail**
+   - Consider every pixel, interaction, and transition
+   - Excellence emerges from hundreds of small, intentional decisions
+   - Balance: Details should serve simplicity, not complexity
+   - When detail conflicts with clarity, clarity wins
+
+5. **Coherent Design Language**
    - Every element should visually communicate its function
-   - Elements should feel like part of a unified system
+   - Elements should feel part of a unified system
    - Nothing should feel arbitrary
 
-5. **Invisibility of Technology**
+6. **Invisibility of Technology**
    - The best technology disappears
    - Users should focus on content and goals, not on understanding the interface
+
+### What This Means in Practice
+
+**Color Usage:**
+- Base palette: 4-5 neutral shades (backgrounds, borders, text)
+- Accent palette: 1-3 bold colors (CTAs, status, emphasis)
+- Neutrals are slightly desaturated, warm or cool based on brand intent
+- Accents are saturated enough to create clear contrast
+
+**Typography:**
+- Headlines: Emotional, attention-grabbing (personality over pure legibility)
+- Body/UI: Functional, highly legible (clarity over expression)
+- 2-3 typefaces maximum
+- Clear mathematical scale (e.g., 1.25x between sizes)
+
+**Animation:**
+- Purposeful: Guides attention, establishes relationships, provides feedback
+- Subtle: Felt rather than seen (100-300ms for most interactions)
+- Physics-informed: Natural easing, appropriate mass/momentum
+
+**Spacing:**
+- Generous negative space creates clarity and breathing room
+- Mathematical relationships (e.g., 4px base, 8/16/24/32/48px scale)
+- Consistent application creates visual rhythm
+
+### Design Decision Checklist
+
+Before presenting any design, verify:
+
+1. **Purpose**: Does every element serve a clear function?
+2. **Hierarchy**: Is visual importance aligned with content importance?
+3. **Consistency**: Do similar elements look and behave similarly?
+4. **Accessibility**: Does it meet WCAG AA standards? (contrast, touch targets, keyboard nav)
+5. **Responsiveness**: Does it work on mobile, tablet, desktop?
+6. **Uniqueness**: Does this break from generic SaaS patterns?
+7. **Approval**: Have I asked before implementing colors, fonts, sizes, layouts?
+
+**Design System Framework:**
+
+For understanding what's fixed (universal rules), project-specific (brand personality), and adaptable (context-dependent) in your design system, see DESIGN-SYSTEM-TEMPLATE.md (meta-framework, project templates, decision trees).
 
 ## Visual Design Standards
 
 ### Color & Contrast
 
-**Intentional Color Usage:**
-- Every color must have a specific purpose
-- Avoid decorative colors that don't communicate function or hierarchy
-- Use color to convey meaning: success, warning, information, action
-- Maintain consistency in color relationships throughout
+**Color System Architecture:**
 
-**Sophisticated Palettes:**
-- Prefer subtle, slightly desaturated colors over bold primary colors
-- Consider colors that feel "photographed" rather than "rendered"
-- Use neutral pastel palettes with accent colors for focus
-- Use warm greys as base tones
-- Limit accent colors to guide attention to the most important actions
+Every interface needs two color roles:
+
+1. **Base/Neutral Palette (4-5 colors):**
+   - Backgrounds (lightest)
+   - Surface colors (cards, inputs)
+   - Borders and dividers
+   - Text (darkest)
+   - Use slightly desaturated, warm or cool greys based on brand
+
+2. **Accent Palette (1-3 colors):**
+   - Primary action (CTA buttons)
+   - Status indicators (success, warning, error, info)
+   - Focus/hover states
+   - Use saturated colors for clear contrast against neutrals
+
+**Palette Structure Example:**
+```
+Neutrals: slate-50, slate-100, slate-300, slate-700, slate-900
+Accents: teal-500 (primary), amber-500 (warning), red-500 (error)
+```
+
+**Color Application Rules:**
+
+- **Backgrounds**: Lightest neutral (slate-50 or white)
+- **Text**: Darkest neutral for primary text (slate-900), mid-tone for secondary (slate-600)
+- **Buttons (primary)**: Accent color with white text
+- **Buttons (secondary)**: Neutral with border and dark text
+- **Status indicators**: Specific accent (green=success, red=error, amber=warning, blue=info)
+- **Interactive states**:
+  - Hover: Darken by 10-15% or shift hue slightly
+  - Focus: Use ring/outline in accent color
+  - Disabled: Reduce opacity to 40-50% and remove hover effects
+
+**Color Relationships:**
+
+Choose warm or cool intentionally based on brand:
+- **Warm greys** (beige/brown undertones): Organic, approachable, trustworthy
+- **Cool greys** (blue undertones): Modern, tech-forward, professional
+
+Accent colors should have clear contrast with both:
+- Light backgrounds (for buttons on white)
+- Dark text (if used as backgrounds for white text)
+
+**Intentional Color Usage:**
+- Every color must serve a purpose (hierarchy, function, status, or action)
+- Avoid decorative colors that don't communicate meaning
+- Maintain consistency: same color = same meaning throughout
 
 **Accessibility:**
 - Ensure sufficient contrast for color-blind users
-- Follow WCAG 2.1 AA standards (minimum 4.5:1 for normal text)
-- Don't rely on color alone to convey information
+- Follow WCAG 2.1 AA: minimum 4.5:1 for normal text, 3:1 for large text
+- Don't rely on color alone to convey information (add icons or labels)
 
-**Current Style Preferences:**
-- Prefer flat minimal design
-- Don't use shadows, gradients, or glass effects
-- Don't mimic Apple/iOS aesthetics
-- Use unique color pairs that aren't typical
+**Unique Color Strategy:**
+
+To stand out from generic patterns:
+- Avoid default SaaS blue (#3B82F6) unless it fits your brand
+- Consider unexpected neutrals: warm greys, soft off-whites, deep charcoals
+- Pair neutrals with distinctive accents: terracotta + charcoal, sage + navy, coral + slate
+- Test combinations against "does this look AI-generated?" filter
 
 ### Typography Excellence
 
-**Font Selection Philosophy:**
-- Typography is a core design element, not an afterthought
-- **Don't worship legibility** - pick fonts that trigger emotion for headlines
-- Every typeface choice should serve the app's purpose and personality
-- Limit to 2-3 typefaces maximum per application
+**Typography Philosophy:**
+
+Typography is a primary design element that conveys personality and hierarchy.
+
+**Functional vs Emotional Typography:**
+- **Headlines/Display**: Prioritize emotion, personality, attention (legibility secondary)
+- **Body Text**: Prioritize legibility, reading comfort, accessibility
+- **UI/Labels**: Prioritize clarity, scannability, consistency
+
+**Font Selection:**
+- Use 2-3 typefaces maximum
+- Limit to 3 weights per typeface (e.g., Regular 400, Medium 500, Bold 700)
+- Prefer variable fonts for fine-tuned control and performance
 
 **Font Version Usage:**
-- **Display version:** For big headlines only
-- **Text version:** For long bodies of text
-- **Caption/Micro versions:** For small short texts (1-2 lines)
+- **Display version**: Headlines and hero text only
+- **Text version**: Paragraphs and long-form content
+- **Caption/Micro**: Small UI labels (1-2 lines, non-critical info)
 
-**Recommended Fonts:**
-- Use Google Fonts for web typography
-- Consider: DM Sans, Mozilla Text, Lato, Arimo, system defaults
-- Clean, readable sans-serif and serif combinations
-- Trending fonts on Google Fonts for fresh, modern feel
+**Recommended Sources:**
+- Google Fonts for web (free, well-optimized, reliable)
+- System fonts for performance-critical apps (-apple-system, BlinkMacSystemFont, Segoe UI)
+- Choose fonts that serve your brand's purpose (not "trending" lists)
+
+**Typographic Scale:**
+
+Use mathematical relationships for size hierarchy:
+- **Ratio**: Major third (1.25x) for moderate contrast, Perfect fourth (1.333x) for dramatic
+- **Base size**: 16px (1rem) for body text
+- **Example scale (1.25x)**:
+  ```
+  xs:   0.64rem (10px)
+  sm:   0.8rem  (13px)
+  base: 1rem    (16px)
+  lg:   1.25rem (20px)
+  xl:   1.563rem (25px)
+  2xl:  1.953rem (31px)
+  3xl:  2.441rem (39px)
+  4xl:  3.052rem (49px)
+  5xl:  3.815rem (61px)
+  ```
 
 **Typographic Hierarchy:**
-- Create clear visual distinction between information levels
-- Headlines, subheadings, body text, captions should each have distinct appearance
-- Use mathematical relationships between text sizes (golden ratio or major third)
+- Create clear visual distinction between levels
+- Headlines, subheadings, body, captions should each have distinct size/weight
+- Use combination of size, weight, and color for hierarchy
 
-**Spacing & Kerning:**
-- Line height: typically 1.5x font size for body text
-- Allow generous spacing around text elements
-- **Kerning Guidelines:**
-  - Adjust based on text size
-  - Bigger text = smaller kerning
-  - Large font: -4 kerning
-  - Average text: 0 kerning (optimal for most typefaces)
-  - Very small font: +4 kerning
+**Spacing & Readability:**
+- **Line height**: 1.5x font size for body text (e.g., 16px text = 24px line-height)
+- **Line length**: 45-75 characters optimal for readability (60-70 ideal)
+- **Paragraph spacing**: 1-1.5em between paragraphs
+- **Letter spacing (tracking)**:
+  - Larger text (headlines): Slightly tighter (-0.02em to -0.05em)
+  - Normal text (body): Default (0)
+  - Small text (captions): Slightly looser (+0.01em to +0.03em)
+  - General rule: As size increases, reduce tracking; as size decreases, increase tracking
 
-**Typography Contrast:**
-- Combine typefaces to grab attention and drive interest
-- Create contrast through weight, size, and style variations
+**Font Pairing Logic:**
+
+When using multiple typefaces, create contrast through:
+- **Category contrast**: Serif + Sans-serif (classic, clear distinction)
+- **Weight contrast**: Light + Bold (dynamic, energetic)
+- **Personality contrast**: Geometric + Humanist (modern + warm)
+
+Examples:
+- Serif headlines + Sans body (editorial, trustworthy)
+- Display headlines + System body (distinctive + efficient)
+- Bold sans headlines + Light sans body (modern, clean)
+
+**UI Typography:**
+
+Specific guidance for interface elements:
+- **Button text**: Semi-Bold (600), 14-16px, consistent casing (all-caps OR title case)
+- **Form labels**: Regular (400), 14px, positioned above input
+- **Form input text**: Regular (400), 16px minimum (prevents iOS zoom on focus)
+- **Placeholder text**: Light (300) or desaturated color, same size as input
+- **Error messages**: Regular (400), 12-14px, color-coded (red-ish)
+
+**Responsive Typography:**
+
+Scale type sizes across breakpoints:
+```tsx
+// Example with Tailwind
+<h1 className="text-3xl md:text-4xl lg:text-5xl">
+  Responsive Headline
+</h1>
+
+// Or with CSS clamp (fluid)
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+```
+
+Reduce sizes on mobile (20-30% smaller than desktop)
+Reduce hierarchy levels on small screens (fewer distinct sizes)
 
 ### Layout & Spatial Design
 
@@ -162,53 +313,193 @@ Expert UI/UX design skill that helps create unique, accessible, and thoughtfully
 ### Motion & Animation
 
 **Purposeful Animation:**
+
 Every animation must serve a functional purpose:
-- Orient users during navigation changes
-- Establish relationships between elements
-- Provide feedback for interactions
-- Guide attention to important changes
+- **Orient users**: Smooth transitions during navigation changes
+- **Establish relationships**: Show how elements connect (expand from source, slide between states)
+- **Provide feedback**: Confirm interactions (button press, form submission)
+- **Guide attention**: Direct focus to important changes (new messages, errors)
+
+**Animation & Gestalt Principles:**
+
+Motion should reinforce visual relationships:
+- **Proximity**: Elements near each other move together (grouped cards animating)
+- **Similarity**: Similar elements animate similarly (all buttons have same hover timing)
+- **Continuity**: Movement follows natural paths (smooth curves, not jumpy angles)
+- **Figure-ground**: Important elements animate while backgrounds stay stable
 
 **Natural Physics:**
-- Follow real-world physics with appropriate acceleration/deceleration
-- Appropriate mass and momentum characteristics
-- Elasticity appropriate to context
+
+Animations should feel organic, not mechanical:
+- **Easing**: Use ease-out for entrances (fast start, slow end)
+- **Easing**: Use ease-in for exits (slow start, fast end)
+- **Easing**: Use ease-in-out for transitions (smooth both ends)
+- Avoid linear easing (feels robotic) except for continuous loops
+- Apply appropriate mass/momentum (lightweight UI vs weighty modals)
 
 **Subtle Restraint:**
 - Animations should be felt rather than seen
-- Avoid animations that delay user actions unnecessarily
-- Don't call attention to themselves
-- Avoid mechanical or artificial feeling
+- Don't delay user actions unnecessarily (keep under 300ms for interactive feedback)
+- Never block critical actions with decorative animations
+- Respect `prefers-reduced-motion` media query
 
 **Timing Guidelines:**
-- Quick actions (button press): 100-150ms
-- State changes: 200-300ms
-- Page transitions: 300-500ms
-- Attention-directing: 200-400ms
+
+- **Micro-interactions** (button press, checkbox toggle): 100-150ms
+- **State changes** (expanding accordion, tab switch): 200-300ms
+- **Page transitions** (route changes, modal open/close): 300-500ms
+- **Attention-directing** (notification appearance, error highlight): 200-400ms
+
+**Physics Profiles:**
+
+Define consistent durations for element types:
+- **Lightweight** (icons, small UI): 150ms
+- **Standard** (cards, panels): 300ms
+- **Weighty** (modals, page transitions): 500ms
+
+**Performance Optimization:**
+
+- Animate `transform` and `opacity` only (GPU-accelerated, smooth 60fps)
+- Avoid animating `width`, `height`, `top`, `left`, `margin` (causes reflow/repaint)
+- Use `will-change` sparingly for complex animations (pre-allocates GPU resources)
+- Test on low-end devices (60fps on powerful hardware ≠ 60fps on mobile)
 
 **Implementation:**
 - Use `framer-motion` sparingly and purposefully
-- Use CSS animations over JavaScript when possible
-- Implement critical CSS for above-the-fold content
+- Prefer CSS animations over JavaScript when possible (better performance)
+- Use CSS transitions for simple hover/focus states
+- Implement `@media (prefers-reduced-motion: reduce)` to disable/reduce animations
+
+**Example:**
+```tsx
+// Simple hover transition
+<button className="
+  transition-colors duration-200 ease-out
+  bg-blue-600 hover:bg-blue-700
+">
+  Click me
+</button>
+
+// Framer Motion for complex interaction
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -20 }}
+  transition={{ duration: 0.3, ease: "easeOut" }}
+>
+  Content
+</motion.div>
+```
+
+**Motion Specification:**
+
+For detailed motion specs, see MOTION-SPEC.md (easing curves, duration tables, state-specific animations, implementation patterns).
 
 ### User Experience Patterns
 
 **Core UX Principles:**
-- **Direct Manipulation:** Users interact directly with content, not through abstract controls
-- **Immediate Feedback:** Every interaction provides instantaneous visual feedback (within 100ms)
-- **Consistent Behavior:** Similar-looking elements behave similarly
-- **Forgiveness:** Make errors difficult, but recovery easy
-- **Progressive Disclosure:** Reveal details as needed rather than overwhelming users
+
+1. **Direct Manipulation**
+   - Users interact directly with content, not through abstract controls
+   - Examples:
+     - Drag & drop to reorder items (not up/down buttons)
+     - Inline editing (click to edit, not separate form)
+     - Sliders for ranges (not numeric input with +/-)
+     - Pinch/zoom gestures on mobile (not +/- buttons)
+
+2. **Immediate Feedback**
+   - Every interaction provides instantaneous visual feedback (within 100ms)
+   - Types of feedback:
+     - **Visual**: Button pressed state, hover effects, color changes
+     - **Haptic**: Vibration on mobile (submit, error, success)
+     - **Audio**: Subtle sounds for critical actions (optional, user-controlled)
+     - **Loading**: Skeleton screens, spinners for >300ms operations
+     - **Success**: Checkmarks, green highlights, toast notifications
+     - **Error**: Red highlights, inline error messages, shake animations
+
+3. **Consistent Behavior**
+   - Similar-looking elements behave similarly
+   - Examples:
+     - **Visual consistency**: All primary buttons have same colors, sizes, hover states
+     - **Behavioral consistency**: All modals close via X button, ESC key, and outside click
+     - **Interaction consistency**: All drag targets have same hover state and drop feedback
+     - **Pattern consistency**: All forms validate on blur and submit
+
+4. **Forgiveness**
+   - Make errors difficult, but recovery easy
+   - **Prevention strategies**:
+     - Disable invalid actions (grey out unavailable buttons)
+     - Validate inputs inline (before submission)
+     - Confirm destructive actions (delete, overwrite)
+     - Auto-save in background (drafts, progress)
+   - **Recovery strategies**:
+     - Undo/redo for all state changes
+     - Soft deletes (trash/archive before permanent delete)
+     - Clear error messages with actionable fixes
+     - Preserve user input on errors (don't clear forms)
+
+5. **Progressive Disclosure**
+   - Reveal details as needed rather than overwhelming users
+   - Levels of disclosure:
+     - **Summary**: Show essential info by default (card title, price, rating)
+     - **Details**: Expand to show more info (description, specs, reviews)
+     - **Advanced**: Hide complex options behind "Advanced settings" toggle
+   - Examples:
+     - Accordion: Start collapsed, expand on click
+     - Search filters: Show 3-5 common filters, hide rest behind "More filters"
+     - Settings: Basic settings visible, advanced behind "Show advanced"
 
 **Modern UX Patterns:**
-- Conversational-first interfaces: prioritize natural language
-- Adaptive layouts: respond to context (dark mode at night, simplified on mobile)
-- Minimal, flat design with no depth
+
+1. **Conversational Interfaces**
+
+   Prioritize natural language interaction where appropriate:
+
+   **Four types:**
+   - **Pure chat**: Full conversation (AI assistants, support bots)
+   - **Command palette**: Text-based shortcuts (Cmd+K, search everywhere)
+   - **Smart search**: Natural language queries (search "meetings next week" vs filtering)
+   - **Form alternatives**: Conversational data collection ("What's your name?" vs form fields)
+
+   **When to use:**
+   - Complex searches with multiple variables
+   - Task guidance (wizards, onboarding)
+   - Contextual help
+   - Quick actions (command palette)
+
+   **When NOT to use:**
+   - Simple forms (just use inputs)
+   - Precise control interfaces (design tools, dashboards)
+   - High-frequency repetitive tasks
+
+2. **Adaptive Layouts**
+
+   Respond to user context automatically:
+   - **Time-based**: Dark mode at night, light during day
+   - **Device-based**: Simplified UI on mobile, full features on desktop
+   - **Connection-based**: Reduce images/video on slow connections
+   - **Usage-based**: Prioritize frequent actions, hide rarely-used features
+
+   Examples:
+   - Auto dark/light mode based on time or system preference
+   - Simplified mobile navigation (hamburger menu) vs full desktop nav
+   - Collapsed sidebar on small screens, expanded on large
+
+3. **Minimal, Flat Design**
+
+   Current aesthetic preference:
+   - No drop shadows (except subtle ones for modals/dropdowns)
+   - No gradients for depth (use for accents/backgrounds if desired)
+   - No glass morphism effects
+   - Focus on typography, color, and spacing to create hierarchy
+   - Functional depth: Layers of content (modals, sheets) use positioning, not visual depth
 
 **Navigation:**
 - Clear structure with intuitive navigation menus
-- Implement breadcrumbs for location awareness
-- Use standard components to reduce learning curve
-- Ensure predictable behavior for interactive elements
+- Implement breadcrumbs for deep hierarchies (more than 2 levels)
+- Use standard UI patterns to reduce learning curve (hamburger menu, tab bars)
+- Ensure predictable behavior (back button works, links look clickable)
+- Maintain navigation context (highlight current page, preserve scroll position)
 
 ## Styling Implementation
 

@@ -36,6 +36,26 @@ Always start with mobile design, then progressively enhance for larger screens.
 @media (min-width: 1536px) { }
 ```
 
+### Specific Breakpoint Ranges
+
+| Range | Pixels | Target Devices | Layout Strategy |
+|-------|--------|----------------|-----------------|
+| **XS** | 0-479px | Small phones (iPhone SE, older Android) | Single column, stacked navigation, large touch targets (min 44px) |
+| **SM** | 480-767px | Large phones (iPhone 14, most modern phones) | Single column, simplified UI, bottom navigation, reduced complexity |
+| **MD** | 768-1023px | Tablets (iPad, Android tablets) | 2 columns possible, sidebar navigation, some desktop features |
+| **LG** | 1024-1439px | Small laptops, landscape tablets | Multi-column layouts, full navigation, desktop UI patterns |
+| **XL** | 1440px+ | Desktop monitors, large screens | Max-width containers, multi-panel layouts, advanced features visible |
+
+**Mobile Simplification Examples:**
+
+- **Navigation**: Hamburger menu (mobile) → Full nav bar (desktop)
+- **Forms**: Stacked fields (mobile) → Side-by-side fields (desktop)
+- **Content**: Single column (mobile) → Multi-column grid (desktop)
+- **Actions**: Fixed bottom bar (mobile) → Inline buttons (desktop)
+- **Tables**: Collapsed cards (mobile) → Full data table (desktop)
+- **Sidebars**: Hidden/collapsible (mobile) → Always visible (desktop)
+- **Filters**: Modal/drawer (mobile) → Sidebar panel (desktop)
+
 ### Tailwind Responsive Classes
 
 ```tsx
