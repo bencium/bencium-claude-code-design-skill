@@ -1,29 +1,63 @@
 ---
-name: UX Designer
-description: Expert UI/UX design guidance for building unique, accessible, and user-centered interfaces. Use when designing interfaces, making visual design decisions, choosing colors/typography, implementing responsive layouts, or when user mentions design, UI, UX, styling, or visual appearance. Always ask before making design decisions.
-version: 1.0.0
+name: bencium-innovative-ux-designer
+description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+metadata:
+  version: 2.0.0
 ---
 
-# UX Designer
+# Innovative UX Designer
 
-Expert UI/UX design skill that helps create unique, accessible, and thoughtfully designed interfaces. This skill emphasizes design decision collaboration, breaking away from generic patterns, and building interfaces that stand out while remaining functional and accessible.
+Create distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices. Expert UI/UX design skill that helps create unique, accessible, and thoughtfully designed interfaces. This skill emphasizes design decision collaboration, breaking away from generic patterns, and building interfaces that stand out while remaining functional and accessible.
+
+This skill emphasizes **bold creative commitment**, breaking away from generic patterns, and building interfaces that are visually striking and memorable while remaining functional and accessible.
 
 ## Core Philosophy
 
-**CRITICAL: Design Decision Protocol**
-- **ALWAYS ASK** before making any design decisions (colors, fonts, sizes, layouts)
-- Never implement design changes until explicitly instructed
-- The guidelines below are practical guidance for when design decisions are approved
-- Present alternatives and trade-offs, not single "correct" solutions
+**CRITICAL: Design Thinking Protocol**
+
+Before coding, **ASK to understand context**, then **COMMIT BOLDLY** to a distinctive direction:
+
+### Questions to Ask First
+1. **Purpose**: What problem does this interface solve? Who uses it?
+2. **Tone**: What aesthetic extreme fits? (see Tone Options below)
+3. **Constraints**: Technical requirements (framework, performance, accessibility)?
+4. **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+
+### Tone Options (Pick an Extreme)
+Choose a clear aesthetic direction and execute with precision:
+- **Brutally minimal** - stripped to essence, bold typography, vast whitespace
+- **Maximalist chaos** - layered, dense, visually rich, controlled disorder
+- **Retro-futuristic** - vintage meets sci-fi, nostalgic tech aesthetics
+- **Organic/natural** - soft edges, earthy colors, nature-inspired textures
+- **Luxury/refined** - elegant spacing, premium typography, subtle details
+- **Playful/toy-like** - bright colors, rounded shapes, delightful interactions
+- **Editorial/magazine** - strong typography hierarchy, asymmetric layouts
+- **Brutalist/raw** - exposed structure, harsh contrasts, intentionally rough
+- **Art deco/geometric** - bold patterns, metallic accents, symmetric elegance
+- **Soft/pastel** - gentle gradients, muted tones, calming atmosphere
+- **Industrial/utilitarian** - functional, no-nonsense, mechanical precision
+
+### After Getting Context
+- **Commit fully** to the chosen direction - no half measures
+- Present 2-3 alternative approaches with trade-offs
+- Then implement with precision: production-grade, visually striking, memorable
 
 ## Foundational Design Principles
 
 ### Stand Out From Generic Patterns
 
-**Avoid Generic Training Dataset Patterns:**
-- Don't default to "Claude style" designs (excessive bauhaus, liquid glass, apple-like)
-- Don't use generic SaaS aesthetics that look machine-generated
-- Don't rely only on solid colors - suggest photography, patterns, textures
+**NEVER Use These AI-Generated Aesthetics:**
+- **Fonts**: Inter, Roboto, Arial, system fonts as primary choice, Space Grotesk (overused by AI)
+- **Colors**: Generic SaaS blue (#3B82F6), purple gradients on white backgrounds
+- **Patterns**: Cookie-cutter layouts, predictable component arrangements
+- **Effects**: Glass morphism, Apple design mimicry, liquid/blob backgrounds
+- **Overall**: Anything that looks "Claude-generated" or machine-made
+
+**Instead, Create Atmosphere:**
+- Suggest photography, patterns, textures over flat solid colors
+- Apply gradient meshes, noise textures, geometric patterns
+- Use layered transparencies, dramatic shadows, decorative borders
+- Consider custom cursors, grain overlays, contextual effects
 - Think beyond typical patterns - you can step off the written path
 
 **Draw Inspiration From:**
@@ -49,20 +83,21 @@ Expert UI/UX design skill that helps create unique, accessible, and thoughtfully
 
 2. **Material Honesty**
    - Digital materials have unique properties - embrace them
-   - Buttons should communicate affordance through color, spacing, and typography (not shadows)
-   - Cards use borders and background differentiation (not depth effects)
+   - Buttons communicate affordance through color, spacing, typography, AND shadows when intentional
+   - Cards can use borders, background differentiation, OR dramatic shadows for depth
    - Animations follow real-world physics principles adapted to digital responsiveness
 
    **Examples:**
-   - Clickable: Use distinct colors, hover state changes, cursor feedback
-   - Containers: Use subtle borders (1px), background color shifts, or generous padding
-   - Hierarchy: Use scale, weight, and spacing rather than elevation
+   - Clickable: Use distinct colors, hover state changes, cursor feedback, subtle lift effects
+   - Containers: Use borders, background shifts, generous padding, OR shadow depth
+   - Hierarchy: Use scale, weight, spacing, AND elevation when it serves the aesthetic
 
-3. **Functional Layering (Not Visual Depth)**
+3. **Functional Layering**
    - Create hierarchy through typography scale, color contrast, and spatial relationships
    - Layer information conceptually (primary → secondary → tertiary)
-   - Reject skeuomorphic shadows/gradients that imitate physical depth
+   - Use shadows and gradients INTENTIONALLY when they serve the aesthetic direction
    - Embrace functional depth: modals over content, dropdowns over UI
+   - Avoid: glass morphism, Apple mimicry (but shadows/gradients are tools, not enemies)
 
 4. **Obsessive Detail**
    - Consider every pixel, interaction, and transition
@@ -88,10 +123,11 @@ Expert UI/UX design skill that helps create unique, accessible, and thoughtfully
 - Accents are saturated enough to create clear contrast
 
 **Typography:**
-- Headlines: Emotional, attention-grabbing (personality over pure legibility)
+- Headlines: Emotional, attention-grabbing, UNEXPECTED (personality over pure legibility)
 - Body/UI: Functional, highly legible (clarity over expression)
-- 2-3 typefaces maximum
+- 2-3 typefaces maximum, but make them CHARACTERFUL and distinctive
 - Clear mathematical scale (e.g., 1.25x between sizes)
+- NEVER default to Inter, Roboto, or Space Grotesk - find unique fonts
 
 **Animation:**
 - Purposeful: Guides attention, establishes relationships, provides feedback
@@ -117,7 +153,7 @@ Before presenting any design, verify:
 
 **Design System Framework:**
 
-For understanding what's fixed (universal rules), project-specific (brand personality), and adaptable (context-dependent) in your design system, see DESIGN-SYSTEM-TEMPLATE.md (meta-framework, project templates, decision trees).
+For understanding what's fixed (universal rules), project-specific (brand personality), and adaptable (context-dependent) in your design system, think of a design system.
 
 ## Visual Design Standards
 
@@ -181,10 +217,18 @@ Accent colors should have clear contrast with both:
 **Unique Color Strategy:**
 
 To stand out from generic patterns:
-- Avoid default SaaS blue (#3B82F6) unless it fits your brand
-- Consider unexpected neutrals: warm greys, soft off-whites, deep charcoals
+- NEVER use default SaaS blue (#3B82F6) or purple gradients on white
+- Use unexpected neutrals: warm greys, soft off-whites, deep charcoals, rich blacks
 - Pair neutrals with distinctive accents: terracotta + charcoal, sage + navy, coral + slate
+- Dominant colors with SHARP accents outperform timid, evenly-distributed palettes
 - Test combinations against "does this look AI-generated?" filter
+- Vary between light and dark themes - no design should look the same
+
+**Create Atmosphere with Color:**
+- Gradient meshes for depth and visual interest
+- Noise textures and grain overlays for tactile feel
+- Layered transparencies for dimension
+- Dramatic shadows for emphasis and drama
 
 ### Typography Excellence
 
@@ -198,19 +242,27 @@ Typography is a primary design element that conveys personality and hierarchy.
 - **UI/Labels**: Prioritize clarity, scannability, consistency
 
 **Font Selection:**
-- Use 2-3 typefaces maximum
+- Use 2-3 typefaces maximum, but make them UNEXPECTED and characterful
 - Limit to 3 weights per typeface (e.g., Regular 400, Medium 500, Bold 700)
 - Prefer variable fonts for fine-tuned control and performance
 
+**NEVER Use These Fonts as Primary:**
+- Inter (overused by AI and generic SaaS)
+- Roboto (too generic)
+- Arial/Helvetica (default fallback vibes)
+- Space Grotesk (AI generation favorite)
+- System fonts as primary choice (only as fallback)
+
 **Font Version Usage:**
-- **Display version**: Headlines and hero text only
-- **Text version**: Paragraphs and long-form content
+- **Display version**: Headlines and hero text only - BE BOLD
+- **Text version**: Paragraphs and long-form content - legibility matters
 - **Caption/Micro**: Small UI labels (1-2 lines, non-critical info)
 
-**Recommended Sources:**
-- Google Fonts for web (free, well-optimized, reliable)
-- System fonts for performance-critical apps (-apple-system, BlinkMacSystemFont, Segoe UI)
-- Choose fonts that serve your brand's purpose (not "trending" lists)
+**Find Distinctive Fonts:**
+- Google Fonts for web - but dig deeper than page 1
+- Type foundries for unique options
+- Choose fonts that serve your CHOSEN AESTHETIC DIRECTION
+- Pair distinctive display font with refined body font
 
 **Typographic Scale:**
 
@@ -310,86 +362,6 @@ Reduce hierarchy levels on small screens (fewer distinct sizes)
 
 ## Interaction Design
 
-### Motion & Animation
-
-**Purposeful Animation:**
-
-Every animation must serve a functional purpose:
-- **Orient users**: Smooth transitions during navigation changes
-- **Establish relationships**: Show how elements connect (expand from source, slide between states)
-- **Provide feedback**: Confirm interactions (button press, form submission)
-- **Guide attention**: Direct focus to important changes (new messages, errors)
-
-**Animation & Gestalt Principles:**
-
-Motion should reinforce visual relationships:
-- **Proximity**: Elements near each other move together (grouped cards animating)
-- **Similarity**: Similar elements animate similarly (all buttons have same hover timing)
-- **Continuity**: Movement follows natural paths (smooth curves, not jumpy angles)
-- **Figure-ground**: Important elements animate while backgrounds stay stable
-
-**Natural Physics:**
-
-Animations should feel organic, not mechanical:
-- **Easing**: Use ease-out for entrances (fast start, slow end)
-- **Easing**: Use ease-in for exits (slow start, fast end)
-- **Easing**: Use ease-in-out for transitions (smooth both ends)
-- Avoid linear easing (feels robotic) except for continuous loops
-- Apply appropriate mass/momentum (lightweight UI vs weighty modals)
-
-**Subtle Restraint:**
-- Animations should be felt rather than seen
-- Don't delay user actions unnecessarily (keep under 300ms for interactive feedback)
-- Never block critical actions with decorative animations
-- Respect `prefers-reduced-motion` media query
-
-**Timing Guidelines:**
-
-- **Micro-interactions** (button press, checkbox toggle): 100-150ms
-- **State changes** (expanding accordion, tab switch): 200-300ms
-- **Page transitions** (route changes, modal open/close): 300-500ms
-- **Attention-directing** (notification appearance, error highlight): 200-400ms
-
-**Physics Profiles:**
-
-Define consistent durations for element types:
-- **Lightweight** (icons, small UI): 150ms
-- **Standard** (cards, panels): 300ms
-- **Weighty** (modals, page transitions): 500ms
-
-**Performance Optimization:**
-
-- Animate `transform` and `opacity` only (GPU-accelerated, smooth 60fps)
-- Avoid animating `width`, `height`, `top`, `left`, `margin` (causes reflow/repaint)
-- Use `will-change` sparingly for complex animations (pre-allocates GPU resources)
-- Test on low-end devices (60fps on powerful hardware ≠ 60fps on mobile)
-
-**Implementation:**
-- Use `framer-motion` sparingly and purposefully
-- Prefer CSS animations over JavaScript when possible (better performance)
-- Use CSS transitions for simple hover/focus states
-- Implement `@media (prefers-reduced-motion: reduce)` to disable/reduce animations
-
-**Example:**
-```tsx
-// Simple hover transition
-<button className="
-  transition-colors duration-200 ease-out
-  bg-blue-600 hover:bg-blue-700
-">
-  Click me
-</button>
-
-// Framer Motion for complex interaction
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: -20 }}
-  transition={{ duration: 0.3, ease: "easeOut" }}
->
-  Content
-</motion.div>
-```
 
 **Motion Specification:**
 
@@ -485,14 +457,15 @@ For detailed motion specs, see MOTION-SPEC.md (easing curves, duration tables, s
    - Simplified mobile navigation (hamburger menu) vs full desktop nav
    - Collapsed sidebar on small screens, expanded on large
 
-3. **Minimal, Flat Design**
+3. **Bold Visual Expression**
 
-   Current aesthetic preference:
-   - No drop shadows (except subtle ones for modals/dropdowns)
-   - No gradients for depth (use for accents/backgrounds if desired)
-   - No glass morphism effects
-   - Focus on typography, color, and spacing to create hierarchy
-   - Functional depth: Layers of content (modals, sheets) use positioning, not visual depth
+   Aesthetic flexibility based on chosen direction:
+   - Shadows ALLOWED and encouraged when intentional (dramatic shadows, soft elevation)
+   - Gradients ALLOWED for depth, accents, backgrounds, and atmosphere
+   - NO glass morphism effects (this is the one banned technique)
+   - NO Apple design mimicry (find your own voice)
+   - Focus on typography, color, spacing, AND visual effects to create hierarchy
+   - Create atmosphere: gradient meshes, noise textures, grain overlays, dramatic lighting
 
 **Navigation:**
 - Clear structure with intuitive navigation menus
@@ -704,34 +677,42 @@ Which direction feels right for your brand?
 
 ## Common Patterns to Avoid
 
-❌ **Don't:**
-- Use generic SaaS blue (#3B82F6) without considering alternatives
-- Default to shadows and gradients for depth
-- Copy Apple's design language
-- Use glass morphism effects
-- Make design decisions without asking
-- Implement typography without considering the font version
+❌ **NEVER:**
+- Use Inter, Roboto, Arial, Space Grotesk as primary fonts
+- Use generic SaaS blue (#3B82F6) or purple gradients on white
+- Copy Apple's design language or use glass morphism
+- Create cookie-cutter layouts that look AI-generated
+- Skip asking about context before designing
+- Converge on common choices across generations (vary everything!)
 - Use animations that delay user actions
-- Create cluttered interfaces with competing elements
+- Create cluttered interfaces where elements compete
 
-✅ **Do:**
-- Ask before making design decisions
-- Suggest unique, contextually appropriate color pairs
-- Use flat, minimal design
-- Consider unconventional typography choices
+✅ **ALWAYS:**
+- Ask about purpose, tone, constraints, differentiation FIRST
+- Then commit BOLDLY to a distinctive aesthetic direction
+- Use unexpected, characterful typography choices
+- Create atmosphere: shadows, gradients, textures, grain (when intentional)
+- Dominant colors with sharp accents (not timid, evenly-distributed palettes)
 - Provide immediate feedback for interactions
-- Create generous white space
 - Test with real devices
-- Validate accessibility
+- Validate accessibility (it enables creativity, not limits it)
+- Remember: Claude is capable of extraordinary creative work - don't hold back!
 
 ## Version History
 
+- v2.0.0 (2025-11-22): Creative liberation update - bold aesthetics, shadows/gradients allowed, Design Thinking protocol
 - v1.0.0 (2025-10-18): Initial release with comprehensive UI/UX design guidance
 
 ## References
 
 For additional context, see:
+- **Anthropic Frontend Aesthetics Cookbook**: https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb
 - WCAG 2.1 Guidelines: https://www.w3.org/WAI/WCAG21/quickref/
 - Google Fonts: https://fonts.google.com/
 - Tailwind CSS Docs: https://tailwindcss.com/docs
 - Shadcn UI Components: https://ui.shadcn.com/
+
+**Progressive Disclosure Files:**
+- ACCESSIBILITY.md - Accessibility essentials (WCAG AA baseline)
+- MOTION-SPEC.md - Animation timing and easing
+- RESPONSIVE-DESIGN.md - Mobile-first breakpoints and patterns
