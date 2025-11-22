@@ -1,267 +1,179 @@
-# UX Designer Skill
+# UX Designer Skills
 
-Expert UI/UX design guidance skill for Claude Code that helps create unique, accessible, and user-centered interfaces.
+Two Claude Code skills for UI/UX design guidance — choose based on your project needs.
 
-## Overview
+## Why Two Variants?
 
-This skill provides comprehensive design guidance based on your personal design philosophy, emphasizing:
+| Aspect | Controlled | Innovative |
+|--------|------------|------------|
+| **Decision Authority** | Asks before making choices | Commits boldly to directions |
+| **Aesthetic Philosophy** | Flat, minimal, no shadows | Shadows, gradients, textures allowed |
+| **Typography** | 2-3 typefaces, mathematical scales | Experimental, characterful choices |
+| **Structure** | 6 files (~3,500 lines) | 6 files (~1,000 lines) |
+| **Best For** | Production, enterprise, regulated | Landing pages, portfolios, campaigns |
 
-- **Design Decision Collaboration**: Always asking before making design choices
-- **Standing Out**: Breaking away from generic patterns and training dataset aesthetics
-- **Accessibility**: WCAG 2.1 AA compliance by default
-- **Modern Implementation**: Using shadcn/ui, Tailwind CSS, and modern React patterns
+## Skill Variants
 
-## Structure
+### bencium-controlled-ux-designer
+
+**Systematic design for production work.**
+
+Best for:
+- Enterprise applications
+- Healthcare/regulated industries
+- Long-term maintainable projects
+- Design systems requiring consistency
+- Accessibility-critical interfaces
+
+Key behaviors:
+- **Always asks** before making design decisions
+- WCAG 2.1 AA compliance (non-negotiable)
+- Mathematical spacing/typography scales
+- Flat, minimal aesthetic (no shadows, gradients, glass)
+- Comprehensive validation checklists
 
 ```
-ux-designer/
-├── SKILL.md                  # Main skill file (loaded when relevant)
-├── RESPONSIVE-DESIGN.md      # Detailed responsive design patterns
-├── ACCESSIBILITY.md          # Comprehensive accessibility guide
-└── README.md                # This file
+bencium-controlled-ux-designer/
+├── SKILL.md                  # Main skill (~740 lines)
+├── ACCESSIBILITY.md          # Full WCAG guidance (~830 lines)
+├── RESPONSIVE-DESIGN.md      # Breakpoints & patterns (~600 lines)
+├── DESIGN-SYSTEM-TEMPLATE.md # Project kickoff framework
+├── MOTION-SPEC.md            # Animation specifications
+└── README.md
 ```
 
-## When Claude Uses This Skill
+### bencium-innovative-ux-designer
 
-Claude automatically uses this skill when you:
+**Bold design for creative exploration.**
 
-- Mention design, UI, UX, styling, or visual appearance
-- Ask about colors, typography, layouts, or spacing
-- Request interface design or visual improvements
-- Need responsive design guidance
-- Ask about accessibility or WCAG compliance
-- Work on forms, navigation, or interactive elements
+Inspired by [Anthropic's Frontend Aesthetics Cookbook](https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb).
 
-## Key Principles
+Best for:
+- Landing pages and marketing sites
+- Creative agency projects
+- Prototypes and concept exploration
+- Portfolio pieces
+- Short-term campaigns
 
-### 1. Design Decision Protocol
+Key behaviors:
+- **Commits boldly** to aesthetic directions (doesn't ask)
+- Asks Design Thinking questions upfront, then executes
+- Shadows, gradients, textures allowed when intentional
+- Typography experimentation encouraged
+- Accessibility as baseline (not blocking exploration)
 
-**ALWAYS ASK before making design decisions**
-
-The skill enforces collaborative design decision-making:
-- Colors, fonts, sizes, layouts require approval
-- Present alternatives and trade-offs
-- No unilateral design changes
-
-### 2. Stand Out From Generic Patterns
-
-Avoid typical "AI-generated" aesthetics:
-- ❌ Generic SaaS blue, liquid glass, Apple mimicry
-- ✅ Unique color pairs, thoughtful typography, custom visuals
-
-### 3. Flat, Minimal Design
-
-Current style preference:
-- No shadows, gradients, or glass effects
-- Clean, minimal aesthetic
-- Focus on typography and color
-
-### 4. Accessibility by Default
-
-- WCAG 2.1 AA compliance
-- Keyboard navigation
-- Screen reader support
-- Sufficient color contrast
-
-## Supporting Files
-
-### RESPONSIVE-DESIGN.md
-
-Progressive disclosure file covering:
-- Mobile-first approach
-- Responsive breakpoints and patterns
-- Touch-friendly interfaces
-- Navigation patterns
-- Form layouts
-- Testing strategies
-
-**Claude loads this when:** You ask about responsive design, mobile layouts, or cross-device compatibility.
-
-### ACCESSIBILITY.md
-
-Progressive disclosure file covering:
-- Semantic HTML patterns
-- Keyboard navigation
-- ARIA attributes
-- Color contrast requirements
-- Screen reader compatibility
-- Testing checklists
-
-**Claude loads this when:** You ask about accessibility, WCAG compliance, or assistive technology support.
-
-## Example Usage
-
-### Scenario 1: Designing a Button
-
-**You ask:**
 ```
-I need a call-to-action button for the hero section
+bencium-innovative-ux-designer/
+├── SKILL.md                  # Main skill (~700 lines)
+├── ACCESSIBILITY.md          # Compressed essentials (~110 lines)
+├── RESPONSIVE-DESIGN.md      # Mobile-first basics (~90 lines)
+├── MOTION-SPEC.md            # Animation essentials (~70 lines)
+└── README.md
 ```
 
-**Claude responds:**
+## Anti-Patterns (Both Variants Avoid)
+
+Both skills are designed to avoid "AI slop" — the generic, forgettable aesthetics that flood AI-generated interfaces:
+
+**Fonts to avoid:**
+- Inter, Roboto, Arial as primary typefaces
+- Space Grotesk (overused by AI tools)
+- System fonts without intention
+
+**Colors to avoid:**
+- Generic SaaS blue (`#3B82F6`)
+- Purple gradients on white backgrounds
+- Teal + coral combinations
+
+**Patterns to avoid:**
+- Liquid glass / glassmorphism everywhere
+- Apple mimicry without purpose
+- Cookie-cutter SaaS layouts
+- Predictable component arrangements
+
+## Aesthetic Tone Options (Innovative Variant)
+
+The innovative variant can execute across different aesthetic directions:
+
+| Tone | Characteristics |
+|------|-----------------|
+| Brutally minimal | Maximum whitespace, single accent, stark typography |
+| Maximalist chaos | Dense information, layered elements, controlled overwhelm |
+| Retro-futuristic | Nostalgic tech aesthetics, CRT glow, pixel elements |
+| Organic/natural | Earthy palettes, hand-drawn elements, asymmetry |
+| Luxury/refined | Restrained elegance, premium materials, subtle animation |
+| Editorial/magazine | Strong typography hierarchy, dramatic layouts |
+| Brutalist/raw | Exposed structure, system fonts as statement, anti-design |
+| Soft/pastel | Gentle gradients, rounded forms, approachable |
+
+## Installation
+
+Copy the desired skill folder to your Claude Code skills directory:
+
+```bash
+# For controlled/production workflow
+cp -r bencium-controlled-ux-designer ~/.claude/skills/
+
+# For creative/innovative workflow
+cp -r bencium-innovative-ux-designer ~/.claude/skills/
 ```
-Before I implement this button, I have a few design questions:
+
+## Example Interactions
+
+### Controlled Variant
+
+**You:** "I need a call-to-action button for the hero section"
+
+**Claude:** "Before I implement this button, I have design questions:
 1. What's the primary action you want to emphasize?
 2. Do you have brand colors in mind, or should I suggest options?
 3. What emotion should this button convey? (urgent, calm, professional)
 
-I can suggest 3 unique color directions that break from typical patterns...
-```
+I can suggest 3 unique color directions that break from typical patterns..."
 
-### Scenario 2: Responsive Layout
+### Innovative Variant
 
-**You ask:**
-```
-Make this card grid responsive for mobile
-```
+**You:** "I need a call-to-action button for the hero section"
 
-**Claude responds:**
-```
-I'll implement a mobile-first responsive grid. This will:
-- Stack cards vertically on mobile (< 640px)
-- Show 2 columns on tablets (640px - 1024px)
-- Show 3-4 columns on desktop (> 1024px)
+**Claude:** "What's the overall vibe for this project? Options:
+- Brutally minimal
+- Bold and playful
+- Luxury/refined
+- Something else?
 
-[Implements with Tailwind responsive classes]
+Once I know the direction, I'll commit to a distinctive button design that avoids generic SaaS patterns."
 
-I've also ensured touch targets are at least 44x44px for mobile users.
-```
+**You:** "Bold and playful"
 
-### Scenario 3: Accessibility
+**Claude:** *Implements a distinctive button with intentional design choices, no further questions*
 
-**You ask:**
-```
-Is this form accessible?
-```
+## Key Differences Summary
 
-**Claude responds:**
-```
-Let me check this form against WCAG 2.1 AA standards:
-
-✅ Good:
-- Labels properly associated with inputs
-- Logical tab order
-
-❌ Needs improvement:
-- Error messages need role="alert" for screen readers
-- Submit button needs more descriptive text
-- Color contrast on placeholder text is too low (2.8:1, needs 4.5:1)
-
-Here are the specific fixes needed...
-```
-
-## Testing the Skill
-
-After installation, test by asking design-related questions:
-
-```
-"Can you help me design a hero section?"
-"How should I structure this navigation?"
-"Make this interface more accessible"
-"Suggest some unique color combinations"
-```
-
-Claude will automatically use the UX Designer skill based on the context of your questions.
+| Scenario | Controlled | Innovative |
+|----------|------------|------------|
+| Color choice | "Here are 3 options. Which do you prefer?" | "I'm using [X] because it fits the playful tone" |
+| Shadow usage | "No shadows per design system" | "Adding subtle shadow for depth and hierarchy" |
+| Typography | "Using Inter for readability" | "Using [characterful font] to stand out" |
+| Layout | "Following established grid patterns" | "Breaking grid intentionally for visual interest" |
 
 ## Version History
 
+- **v2.0.0** (2025-11-22): Split into two variants
+  - Created `bencium-controlled-ux-designer` (production focus)
+  - Created `bencium-innovative-ux-designer` (creative focus)
+  - Innovative variant inspired by Anthropic's Frontend Aesthetics Cookbook
+  - Compressed supporting files for innovative variant (~70% reduction)
+  - Added Design Thinking Protocol to innovative variant
+  - Added aesthetic tone options
+
+- **v1.1.0** (2025-11-20): Comprehensive design system enhancement
 - **v1.0.0** (2025-10-18): Initial release
-  - Comprehensive design guidance
-  - Responsive design patterns
-  - Accessibility reference
-  - Design decision protocol
 
-- **v1.1.0** (2025-11-20): Major Update - Comprehensive Design System Enhancement
-  - **SKILL.md Updates** (~1,200 lines of new content):
-    - Core Design Philosophy: Resolved depth contradictions, added Material Honesty principles with examples
-    - Color System: Complete rewrite with architecture (4-5 neutrals + 1-3 accents), application rules, hover/focus/disabled states
-    - Typography Excellence: Functional vs emotional distinction, UI typography specs, responsive typography, font pairing logic
-    - Animation & Motion: Gestalt principles, physics profiles, performance optimization
-    - UX Patterns: Massive expansion with direct manipulation, immediate feedback, conversational interfaces, adaptive layouts
+## References
 
-  - **MOTION-SPEC.md** (NEW): Detailed animation specification reference
-    - Easing curves with cubic-bezier values
-    - Duration tables by interaction type and element weight
-    - State-specific animations (hover, focus, active, disabled, loading, success, error, warning)
-    - Form validation timing guidance
-    - Performance checklist and accessibility considerations
-
-  - **DESIGN-SYSTEM-TEMPLATE.md** (NEW): Meta-framework for system flexibility
-    - Fixed elements (spacing scale, grid system, accessibility standards)
-    - Project-specific elements (brand colors, typography pairing, tone)
-    - Adaptable elements (component variations, responsive behavior, animation personality)
-    - Fill-in-the-blanks template for new projects
-    - Examples showing 3 different brand personalities using same system
-
-  - **RESPONSIVE-DESIGN.md Update**: Added specific breakpoint table
-    - XS/SM/MD/LG/XL ranges with pixel values and target devices
-    - Mobile simplification examples for navigation, forms, content, actions, tables
-
-  - **Key Improvements**:
-    - All contradictions resolved (depth, color, typography)
-    - All gaps filled (line length, font weights, responsive typography)
-    - ~1,400 lines of actionable content added
-    - Zero bloat - all content addresses specific design needs
-    - Structure preserved with natural integration
-
-## Customization
-
-This is a personal skill in your `~/.claude/skills/` directory. You can customize:
-
-1. **Color Preferences**: Edit SKILL.md "Current Style Preferences" section
-2. **Typography Choices**: Update recommended fonts in "Typography Excellence"
-3. **Component Library**: Adjust if using different components than shadcn
-4. **Accessibility Level**: Currently WCAG AA, can increase to AAA
-
-## Related Skills
-
-Consider pairing with these skills (if available):
-
-- **responsive-tester**: Automated responsive layout testing
-- **accessibility-audit**: Comprehensive WCAG compliance checking
-- **design-system**: Brand-specific design token management
-
-## Troubleshooting
-
-### Claude doesn't use the skill
-
-**Check the description in SKILL.md:**
-The description should include specific triggers like "design", "UI", "UX", "styling", "visual", etc.
-
-**Current description:**
-```
-Expert UI/UX design guidance for building unique, accessible, and user-centered
-interfaces. Use when designing interfaces, making visual design decisions, choosing
-colors/typography, implementing responsive layouts, or when user mentions design,
-UI, UX, styling, or visual appearance.
-```
-
-### Claude makes design decisions without asking
-
-**Review the Design Decision Protocol section** in SKILL.md. The CRITICAL designation should enforce asking first.
-
-### Supporting files aren't loaded
-
-**This is intentional (progressive disclosure)**. Claude only loads RESPONSIVE-DESIGN.md or ACCESSIBILITY.md when specifically relevant to your question.
-
-**To explicitly load them**, ask:
-- "Show me responsive design patterns"
-- "What are the accessibility requirements?"
-
-## Contributing
-
-This is your personal skill. As you refine your design process:
-
-1. Update SKILL.md with new patterns
-2. Add examples that worked well
-3. Document edge cases you encounter
-4. Update version number and history
-
-If you want to share with your team, consider:
-- Moving to project `.claude/skills/` directory
-- Creating a plugin for distribution
-- Contributing to the skills marketplace
+- [Anthropic Frontend Aesthetics Cookbook](https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb)
+- [Claude Code Skills Documentation](https://docs.anthropic.com/claude-code/skills)
 
 ## License
 
-Personal skill - use and modify as needed for your projects.
+Personal skills - use and modify as needed for your projects.
