@@ -4,6 +4,22 @@ A Claude Code plugin marketplace with 13 skills for design, architecture, and pr
 
 ## Installation
 
+### skills.sh (Recommended)
+
+Install all skills at once, or pick individual ones:
+
+```bash
+# Browse all available skills
+npx skills add bencium/bencium-marketplace --list
+
+# Install all skills globally
+npx skills add bencium/bencium-marketplace -g --all
+
+# Install a specific skill
+npx skills add bencium/bencium-marketplace -g --skill typography
+npx skills add bencium/bencium-marketplace -g --skill design-audit
+```
+
 ### Claude Code (CLI)
 
 Add the marketplace, then install individual plugins:
@@ -26,12 +42,12 @@ The SKILL.md format is compatible with 40+ AI coding tools that support markdown
 
 ---
 
-## Plugins
+## Skills
 
-### Design (6 plugins)
+### Design (6 skills)
 
-| Plugin | Description |
-|--------|-------------|
+| Skill | Description |
+|-------|-------------|
 | **bencium-controlled-ux-designer** | Systematic UX design for production. WCAG 2.1 AA, mathematical scales, always-ask-first protocol. Best for enterprise and regulated industries. |
 | **bencium-innovative-ux-designer** | Bold creative UX that commits to distinctive directions. Shadows, gradients, experimental typography. Best for landing pages and campaigns. |
 | **bencium-impact-designer** | Production-grade frontend interfaces that avoid generic AI aesthetics. Based on Anthropic's Frontend Designer Skill. |
@@ -39,26 +55,26 @@ The SKILL.md format is compatible with 40+ AI coding tools that support markdown
 | **typography** | Professional typography rules enforcing correct quote marks, dashes, spacing, hierarchy. Auto-applies to generated HTML/CSS/React code. |
 | **relationship-design** | AI-first interfaces that build ongoing relationships through memory, trust evolution, and collaborative planning. |
 
-### Productivity (3 plugins)
+### Productivity (3 skills)
 
-| Plugin | Description |
-|--------|-------------|
+| Skill | Description |
+|-------|-------------|
 | **adaptive-communication** | Detects user communication style (high-context relational vs low-context transactional) and adapts responses. |
 | **negentropy-lens** | Decision-support framework evaluating systems through entropy (decay) vs negentropy (growth), surfacing tacit knowledge gaps. |
 | **bencium-aeo** | Answer Engine Optimization for AI search visibility. Optimize content for ChatGPT, Claude, Gemini, AI Overviews citations. |
 
-### Development (4 plugins)
+### Development (4 skills)
 
-| Plugin | Description |
-|--------|-------------|
+| Skill | Description |
+|-------|-------------|
 | **bencium-code-conventions** | Code style and tech stack conventions for React/Next.js/TypeScript, TailwindCSS, Supabase projects. |
 | **renaissance-architecture** | Software architecture principles for building genuinely new solutions through first-principles thinking, not derivative work. |
 | **human-architect-mindset** | Systematic architectural thinking -- domain modeling, systems thinking, constraint navigation, and AI-aware problem decomposition. |
-| **vanity-engineering-review** | Reviews codebases, architectures, PRs, and technical plans for vanity engineering — code built for ego rather than user value. Includes detection patterns and kill criteria templates. |
+| **vanity-engineering-review** | Reviews codebases, architectures, PRs, and technical plans for vanity engineering -- code built for ego rather than user value. |
 
 ---
 
-## Plugin Structure
+## Skill Structure
 
 Each plugin follows the standard Claude Code plugin format:
 

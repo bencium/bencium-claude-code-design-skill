@@ -1,2 +1,11 @@
 .DS_Store
 .claude/
+
+# Private skills (not for public distribution)
+client-effort-estimate/
+content-pipeline/
+deploy-and-verify/
+rag-debug/
+resilience-audit/
+supabase-stripe-security/
+video-gen-prompting/
