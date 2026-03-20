@@ -114,6 +114,15 @@
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
       "category": "development",
       "keywords": ["bence"]
+    },
+    {
+      "name": "vanity-engineering-review",
+      "source": "./vanity-engineering-review",
+      "description": "Reviews codebases, architectures, PRs, and technical plans for vanity engineering — code built for ego rather than user value.",
+      "version": "1.0.0",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "category": "development",
+      "keywords": ["bence"]
     }
   ]
 }
