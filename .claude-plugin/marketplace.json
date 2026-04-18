@@ -123,6 +123,15 @@
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
       "category": "development",
       "keywords": ["bence"]
+    },
+    {
+      "name": "organic-first-campaign",
+      "source": "./organic-first-campaign",
+      "description": "Grassroots-first campaign designer for startups, NGOs, movements, and solo brands being outspent by incumbents. Ideates campaigns of any kind (awareness, launch, fundraising, mobilization, counter-narrative), audits spend asymmetry, assembles an organic-first channel stack with 70/30 boost rules, and outputs a lift-test plan.",
+      "version": "1.0.0",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "category": "productivity",
+      "keywords": ["bence"]
     }
   ]
 }

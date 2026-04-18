@@ -1,0 +1,7 @@
+{
+  "name": "organic-first-campaign",
+  "version": "1.0.0",
+  "description": "Produces grassroots-first campaign plans for startups, NGOs, movements, and solo brands being outspent by incumbents. Ideates campaigns of any kind (awareness, launch, fundraising, mobilization, counter-narrative), audits spend asymmetry, assembles an organic-first channel stack with 70/30 boost rules, and outputs a lift-test plan so users measure incremental impact instead of vanity metrics.",
+  "author": { "name": "bencium.io", "url": "https://bencium.io" },
+  "keywords": ["marketing", "advertising", "campaigns", "organic", "paid-media", "grassroots", "growth", "ngo", "startup"]
+}
