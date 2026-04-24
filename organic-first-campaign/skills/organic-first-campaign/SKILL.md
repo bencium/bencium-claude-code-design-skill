@@ -182,6 +182,29 @@ For each concept, produce:
 - **Minimum viable version** — the smallest possible execution that proves the concept works
   in two weeks or less.
 
+**Anti-fabrication rule for concept names, theses, and hooks.** If the user named a
+specific competitor in the brief, use the name. If the user said "well-known incumbent,"
+"market leader," "the dominant player," or otherwise did not name one, **do not fill in
+the blank with your best guess.** Stay at the level of abstraction the brief gave you.
+Use the category descriptor (e.g., "the $400-per-seat monitor"), the behavior
+("the enterprise billing tax"), or a bracketed placeholder (`[incumbent]`) that the user
+will fill in. Concept names like "We Quit Sentry" or "DataDog Alternative" — invented
+from the category description rather than the brief — violate the Stage 1 anti-fabrication
+rule and must not appear in Stage 2 output. This applies equally to SEO keyword lists,
+earned-media pitch hooks, and any downstream section that inherits the concept name.
+
+**Industry-peer rule.** The anti-fabrication rule covers *any* competitor name absent
+from the brief — not only invented names, but widely-known industry peers to a
+brief-named incumbent. If the brief names one dominant player (e.g., the user says
+"we're outspent 100x by [market leader]"), do **not** add the obvious #2 or #3 from
+the same category on your own ("LexisNexis and Westlaw," "Salesforce and HubSpot,"
+"Datadog and New Relic") as if their presence were implied context. Use escape-hatch
+phrasing instead: "the other major [category] platforms," "[incumbent]-class tools,"
+or "the dominant [category] incumbents." This applies in every section — Stage 2
+concepts, Stage 4 SEO, Stage 5 competitor saturation, Stage 7 dialogue, Stage 8
+earned-media targets. "Everyone in the industry knows it exists" is not a licence to
+name it.
+
 After presenting the five concepts, ask the user to pick one (or more) to push through
 Stage 3–5.
 
@@ -335,6 +358,20 @@ rules layer on top of the function choice and the sector rider:
 Output the stack as a prioritized list with: (a) the primary function chosen, (b) the
 channels mapped to that function, (c) an estimated weekly effort commitment per channel,
 (d) the 70/30 (or 80/20) split in plain numbers.
+
+**Anti-fabrication carries through.** The Stage 2 anti-fabrication rule applies to
+every element of the Stage 4 output: SEO keyword examples, long-tail query lists,
+directory/review-site references, competitor saturation descriptions, and any sample
+copy shown inline with the stack. If the brief did not name the incumbent, the
+incumbent's proper noun must not appear in this stage **in any casing** — not
+title-case ("Sentry alternative"), not lowercase ("sentry alternative"), not
+hyphenated, not as part of a compound keyword or URL. Search-query examples that
+would otherwise require a brand name must either retain the `[incumbent]` bracketed
+placeholder for the user to fill in, or be rewritten as non-brand equivalents
+("error monitoring for small teams," "application monitoring under $100/seat",
+"lightweight APM for node.js"). This applies equally to Stage 5's competitor
+saturation map and Stage 6–10 content: the banned-token discipline does not
+relax downstream of Stage 2.
 
 ### Stage 5 — Alternative Shapes, Ad Copy, Boost Rules, Measurement
 

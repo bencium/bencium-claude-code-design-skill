@@ -1,0 +1,47 @@
+{
+  "iteration": 2,
+  "label": "anti-fab-stage4",
+  "brief": "02-ngo-climate",
+  "model": "claude-haiku-4-5",
+  "mutation_target": "c6 (carryover from iter 1 — Stage 4 SEO leak)",
+  "mutation_locus": "skills/organic-first-campaign/SKILL.md Stage 4, after the stack-output paragraph",
+  "mutation_summary": "Added 'Anti-fabrication carries through' rule covering Stage 4+: SEO keyword examples, long-tail query lists, directory references, competitor saturation descriptions. Forbids banned token in any casing, any compound form (e.g. '[incumbent] alternative'). Explicitly states rule applies to Stages 5-10, not just Stage 4.",
+  "n_outputs": 3,
+  "max_per_output": 6,
+  "max_total": 18,
+  "outputs": [
+    {
+      "file": "01.md",
+      "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true,
+      "total": 6,
+      "failures": {},
+      "notes": "16 uses of [opposition] placeholder; Templates 1/4/5 cited; 5 concepts across distinct archetypes; MMF 3/3"
+    },
+    {
+      "file": "02.md",
+      "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true,
+      "total": 6,
+      "failures": {},
+      "notes": "13 descriptor/placeholder uses; Templates 1/5 cited; earned-media stunt + counter-narrative + community + movement + cause archetypes"
+    },
+    {
+      "file": "03.md",
+      "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true,
+      "total": 6,
+      "failures": {},
+      "notes": "Clean; 'Direkt36-tier' used as brief-verbatim category (compliant); Templates 1/5; 85/15 organic/paid allocation applied correctly for severe asymmetry"
+    }
+  ],
+  "totals": {"c1": 3, "c2": 3, "c3": 3, "c4": 3, "c5": 3, "c6": 3},
+  "aggregate_total": 18,
+  "aggregate_max": 18,
+  "pass_rate": 1.0,
+  "previous_champion_total": 17,
+  "delta": 1,
+  "delta_percentage_points": 5.6,
+  "weakest_criterion": null,
+  "weakest_criterion_pass_count": 3,
+  "verdict": "KEEP",
+  "verdict_reasoning": "Aggregate strictly improves (17 → 18). c6 hits 3/3, reaching the maximum. No regression on any other criterion. The mutation eliminated the Stage 4 SEO leak AND generalized to a rotated brief (01 SaaS → 02 NGO), which is the strongest possible signal that the fix is durable cross-sector rather than brief-specific. Ceiling reached at n=3 scale.",
+  "ceiling_note": "18/18 is the theoretical maximum at n=3. To continue discovering failure modes, the loop must either (a) scale to n=10 per iteration (where more variance surfaces rarer failure modes), or (b) rotate to more adversarial briefs (e.g. brief 06 terse-brief stress test, brief 04 solo-consumer with severe asymmetry). Option (b) is cheaper and tests the n=3 champion against inputs it hasn't seen."
+}

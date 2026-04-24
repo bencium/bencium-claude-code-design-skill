@@ -1,0 +1,62 @@
+{
+  "iteration": 0,
+  "label": "baseline",
+  "brief": "01-startup-saas",
+  "model": "claude-haiku-4-5",
+  "n_outputs": 3,
+  "max_per_output": 6,
+  "max_total": 18,
+  "outputs": [
+    {
+      "file": "01.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": false,
+      "total": 5,
+      "failures": {
+        "c6": "Concept A named 'We Quit Sentry' — Sentry is a specific competitor name not in the brief. Brief said 'well-known incumbent at ~$400/mo per seat' with no proper noun."
+      }
+    },
+    {
+      "file": "02.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": false,
+      "total": 5,
+      "failures": {
+        "c6": "SEO content suggests targeting 'Sentry alternative' keywords; concept A references 'The $400 Seat Audit' with generic [incumbent] but Shape 3 section explicitly writes 'Sentry alternative for small teams' as a target query. Sentry not in brief."
+      }
+    },
+    {
+      "file": "03.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": true,
+      "total": 6,
+      "failures": {}
+    }
+  ],
+  "totals": {
+    "c1": 3,
+    "c2": 3,
+    "c3": 3,
+    "c4": 3,
+    "c5": 3,
+    "c6": 1
+  },
+  "aggregate_total": 16,
+  "aggregate_max": 18,
+  "pass_rate": 0.889,
+  "weakest_criterion": "c6",
+  "weakest_criterion_pass_count": 1,
+  "notes": "Baseline establishes a strong floor on structural criteria (c1, c3, c4, c5 all perfect). The single failure mode is c6 anti-fabrication: model infers the incumbent's name from the category description and uses it as a proper noun (specifically 'Sentry' for error-monitoring at $400/seat). This is a well-defined, targetable weakness — first mutation will address it."
+}

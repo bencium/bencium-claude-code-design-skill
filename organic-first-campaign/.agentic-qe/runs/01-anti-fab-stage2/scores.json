@@ -1,0 +1,68 @@
+{
+  "iteration": 1,
+  "label": "anti-fab-stage2",
+  "brief": "01-startup-saas",
+  "model": "claude-haiku-4-5",
+  "mutation_target": "c6",
+  "mutation_locus": "skills/organic-first-campaign/SKILL.md Stage 2 ideation, post-bullet-list",
+  "mutation_summary": "Added explicit anti-fabrication rule covering concept names, theses, hooks, and SEO keyword lists. Rule forbids substituting an inferred proper-noun incumbent name when the brief did not supply one. Examples cite 'We Quit Sentry' as a violation.",
+  "n_outputs": 3,
+  "max_per_output": 6,
+  "max_total": 18,
+  "outputs": [
+    {
+      "file": "01.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": true,
+      "total": 6,
+      "failures": {}
+    },
+    {
+      "file": "02.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": false,
+      "total": 5,
+      "failures": {
+        "c6": "Stage 4 SEO keyword list contains 'sentry alternative under 100 per seat' — a fabricated proper-noun brand token inherited from the category description. Concept names and theses are clean; the leak migrated to the SEO sub-section despite the mutation rule explicitly covering SEO keyword lists. Same standard as baseline scoring."
+      }
+    },
+    {
+      "file": "03.md",
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "c4": true,
+      "c5": true,
+      "c6": true,
+      "total": 6,
+      "failures": {}
+    }
+  ],
+  "totals": {
+    "c1": 3,
+    "c2": 3,
+    "c3": 3,
+    "c4": 3,
+    "c5": 3,
+    "c6": 2
+  },
+  "aggregate_total": 17,
+  "aggregate_max": 18,
+  "pass_rate": 0.944,
+  "baseline_aggregate_total": 16,
+  "delta": 1,
+  "delta_percentage_points": 5.5,
+  "weakest_criterion": "c6",
+  "weakest_criterion_pass_count": 2,
+  "verdict": "KEEP",
+  "verdict_reasoning": "Aggregate total strictly improves (16 → 17). Target criterion c6 improved as hypothesized (1/3 → 2/3). No per-criterion regression. The one remaining c6 failure shows the mutation worked at the locus it was written for (Stage 2 ideation), but the lowercase token 'sentry' leaked through Stage 4's SEO keyword generation — the rule was not enforced downstream. Iter 2 should target Stage 4 SEO sub-section specifically, or tighten the rule to forbid the banned token globally regardless of casing.",
+  "notes": "Iter 1 is a partial success: the concept-naming locus is now clean across all 3 outputs (baseline had 'We Quit Sentry' and similar in Stage 2). The failure mode has migrated downstream rather than being eliminated. Worth noting that output 02's subagent self-reported 'anti-fabrication rule honored throughout' — but the actual text contained a violation. This confirms the importance of deterministic grep-based judging over trust-the-generator self-reports."
+}

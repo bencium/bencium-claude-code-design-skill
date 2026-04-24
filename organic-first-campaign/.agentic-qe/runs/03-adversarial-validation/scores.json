@@ -1,0 +1,42 @@
+{
+  "iteration_label": "03-adversarial-validation",
+  "iteration_type": "validation (not mutation)",
+  "champion_under_test": "iter-2-anti-fab-stage4 (SKILL.md with Stage 2 + Stage 4 anti-fab rules)",
+  "briefs_tested": ["03-political-underdog", "04-solo-consumer-brand", "05-cohort-course", "06-terse-brief"],
+  "n_per_brief": 3,
+  "total_outputs": 12,
+  "max_score_per_output": 6,
+  "max_aggregate": 72,
+  "model": "claude-haiku-4-5",
+  "scoring_method": "deterministic grep + sector-keyed fabrication scan; Tisza/Fidesz references treated as PASS (case-study citations from skill's own references/hungarian-case-study.md); brief-verbatim names (e.g., Udemy/Coursera named in brief 05, LexisNexis named in brief 06) treated as PASS",
+  "outputs": [
+    {"file": "brief-03/01.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Tisza/Fidesz cited as historical case-study analogy (legitimate reference). 13 section matches; MMF explicit; Template cited 2x."},
+    {"file": "brief-03/02.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Clean. MMF scored; Template cited 4x."},
+    {"file": "brief-03/03.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Tisza/Fidesz case-study reference in asymmetry analysis; appropriate scaling note for regional race. Template cited 7x."},
+    {"file": "brief-04/01.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Clean across all criteria. No fabricated creator/platform names."},
+    {"file": "brief-04/02.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Clean. Severe asymmetry correctly classified."},
+    {"file": "brief-04/03.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Explicit 'No brand names invented' discipline statement in output. Clean."},
+    {"file": "brief-05/01.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Udemy/Coursera mentioned — both brief-verbatim (brief names them in Competition field). Clean."},
+    {"file": "brief-05/02.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Clean. Rider 1 (cohort-education) applied."},
+    {"file": "brief-05/03.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Open-curriculum GitHub move as counter-position; rider failure-mode ('market the room, not the curriculum') embedded as standing watch item."},
+    {"file": "brief-06/01.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Mode C Assumptions table; MMF 2/3 with validation-cycle pre-campaign task. Clean — only LexisNexis named (brief-verbatim)."},
+    {"file": "brief-06/02.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": true, "total": 6, "notes": "Mode C; MMF 2/3 borderline; 6h/week capacity. Clean — no Westlaw leak."},
+    {"file": "brief-06/03.md", "c1": true, "c2": true, "c3": true, "c4": true, "c5": true, "c6": false, "total": 5, "notes": "NEW C6 FAILURE. Mentions 'Westlaw' at line 205 (dialogue: 'a Westlaw subscription they share') and line 330 ('dominated by LexisNexis and Westlaw'). The brief only named LexisNexis. Westlaw is the well-known #2 competitor in legal research — the skill leaked it as an industry-peer reference. This is exactly the kind of rare failure-mode that only terse Mode C + categorical asymmetry surfaces."}
+  ],
+  "totals": {"c1": 12, "c2": 12, "c3": 12, "c4": 12, "c5": 12, "c6": 11},
+  "aggregate_total": 71,
+  "aggregate_max": 72,
+  "pass_rate": 0.9861,
+  "weakest_criterion": "c6",
+  "weakest_criterion_pass_count": 11,
+  "per_brief_aggregate": {
+    "brief-03": {"total": 18, "max": 18, "pass_rate": 1.0},
+    "brief-04": {"total": 18, "max": 18, "pass_rate": 1.0},
+    "brief-05": {"total": 18, "max": 18, "pass_rate": 1.0},
+    "brief-06": {"total": 17, "max": 18, "pass_rate": 0.944}
+  },
+  "verdict": "KEEP champion (no regression; 11/12 clean is robust cross-sector); new failure mode identified for iter 3 if continued",
+  "new_failure_mode_surfaced": "c6 leak of well-known industry-peer competitor under terse Mode C + categorical asymmetry. When brief names only the market leader (e.g., LexisNexis), the skill may reference the obvious #2 (Westlaw) as an industry-context signal. Current Stage 2 + Stage 4 rules forbid inventing competitor names absent from brief, but the model appears to treat 'industry-peer-everyone-knows' as implied context rather than fabrication.",
+  "iter_3_target_hypothesis": "Tighten anti-fabrication rule to explicitly cover 'industry-peer references' — not just truly invented names, but any named competitor absent from the brief, even when inferrable from the incumbent. Locus: Stage 2 existing rule + add enforcement in Stage 5/6/7 where competitor-saturation and earned-media sections live. Expected delta: brief-06/03 c6 lifts to PASS, aggregate 71→72 (100%).",
+  "created": "2026-04-23"
+}
