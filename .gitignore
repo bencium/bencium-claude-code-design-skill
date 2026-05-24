@@ -9,3 +9,11 @@ rag-debug/
 resilience-audit/
 supabase-stripe-security/
 video-gen-prompting/
+
+# organic-first-campaign: internal workflow only, never published
+organic-first-campaign/post.md
+organic-first-campaign/.agentic-qe/
+organic-first-campaign/skills/organic-first-campaign/REFACTOR-NOTES.md
+organic-first-campaign/The_Organic_Playbook.mp4
+organic-first-campaign/*.mp4
+organic-first-campaign/*.mov

@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>organic-first-campaign. A Claude Code plugin.</title>
+<meta name="description" content="Campaign plans for everyone who is outspent. Paid spend is treated as amplification, not the plan. A Claude Code plugin built around the methodology that took Hungary's opposition from zero paid media to a parliamentary supermajority against a four-billion-euro state-backed advertising machine.">
+<meta property="og:title" content="€0 beat €4 billion. organic-first-campaign.">
+<meta property="og:description" content="A Claude Code plugin that refuses the 'content calendar plus ads plus influencers' default. Built around the methodology that beat a twenty-year incumbent on near-zero paid media.">
+<meta property="og:type" content="website">
+<style>
+:root {
+  --paper: oklch(0.965 0.012 70);
+  --paper-deep: oklch(0.94 0.014 70);
+  --ink: oklch(0.18 0.018 50);
+  --ink-2: oklch(0.45 0.022 50);
+  --ink-3: oklch(0.62 0.022 50);
+  --accent: oklch(0.58 0.20 35);
+  --accent-deep: oklch(0.42 0.18 35);
+  --accent-ink: oklch(0.96 0.012 70);
+  --rule: oklch(0.86 0.02 70);
+  --rule-strong: oklch(0.30 0.04 50);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02", "tnum";
+}
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 72px) clamp(20px, 5vw, 56px) clamp(48px, 8vw, 96px);
+}
+section { margin: 0; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+a:hover { background: var(--accent); color: var(--accent-ink); border-bottom-color: var(--accent); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+.kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.kicker .num { color: var(--ink-3); margin-right: 6px; }
+
+h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  margin: 14px 0 0;
+  color: var(--ink);
+}
+h1 .v {
+  display: block;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ink-3);
+  margin: 18px 0 0;
+  font-style: italic;
+  font-variant-numeric: tabular-nums;
+}
+h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+h2 + .pre, h2 + p { margin-top: 0; }
+
+.section { padding-top: clamp(48px, 7vw, 80px); }
+.section:first-of-type { padding-top: 0; }
+
+p { margin: 0 0 16px; max-width: 62ch; }
+p.lede {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 56ch;
+  margin: 28px 0 36px;
+}
+p.lede strong { color: var(--ink); }
+
+.hero {
+  padding-bottom: clamp(40px, 6vw, 64px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.install {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  margin: 0 0 24px;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.install code {
+  padding: 14px 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+  flex: 1 1 auto;
+  background: transparent;
+  color: var(--paper);
+}
+.install button {
+  flex: 0 0 auto;
+  background: var(--accent);
+  border: none;
+  color: var(--accent-ink);
+  cursor: pointer;
+  padding: 14px 18px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.install button:hover { background: var(--accent-deep); }
+.install button.ok { background: var(--ink-2); }
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+.cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.cta--primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.cta--primary:hover { background: var(--accent-deep); color: var(--accent-ink); border-color: var(--accent-deep); }
+
+.wedge {
+  background: var(--ink);
+  color: var(--paper);
+  margin: clamp(48px, 7vw, 80px) calc(-1 * clamp(20px, 5vw, 56px)) 0;
+  padding: clamp(40px, 6vw, 64px) clamp(20px, 5vw, 56px);
+}
+.wedge .kicker { color: var(--accent); }
+.wedge .kicker .num { color: oklch(0.62 0.04 50); }
+.wedge h2 { color: var(--paper); margin-top: 14px; font-size: clamp(1.6rem, 3vw, 2.4rem); max-width: 18ch; }
+.wedge p { color: oklch(0.85 0.012 70); max-width: 56ch; }
+.wedge strong { color: var(--paper); }
+.wedge .accent-word { background: var(--accent); color: var(--accent-ink); padding: 0 6px; }
+
+.specs { margin: 16px 0 0; padding: 0; list-style: none; }
+.specs li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.specs li:first-child { border-top: 1px solid var(--rule-strong); padding-top: 12px; }
+.specs .marker {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  flex: 0 0 32px;
+}
+.specs .body { flex: 1 1 auto; }
+
+.fights {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule-strong);
+  font-variant-numeric: tabular-nums;
+}
+.fights li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 32px 1fr auto 1fr;
+  gap: 14px;
+  align-items: baseline;
+  font-size: 15px;
+}
+.fights .n {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.fights .you { font-weight: 700; color: var(--ink); }
+.fights .vs { color: var(--ink-3); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; padding: 0 6px; }
+.fights .them { color: var(--ink-2); text-align: right; }
+@media (max-width: 640px) {
+  .fights li { grid-template-columns: 28px 1fr; row-gap: 4px; }
+  .fights .vs { display: none; }
+  .fights .them { text-align: left; grid-column: 2; color: var(--ink-3); font-size: 14px; }
+}
+
+.steps { margin: 16px 0 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+  line-height: 1.45;
+}
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps li::before {
+  counter-increment: step;
+  content: counter(step, decimal-leading-zero);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.steps li > div { padding-top: 1px; }
+
+details {
+  margin: 24px 0 0;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  padding: 18px 0;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; color: var(--accent); font-weight: 700; font-size: 20px; line-height: 1; }
+details[open] summary::after { content: "×"; }
+.demo {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.demo h4 {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 20px 0 8px;
+  font-weight: 700;
+}
+.demo h4:first-child { margin-top: 0; }
+.demo .quote {
+  background: var(--paper-deep);
+  padding: 12px 16px;
+  font-style: italic;
+  color: var(--ink);
+  font-size: 14px;
+  margin: 8px 0;
+}
+.demo table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; font-variant-numeric: tabular-nums; }
+.demo td, .demo th { padding: 6px 8px; border-bottom: 1px solid var(--rule); text-align: left; }
+.demo th { color: var(--ink-3); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+.demo ul { padding-left: 18px; margin: 8px 0; }
+
+.divider {
+  text-align: center;
+  margin: clamp(64px, 9vw, 112px) 0 clamp(48px, 6vw, 80px);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.divider::before, .divider::after {
+  content: "";
+  display: inline-block;
+  width: clamp(40px, 6vw, 80px);
+  height: 1px;
+  background: var(--accent);
+  vertical-align: middle;
+  margin: 0 16px;
+}
+
+table.iters {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 12px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+table.iters th, table.iters td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--rule); text-align: left; }
+table.iters th { font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border-bottom-color: var(--rule-strong); }
+table.iters tr:last-child td { border-bottom: 1px solid var(--rule-strong); }
+table.iters .score { font-weight: 700; color: var(--ink); }
+table.iters .keep { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 12px; }
+table.iters tr:last-child .keep { color: var(--accent-deep); }
+.tablefoot {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 12px 0 0;
+  max-width: 56ch;
+}
+.tablefoot strong { color: var(--accent); }
+
+.callout {
+  margin: 28px 0 0;
+  padding: 22px 24px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 600;
+  max-width: 56ch;
+}
+
+.video-block {
+  margin: clamp(40px, 6vw, 64px) 0 0;
+}
+.video-block .kicker { margin-bottom: 14px; }
+.video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  overflow: hidden;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+footer {
+  margin-top: clamp(64px, 9vw, 96px);
+  padding-top: 32px;
+  border-top: 1px solid var(--rule-strong);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0 0 16px;
+}
+footer a { font-weight: 500; }
+footer p { font-size: 12px; color: var(--ink-3); margin: 0; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 .v { font-size: 1.05rem; }
+  .install { display: flex; width: 100%; }
+  .install code { padding: 12px 14px; font-size: 13px; }
+  .install button { padding: 12px 14px; }
+  .cta { padding: 11px 16px; font-size: 13px; flex: 1 1 auto; justify-content: center; }
+  .ctas { gap: 0; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <p class="kicker"><span class="num">01</span>For everyone they outspend</p>
+  <h1>
+    €0 beat €4&nbsp;billion.
+    <span class="v">Hungary, April 2026. Grassroots opposition, near-zero paid media, parliamentary supermajority, against a twenty-year incumbent backed by every major global power that wanted it to stay.</span>
+  </h1>
+
+  <p class="lede">A Claude Code plugin that turns a brief into a campaign plan for the outspent. It encodes the asymmetry playbook that won that fight, and applies it to any incumbent with infinite budgets and the platforms on their side.</p>
+
+  <div class="install">
+    <code id="install-cmd">/plugin install organic-first-campaign@bencium-marketplace</code>
+    <button type="button" onclick="copyInstall(this)" aria-label="Copy install command">Copy</button>
+  </div>
+
+  <div class="ctas">
+    <a class="cta cta--primary" href="https://github.com/bencium/bencium-marketplace" target="_blank" rel="noopener">★&nbsp;Star on GitHub</a>
+    <a class="cta" href="https://twitter.com/intent/tweet?text=%E2%82%AC0%20beat%20%E2%82%AC4%20billion.%20organic-first-campaign%20is%20a%20Claude%20Code%20plugin%20that%20refuses%20the%20%E2%80%98content%20calendar%20plus%20ads%20plus%20influencers%E2%80%99%20default.%20Built%20around%20the%20methodology%20that%20beat%20a%20twenty-year%20incumbent%20on%20near-zero%20paid%20media.&url=https%3A%2F%2Fgithub.com%2Fbencium%2Fbencium-marketplace" target="_blank" rel="noopener">Share&nbsp;X</a>
+    <a class="cta" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2Fbencium%2Fbencium-marketplace" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+
+  <div class="video-block">
+    <p class="kicker">Watch the playbook</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/2vJGi34lc_o?rel=0&modestbranding=1"
+        title="The Organic Playbook"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section wedge">
+  <p class="kicker"><span class="num">02</span>What it refuses</p>
+  <h2>Paid spend is treated as amplification. <span class="accent-word">Not the plan.</span></h2>
+  <p>A normal marketing assistant defaults to "content calendar plus ads plus influencer outreach." This skill refuses that pattern. It treats credibility and community trust as the bottleneck, paid media as a boost gate on top of proven organic winners, and incremental lift as the only metric that counts. Platform-reported ROAS describes activity, not causality.</p>
+  <p>Most campaign-AI tools sell reach. This one sells the discipline that wins when reach is the rigged game.</p>
+</section>
+
+<section class="section">
+  <p class="kicker"><span class="num">03</span>What makes it different</p>
+  <h2>Four claims most marketing-AI tools cannot make.</h2>
+
+  <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); margin: 28px 0 6px;">01. Anti-fabrication is a discipline, not a hope.</h3>
+  <p>Explicit rules cover unnamed competitors, industry peers, SEO keyword examples, and earned-media targets. When the brief says "the dominant incumbent" without naming anyone, the skill refuses to quietly fill in Sentry, Datadog, HubSpot. It stays at the level of abstraction the brief gave it. This is the best part of the skill, and the loop in section 06 below is what got it there.</p>
+
+  <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); margin: 32px 0 6px;">02. A real refusal mechanism, not just "best practices."</h3>
+  <p>The message-market-fit gate is a hard refusal. If the offer is not validated (no paid commitments, no audience language, no close signal), the skill stops, names the missing evidence, and routes you to a discovery cycle instead of generating a plan anyway. The intent is not "always produce a campaign plan." The intent is to protect you from running the wrong campaign.</p>
+
+  <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); margin: 32px 0 6px;">03. Modular references, loaded on demand.</h3>
+  <p>Archetypes, sector riders, asymmetry tables, channel tiers, the authenticity playbook, lift-test templates, and the Hungary case study live in separate files. The main workflow loads them only when a stage actually needs them, instead of stuffing every decision into one monolithic prompt. The skill stays legible; the agent stays accurate.</p>
+
+  <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); margin: 32px 0 6px;">04. Orchestration-agnostic. Works in any agent harness.</h3>
+  <p>The skill is portable by design. It ships as a Claude Code plugin, and the same files run unchanged inside Codex, Pidev, Opencode, or any agent environment that can read a prompt. Where the workflow says "ask the user," it uses whatever structured-question facility your harness provides, or falls back to plain text. You are not locked to one orchestrator.</p>
+</section>
+
+<section class="section">
+  <p class="kicker"><span class="num">04</span>The kinds of fights</p>
+  <h2>Anywhere the spending math is rigged and the trust math is not.</h2>
+  <ol class="fights">
+    <li><span class="n">01</span><span class="you">Indie SaaS founder</span><span class="vs">vs</span><span class="them">Big&nbsp;4 AI-advisory arm</span></li>
+    <li><span class="n">02</span><span class="you">Open-source maintainer</span><span class="vs">vs</span><span class="them">VC-funded commercial fork</span></li>
+    <li><span class="n">03</span><span class="you">Single-product B2B startup</span><span class="vs">vs</span><span class="them">enterprise-suite incumbent</span></li>
+    <li><span class="n">04</span><span class="you">Niche analytics tool</span><span class="vs">vs</span><span class="them">category-king platform</span></li>
+    <li><span class="n">05</span><span class="you">Privacy-first consumer app</span><span class="vs">vs</span><span class="them">ad-funded incumbent</span></li>
+    <li><span class="n">06</span><span class="you">Local newsroom</span><span class="vs">vs</span><span class="them">private-equity media rollup</span></li>
+    <li><span class="n">07</span><span class="you">Independent bookstore</span><span class="vs">vs</span><span class="them">global logistics moat</span></li>
+    <li><span class="n">08</span><span class="you">Indie game studio</span><span class="vs">vs</span><span class="them">AAA publisher marketing</span></li>
+    <li><span class="n">09</span><span class="you">DTC skincare brand</span><span class="vs">vs</span><span class="them">legacy beauty conglomerate</span></li>
+    <li><span class="n">10</span><span class="you">Specialty coffee roaster</span><span class="vs">vs</span><span class="them">multinational chain</span></li>
+    <li><span class="n">11</span><span class="you">Boutique hotel</span><span class="vs">vs</span><span class="them">global hospitality chain</span></li>
+    <li><span class="n">12</span><span class="you">Solo educator, cohort course</span><span class="vs">vs</span><span class="them">bootcamp marketing budget</span></li>
+  </ol>
+</section>
+
+<section class="section">
+  <p class="kicker"><span class="num">05</span>How it works</p>
+  <h2>Three moves.</h2>
+  <ul class="steps">
+    <li><div>You paste a campaign brief. Any length. Even one sentence.</div></li>
+    <li><div>The skill runs five stages with a message-market-fit gate. If the offer is not validated, the gate refuses the plan and routes you to a discovery cycle instead.</div></li>
+    <li><div>You pick a campaign shape. The skill produces first-thirty-days actions, a lift test, and an anti-vanity dashboard.</div></li>
+  </ul>
+
+  <details>
+    <summary>See a real run: enterprise AI adoption, categorical asymmetry, €0 budget</summary>
+    <div class="demo">
+      <p>A solo educator teaching enterprise AI adoption, outspent by the named consultancies' AI-advisory arms. Excerpt from a live run.</p>
+
+      <h4>Section 0. Assumptions</h4>
+      <table>
+        <tbody>
+          <tr><td>Outcome</td><td>Cohort and workshop signups</td></tr>
+          <tr><td>Audience</td><td>VPs of Engineering at mid-market</td></tr>
+          <tr><td>Sector</td><td>Cohort education, personal-brand overlay</td></tr>
+          <tr><td>Budget yours</td><td>€0&nbsp;/&nbsp;month</td></tr>
+          <tr><td>Budget incumbent</td><td>Categorical (effectively unbounded)</td></tr>
+          <tr><td>Bottleneck</td><td>Trust</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Section 3. Spend-asymmetry verdict</h4>
+      <p>Your asymmetry is categorical. You cannot be in a spending race. This is the good news: the recommended playbook, Tier 1 to Tier 2 only, refuse broad cold-paid, counter-position against incumbent saturation, is the right answer at this ratio, not a compromise.</p>
+      <p><strong>Preconditions score: 5&nbsp;/&nbsp;6.</strong> Credible insider, accumulated grievance, felt pain, threshold-rewarding system, and overplayed incumbent all present. Consolidated challenger field is partial; differentiation matters more than usual.</p>
+
+      <h4>Section 6. Competitor saturation (excerpt)</h4>
+      <p><strong>What they saturate:</strong> polished maturity-assessment frameworks, multi-author PDFs, op-eds, conference circuit presence, corporate-voiced thought leadership authored by rotating partners.</p>
+      <p><strong>The absence that becomes your signal:</strong> your named individual voice, with real engagement detail, published consistently on one platform. They predict; you report.</p>
+      <p class="quote">The incumbents publish AI roadmaps for the board. I help you ship the one that actually runs.</p>
+
+      <h4>Section 7. Three shapes</h4>
+      <ul>
+        <li><strong>Founder-arc plus curriculum.</strong> Weekly post on one platform for twelve months, with the cohort curriculum published openly. Slowest to revenue, highest compounding.</li>
+        <li><strong>Earned-media-first.</strong> One signature artifact, then a six-to-eight week earned-media push. Fastest measurable spike.</li>
+        <li><strong>Community-first.</strong> Peer-validated admissions for one in-person workshop. Fastest to revenue, no public artifact.</li>
+      </ul>
+      <p style="margin-top: 16px; font-size: 13px; color: var(--ink-3);">Full output runs roughly seven hundred lines including the week-by-week plan, the lift test, and the anti-vanity dashboard.</p>
+    </div>
+  </details>
+</section>
+
+<div class="divider">How this was hardened</div>
+
+<section class="section">
+  <p class="kicker"><span class="num">06</span>The engineer</p>
+  <h2>I build skills that hold their edge as models change.</h2>
+  <p class="lede">An agentic engineer's claim is worth what their loop produces. So I built a self-grading loop that runs on every skill I ship. Here is what it did to this one.</p>
+
+  <h2 style="margin-top: 40px;">The problem.</h2>
+  <p>The skill looked solid. It had stages, refusals, case studies, all the structure you would want. Then I tested it.</p>
+  <p>Give it a brief that says "we compete with a well-known incumbent" without naming anyone, and the AI quietly fills in the blank. It picks a real company from its training data: Sentry, DataDog, whichever felt right. The whole campaign anchors on that guess. Concepts, search keywords, earned-media pitches, all built on a name the user never gave.</p>
+  <p>The user takes that plan to a client meeting. Weeks later: "actually our competitor isn't Sentry." Too late.</p>
+  <p>This is the AI failure mode that does not show up in benchmarks. It looks right. It passes a quick eyeball review. The damage surfaces after it ships.</p>
+
+  <h2 style="margin-top: 48px;">The fix.</h2>
+  <ul class="specs">
+    <li><span class="marker">01</span><span class="body">Six yes-or-no questions that define "good output."</span></li>
+    <li><span class="marker">02</span><span class="body">An AI judge grades every generation against those questions.</span></li>
+    <li><span class="marker">03</span><span class="body">An AI optimizer proposes surgical edits to the skill prompt.</span></li>
+    <li><span class="marker">04</span><span class="body">Keep only edits that strictly improve the aggregate score.</span></li>
+    <li><span class="marker">05</span><span class="body">Log every attempt: what was kept, what was reverted, why.</span></li>
+  </ul>
+  <p style="margin-top: 20px;">I walked away. The loop ran.</p>
+
+  <h2 style="margin-top: 48px;">The numbers.</h2>
+  <table class="iters">
+    <thead>
+      <tr><th>Iter</th><th>Brief</th><th>Mutation</th><th>Score</th><th>Verdict</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>00</td><td>SaaS</td><td>baseline</td><td class="score">16&nbsp;/&nbsp;18</td><td>—</td></tr>
+      <tr><td>01</td><td>SaaS</td><td>anti-fabrication rule, stage&nbsp;2</td><td class="score">17&nbsp;/&nbsp;18</td><td class="keep">keep</td></tr>
+      <tr><td>02</td><td>NGO climate</td><td>anti-fab carry-through, stage&nbsp;4</td><td class="score">18&nbsp;/&nbsp;18</td><td class="keep">keep</td></tr>
+      <tr><td>03</td><td>legal-tech terse</td><td>industry-peer rule, stage&nbsp;2</td><td class="score">18&nbsp;/&nbsp;18</td><td class="keep">ship</td></tr>
+    </tbody>
+  </table>
+  <p class="tablefoot"><strong>107&nbsp;/&nbsp;108&nbsp;=&nbsp;99.1%</strong> across six sector briefs: SaaS, NGO climate, political underdog, solo consumer brand, cohort course, legal-tech terse. Forty-one minutes wall-clock. Roughly fifty cents of Haiku compute.</p>
+
+  <h2 style="margin-top: 48px;">Why the log matters.</h2>
+  <p>The improvement is not the asset. The log is. Every edit the loop tried, every score, every kept-or-reverted verdict.</p>
+  <p>When I edit this skill in six months, the log is my regression test. When a stronger model arrives next year, the loop picks up where this run stopped. Research data compounds.</p>
+
+  <p class="callout">Most teams treat AI as a tool they use. The teams building a real advantage treat AI as a system they teach. The teaching is what compounds.</p>
+
+  <div class="ctas" style="margin-top: 40px;">
+    <a class="cta cta--primary" href="https://github.com/bencium/bencium-marketplace" target="_blank" rel="noopener">★&nbsp;Star on GitHub</a>
+    <a class="cta" href="https://twitter.com/intent/tweet?text=%E2%82%AC0%20beat%20%E2%82%AC4%20billion.%20organic-first-campaign%20is%20a%20Claude%20Code%20plugin%20that%20refuses%20the%20%E2%80%98content%20calendar%20plus%20ads%20plus%20influencers%E2%80%99%20default.&url=https%3A%2F%2Fgithub.com%2Fbencium%2Fbencium-marketplace" target="_blank" rel="noopener">Share&nbsp;X</a>
+    <a class="cta" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2Fbencium%2Fbencium-marketplace" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="links">
+    <a href="https://bencium.io" target="_blank" rel="noopener">bencium.io</a>
+    <a href="https://github.com/bencium/bencium-marketplace" target="_blank" rel="noopener">More plugins</a>
+  </div>
+  <p>Built by bencium.io. Released under the marketplace license.</p>
+</footer>
+
+</main>
+
+<script>
+function copyInstall(btn) {
+  const cmd = document.getElementById('install-cmd').textContent;
+  navigator.clipboard.writeText(cmd).then(() => {
+    const original = btn.textContent;
+    btn.textContent = 'Copied';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('ok'); }, 1400);
+  }).catch(() => { btn.textContent = 'Press ⌘C'; });
+}
+</script>
+
+</body>
+</html>

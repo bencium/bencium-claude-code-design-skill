@@ -1,6 +1,6 @@
 # Lift-Test Templates
 
-Stage 5 of `SKILL.md` requires a concrete measurement plan for any paid spend. Platforms
+Stage 5b of `SKILL.md` requires a concrete measurement plan for any paid spend. Platforms
 report *attributed* conversions — conversions correlated with an ad view. What the user
 needs is *incremental* conversions — conversions that would not have happened without
 the ad. The gap between these two numbers is often the entire ad spend.
@@ -166,7 +166,7 @@ campaign running either alone.
 
 ## Output in the deliverable
 
-In Stage 5 of `SKILL.md`, produce a specific, named experiment from one of these templates.
+In Stage 5b of `SKILL.md`, produce a specific, named experiment from one of these templates.
 Not "set up some form of lift testing." A template like:
 
 > **Geo-holdout: 4-week experiment**
@@ -179,7 +179,7 @@ Not "set up some form of lift testing." A template like:
 
 Specificity is the whole point. A vague measurement plan is no measurement plan.
 
-## Template 4 — Brand-keyword holdout test
+## Template 5 — Brand-keyword holdout test
 
 Best for: established brands, SaaS, e-commerce, anyone currently bidding on their own
 brand name in Google Ads (or Bing / other search networks).
@@ -234,20 +234,20 @@ have converted regardless. The lift vs. no-ad condition is the honest number.
   "company-name reviews" or "company-name vs competitor-name." Test each segment
   separately.
 
-### Why this template belongs in Stage 5
+### Why this template belongs in Stage 5b
 
-Stage 5 of `SKILL.md` forbids broad cold-paid for severe / categorical asymmetry. For mild
+Stage 4 of `SKILL.md` forbids broad cold-paid for severe / categorical asymmetry. For mild
 asymmetry users, the single most common paid mistake is brand-keyword overspend. This
-template catches it. Run this test before any other paid-search expansion.
+template catches it in Stage 5b. Run this test before any other paid-search expansion.
 
-## Template 5 — Organic-source attribution (zero-budget)
+## Template 6 — Organic-source attribution (zero-budget)
 
 Best for: campaigns with no paid budget at all. Every Tisza-style campaign, early-stage
 startup, NGO push, solo practitioner, and any underdog at categorical asymmetry.
 
 ### Why this template matters
 
-Templates 1–4 all assume some paid spend to test against a holdout. Zero-budget campaigns
+Templates 1–5 all assume some paid spend to test against a holdout. Zero-budget campaigns
 have no holdout axis — there is no "paid on" vs. "paid off" comparison possible. But
 measurement is still mandatory. Without source-level attribution, the user cannot tell
 whether LinkedIn is driving the campaign or the newsletter is, which means they cannot
@@ -297,10 +297,10 @@ via the newsletter link may have first heard about the event on LinkedIn and lat
 clicked through an email — multi-touch attribution is underspecified in this template.
 Treat the rankings as a rough guide to effort allocation, not as proof of lift. If the
 campaign later gets any budget, graduate to Template 1 (geo-holdout) for real lift
-measurement.
+measurement. Until then, this template is what the user runs to keep Stage 5b honest.
 
-### Why this template belongs in Stage 5
+### Why this template belongs in Stage 5b
 
 Zero-budget campaigns are the default case for the organic-first skill. Without a
-zero-budget template, Stage 5 would either demand a paid test the user cannot run or
-quietly drop the measurement requirement. Template 5 fills that gap.
+zero-budget template, Stage 5b would either demand a paid test the user cannot run or
+quietly drop the measurement requirement. Template 6 fills that gap.

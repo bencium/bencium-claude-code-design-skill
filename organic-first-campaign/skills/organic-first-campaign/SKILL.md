@@ -67,11 +67,46 @@ time and money for distribution.
 
 ## Workflow
 
-The skill runs in six stages (1, 2, 3, 3a, 4, 5). Do not skip stages; later stages
-depend on the user's answers and selections from earlier ones. Stage 3a (MMF Gate)
-can refuse the full campaign plan and route the user to validation work instead.
+The skill runs in seven stages (1, 2, 3, 3a, 4, 5, 5b). Do not skip stages; later
+stages depend on the user's answers and selections from earlier ones. Stage 3a
+(MMF Gate) can refuse the full campaign plan and route the user to validation work
+instead. Stage 5 ends with a shape selection — Stage 5b only begins once the user
+has picked one of the three shapes.
+
+This skill is designed to be portable across agent environments. Where the workflow
+says "ask the user," use whatever structured-question facility your environment
+provides (in Claude Code that is the `AskUserQuestion` tool, batching up to 4
+questions per call); if no structured tool exists, ask in plain text and wait for
+the user to reply before continuing. Either way, never invent answers.
+
+**Resume Protocol (idempotency).** Before producing any output, scan the
+conversation for prior skill output. If a section's heading (`## N. <name>`)
+is already present in the conversation, do not regenerate it. Pick up at the
+first stage whose Contract preconditions are satisfied AND whose output
+section(s) are not yet in the conversation. If the user explicitly asks to
+restart, restart from Stage 1; otherwise resume rather than rerun. This makes
+the skill safely re-invokable: a second call in the same conversation produces
+only the next incremental section, never duplicates or regressions to earlier
+stages. Scope: idempotency holds within a single conversation; if prior output exists only in an external file or a previous session, paste it into the conversation first or restart from Stage 1.
+
+**Stage Contracts.** Each stage below opens with a **Contract** block declaring
+inputs, outputs, preconditions, postconditions, and failure modes. The contract
+is the structural boundary — it is what makes the stage retry-safe, error-
+explicit, and self-describing. Treat the contract as binding: if the
+preconditions are not met, do not enter the stage; if a failure-mode trigger
+fires, take the declared action rather than improvising.
 
 ### Stage 1 — Interview / Brief Capture
+
+**Contract**
+- Inputs: user's initial brief (free text, any length).
+- Outputs: Section 0 (Assumptions table) under Mode C; mode-tag (A/B/C) and the 8 fields captured in working memory for downstream stages.
+- Preconditions: none (entry stage).
+- Postconditions: all 8 fields have a value (captured, defaulted, or flagged as `[ask]` for a still-pending question); mode is determined.
+- Failure modes:
+  - any always-capture field missing under Mode C → add it to the question batch; do not default silently.
+  - a missing field would change Stage 3 asymmetry classification OR Stage 4 function choice → escalate it into the batch even if it would normally default.
+  - user gives contradictory values for the same field → ask one clarifying question; do not pick one silently.
 
 The skill has **three intake modes**. Pick the mode that matches the user's brief
 before asking any questions.
@@ -82,8 +117,9 @@ confirm understanding in one sentence, and proceed to Stage 2.
 
 **Mode B — Interview mode.** The user explicitly asks to be scoped ("help me figure
 out what this campaign should be," "walk me through it," "interview me"). Ask the 8
-questions below via `AskUserQuestion` in batches of ≤4 per call. Do not invent
-answers. Do not merge questions.
+questions below in batches of ≤4 per turn, using the environment's structured
+question facility if one exists (see the structured-tool note in the Workflow
+section above). Do not invent answers. Do not merge questions.
 
 **Mode C — Default mode (for terse briefs).** The user gave a short brief
 (≤2 sentences) without asking for an interview. This is the common case. Do NOT run
@@ -91,8 +127,8 @@ the full 8-question interview — it turns a 12-word prompt into an interrogatio
 Instead:
 
 1. **Always-capture fields (ask once, batched).** Four fields are too material to
-   default silently; getting them wrong produces a generic plan. Send **one**
-   `AskUserQuestion` call with up to 4 questions covering:
+   default silently; getting them wrong produces a generic plan. Ask the user in
+   **one batch** of up to 4 questions covering:
 
    - **Outcome** — what specific action is the campaign driving (signups, ticket
      sales, votes, donations, attendance, pre-orders, qualified demos)?
@@ -111,7 +147,7 @@ Instead:
      silently.
 
    If one of these four fields is already clearly present in the user's brief,
-   drop it from the `AskUserQuestion` call. Only ask what is missing.
+   drop it from the question batch. Only ask what is missing.
 
 2. **Default-with-flag fields.** The remaining fields default silently but are
    surfaced in an **Assumptions table** at the top of the final deliverable (Stage
@@ -127,9 +163,9 @@ Instead:
 
 3. **Escalation rule.** If a missing field would materially change the Stage 3
    asymmetry classification *or* the Stage 4 primary-function choice, do not
-   default it — add it to the `AskUserQuestion` call. Example: if the user
-   mentions "our whole team is posting already" but does not specify which
-   channels, ask, because it changes the channel stack.
+   default it — add it to the question batch. Example: if the user mentions
+   "our whole team is posting already" but does not specify which channels,
+   ask, because it changes the channel stack.
 
 4. **Assumptions table is mandatory under Mode C.** Open the final deliverable
    with a table listing every defaulted field and its assumed value. End the
@@ -163,6 +199,16 @@ Regardless of mode, the campaign plan is grounded in these 8 fields:
    (Defaults to 6h/week in Mode C.)
 
 ### Stage 2 — Ideation (generate 5+ campaign concepts across archetypes)
+
+**Contract**
+- Inputs: 8 fields from Stage 1 (especially sector, audience, competition descriptor).
+- Outputs: Section 1 (Campaign Ideas) with ≥5 concepts across distinct archetypes; an explicit ask to the user to pick one or more.
+- Preconditions: Stage 1 complete; sector field has a value (named or `other`).
+- Postconditions: ≥5 distinct-archetype concepts presented; user has been prompted to select.
+- Failure modes:
+  - competitor unnamed in brief → use `[incumbent]` placeholder or category descriptor in every concept; never invent a name.
+  - cannot produce 5 genuinely distinct archetypes for this audience/sector → say so plainly, present what you have, do not pad with cosmetic variants of one archetype.
+  - user's brief names one dominant player but expects industry peers → do not auto-name the obvious #2/#3; use the escape-hatch phrasings from the Industry-peer rule.
 
 Before any audit or channel work, generate **at least five distinct campaign concepts**,
 drawn from different archetypes in `references/campaign-archetypes.md`. Do not converge
@@ -201,14 +247,25 @@ the same category on your own ("LexisNexis and Westlaw," "Salesforce and HubSpot
 "Datadog and New Relic") as if their presence were implied context. Use escape-hatch
 phrasing instead: "the other major [category] platforms," "[incumbent]-class tools,"
 or "the dominant [category] incumbents." This applies in every section — Stage 2
-concepts, Stage 4 SEO, Stage 5 competitor saturation, Stage 7 dialogue, Stage 8
-earned-media targets. "Everyone in the industry knows it exists" is not a licence to
-name it.
+concepts, Stage 4 SEO, Stage 5 competitor saturation, Stage 5b earned-media
+targets and ad-copy hooks, and any other downstream output. The discipline does
+not relax in any later stage. "Everyone in the industry knows it exists" is not a
+licence to name it.
 
 After presenting the five concepts, ask the user to pick one (or more) to push through
 Stage 3–5.
 
 ### Stage 3 — Asymmetry Audit
+
+**Contract**
+- Inputs: budget (user's + competitor's), or heuristic answers from `references/asymmetry-audit-table.md`; the concept(s) the user selected from Stage 2.
+- Outputs: Section 3 (Spend Asymmetry Verdict) — one-sentence classification + preconditions score (0–6).
+- Preconditions: Stage 2 complete; user has named one or more concepts to push forward.
+- Postconditions: asymmetry classified as mild / severe / categorical; preconditions count is in {0..6}; downstream stages know which playbook scale to run.
+- Failure modes:
+  - 0–2 preconditions → name the missing ones, refuse the full playbook, route the user to building the missing preconditions as the campaign itself.
+  - asymmetry numbers absent → ask the heuristic questions in the reference file; do not assume a level.
+  - user gives competitor spend in a non-comparable form (e.g., revenue, headcount) → ask one clarifying question to convert to spend ratio; do not estimate silently.
 
 Classify the user's spend asymmetry using the table in `references/asymmetry-audit-table.md`.
 
@@ -256,6 +313,16 @@ Score 0–6. Tell the user the count plainly and what it implies:
 
 ### Stage 3a — Message-Market-Fit Gate
 
+**Contract**
+- Inputs: three yes/no signals (revenue/commitment, audience-language, close) from the user.
+- Outputs: Section 3a (3 signals + 0–3 score + explicit verdict).
+- Preconditions: Stage 3 complete.
+- Postconditions: verdict ∈ {3/3 proceed, 2/3 validation-cycle, 0–1/3 refuse}; downstream stages know whether to proceed, insert a validation cycle, or stop.
+- Failure modes:
+  - **score 0–1/3 → produce only Section 3a + refusal text; do NOT generate Sections 4–11. Route the user to a discovery cycle.**
+  - score 2/3 → produce Section 3a + the validation-cycle pre-task description; allow Stage 4 only after the validation cycle is named.
+  - user does not know the answer to a signal → treat that signal as a "no" (absence of evidence is evidence of absence for MMF); do not skip the question.
+
 Before assembling a channel stack, verify the campaign is solving a **distribution
 problem, not an MMF problem**. Distribution amplifies signal; it cannot manufacture
 it. A founder's great LinkedIn post cannot sell a product nobody wants, and a
@@ -298,6 +365,16 @@ Report the MMF verdict at the top of the Stage 3 section of the final output so
 the user sees it before the channel stack.
 
 ### Stage 4 — Channel Tier Stack + 70/30 Allocation
+
+**Contract**
+- Inputs: bottleneck (Stage 1 Q6), sector (Stage 1 Q1), asymmetry verdict (Stage 3), MMF verdict (Stage 3a).
+- Outputs: Section 4 (Channel Tier Stack) + Section 5 (70/30 or 80/20 Allocation).
+- Preconditions: Stage 3a verdict is `3/3 proceed` OR `2/3 with validation cycle attached`. **If verdict is `0–1/3 refuse`, this stage MUST NOT execute.**
+- Postconditions: primary function chosen (demand-capture / paid-amplification / trust-compounding); sector rider applied; channels listed with weekly effort estimates; allocation split stated in plain numbers.
+- Failure modes:
+  - asymmetry is categorical AND user requests broad cold-paid Tier 4 → refuse, route to Tier 1/2 + counter-positioning, explain the diminishing-returns curve from `references/authenticity-playbook.md`.
+  - sector = `other` → flag rider mismatch in Assumptions table, proceed with the closest rider, name which rider assumptions do not apply.
+  - function choice conflicts with sector rider (e.g., B2B SaaS rider biases founder-LinkedIn, function choice is demand-capture) → surface the conflict, present both paths, do not collapse silently.
 
 **Function before cost.** Before picking channels, pick the campaign's primary function
 against the user's bottleneck (from Stage 1 Q6). Use the function table at the top of
@@ -370,12 +447,24 @@ would otherwise require a brand name must either retain the `[incumbent]` bracke
 placeholder for the user to fill in, or be rewritten as non-brand equivalents
 ("error monitoring for small teams," "application monitoring under $100/seat",
 "lightweight APM for node.js"). This applies equally to Stage 5's competitor
-saturation map and Stage 6–10 content: the banned-token discipline does not
-relax downstream of Stage 2.
+saturation map and to every Stage 5b output section (`## 8`–`## 11`): the
+banned-token discipline does not relax downstream of Stage 2.
 
-### Stage 5 — Alternative Shapes, Ad Copy, Boost Rules, Measurement
+### Stage 5 — Shape Menu + Competitor Saturation Map
 
-Given the selected concept + channel stack, produce:
+**Contract**
+- Inputs: selected concept (Stage 2), channel stack + allocation (Stage 4).
+- Outputs: Section 6 (Competitor Saturation Map) + Section 7 (Three Alternative Campaign Shapes). **No other sections.**
+- Preconditions: Stage 4 complete; allocation stated.
+- Postconditions: 3 shapes presented with tradeoffs; user has been explicitly asked to pick one; turn ends.
+- Failure modes:
+  - **end of stage reached without a shape selection from the user → end the turn with the selection ask; do NOT produce Sections 8–11.**
+  - user cannot tell a Self-story (Marshall Ganz framework) → drop the founder-led shape, present community-first / earned-media-first / search-capture-first instead.
+  - brief already pre-selects a shape (rare) → confirm in one sentence, proceed to Stage 5b.
+
+Given the selected concept + channel stack, produce **only the two items below**.
+Stage 5 ends with the user picking one of the three shapes; do not generate any
+of the Stage 5b output (`## 8`–`## 11`) until the selection has been made.
 
 1. **Competitor saturation map.** Before shapes, before ad copy, before anything: for
    each of the top 2 named competitors (or top 2 competitor *categories* if the user did
@@ -409,7 +498,33 @@ Given the selected concept + channel stack, produce:
    story, drop the founder-led shape and route to community-first, earned-media-first, or
    search-capture-first instead.
 
-3. **First-30-days action list** — concrete weekly actions for weeks 1–4, mapped to the chosen
+**Stop point.** Output only sections `## 6` (Competitor Saturation Map) and `## 7`
+(Three Alternative Campaign Shapes), then end the turn with an explicit request:
+*"Pick one of the three shapes (or ask me to revise them) and I will produce the
+First-30-Days plan, ad copy, lift-test, and anti-vanity dashboard."* Do not
+generate `## 8`–`## 11` until the user names a shape. If the user's initial brief
+already pre-selected a shape (rare), confirm that selection in one sentence and
+proceed to Stage 5b.
+
+### Stage 5b — Selected-Shape Plan
+
+**Contract**
+- Inputs: the *one* shape the user selected from Stage 5; capacity (Stage 1 Q8); paid-channel role from Stage 4 allocation.
+- Outputs: Section 8 (First-30-Days Action List) + Section 9 (Ad Copy + Boost Rules, only if paid applies) + Section 10 (Lift-Test / Measurement Plan) + Section 11 (Anti-Vanity Metric Dashboard).
+- Preconditions: Stage 5 complete AND a specific shape has been named by the user (by index or name).
+- Postconditions: 30-day plan fits within stated capacity ceiling (cuts named if not); a single named lift-test template selected; track/ignore metrics enumerated.
+- Failure modes:
+  - **entered without a named shape from Stage 5 → ask for the selection; do NOT produce any Section 8–11 content.**
+  - drafted weekly effort exceeds capacity ceiling → cut lowest-ROI actions until total fits; name the cuts explicitly.
+  - earned-media targets unknown / not in brief → flag week-1 research as the action with explicit research method; do not invent outlet names.
+  - paid does not apply in the channel stack → omit Section 9 entirely (do not produce empty/placeholder ad copy).
+  - asymmetry categorical AND paid in stack → produce a counter-positioning refusal note in Section 9, not cold-paid creative.
+
+Begin only after the user has picked one of the three shapes from Stage 5. If no
+selection has been received, ask for it and stop. The four items below are
+produced against the *one* selected shape — not all three.
+
+1. **First-30-days action list** — concrete weekly actions for weeks 1–4, mapped to the chosen
    shape. Each action has an owner (if multiple people), an effort estimate, and a clear
    success signal.
 
@@ -453,7 +568,7 @@ Given the selected concept + channel stack, produce:
    - **Month 2+:** budget 3–4h/week sustained — moderation, weekly post, member welcomes,
      pruning dead accounts. Underinvest and the community dies.
 
-4. **Ad copy + boost rules** — *only* if paid has a role in the chosen stack:
+2. **Ad copy + boost rules** — *only* if paid has a role in the chosen stack:
    - Creative direction in the user's authentic voice (see `references/authenticity-playbook.md`).
    - The explicit **24–48h organic traction gate**: do not boost a post until it has
      demonstrated genuine organic signal (saves, shares, sustained watch time, thread-depth
@@ -467,30 +582,32 @@ Given the selected concept + channel stack, produce:
      keyword bidding — the traffic arrives organically anyway. Platform-reported ROAS on
      brand keywords is always excellent *because* the traffic would have converted
      regardless. This is one of the most reliable ways established brands waste paid
-     budget. If the user is already bidding on their own brand, require a geo-holdout
-     test (Template 4 in `references/lift-test-templates.md`) before continued spend.
+     budget. If the user is already bidding on their own brand, require a
+     brand-keyword holdout test (Template 5 in `references/lift-test-templates.md`)
+     before continued spend.
    - If asymmetry is categorical, refuse to produce broad cold-paid copy. Offer Tier 1/2
      content instead and explain why.
 
-5. **Lift-test / measurement plan** — mandatory, no exceptions. One concrete experiment
+3. **Lift-test / measurement plan** — mandatory, no exceptions. One concrete experiment
    using the templates in `references/lift-test-templates.md`. Template selection:
    - **Budget exists:** Template 1 (geo-holdout) or Template 2/3 (conversion-lift).
-   - **Brand-keyword bidding already in play:** Template 4 (brand-keyword holdout).
-   - **Zero budget:** Template 5 (organic-source attribution) — directional, UTM-tagged,
+   - **Tiny budget (<€5k), formal templates underpowered:** Template 4 (micro-lift).
+   - **Brand-keyword bidding already in play:** Template 5 (brand-keyword holdout).
+   - **Zero budget:** Template 6 (organic-source attribution) — directional, UTM-tagged,
      30-day window, per-channel conversion-rate ranking, cut-the-bottom-20%-reinvest-
      in-the-top decision rule.
    Specify:
    - The hypothesis (paid channel X drives incremental action Y on top of organic
-     baseline — or, for Template 5, *"channel X outperforms channel Y on conversion rate
+     baseline — or, for Template 6, *"channel X outperforms channel Y on conversion rate
      per unique visitor"*).
-   - Control vs. test group definition (or channel-comparison definition for Template 5).
+   - Control vs. test group definition (or channel-comparison definition for Template 6).
    - Holdout percentage, duration, and minimum sample size.
-   - The incremental metric (not attributed; not platform-reported ROAS). For Template 5,
+   - The incremental metric (not attributed; not platform-reported ROAS). For Template 6,
      per-channel conversion rate, with the explicit caveat that it is directional only.
    - The decision threshold: what lift level justifies continued spend, what level means
-     stop. For Template 5: top channel → double effort; bottom <20% → drop.
+     stop. For Template 6: top channel → double effort; bottom <20% → drop.
 
-6. **Anti-vanity metric dashboard** — the short list of metrics the user should track and
+4. **Anti-vanity metric dashboard** — the short list of metrics the user should track and
    the longer list of metrics they should explicitly ignore. Examples:
    - Track: saves, shares, sustained watch time, signed-up volunteers/subscribers,
      incremental conversions from the lift test, word-of-mouth referrals.
@@ -525,22 +642,22 @@ Produce the final deliverable in this exact order so the user can scan it and ac
 ## 5. 70/30 (or 80/20) Allocation
 <organic % / paid %, with rationale>
 
-## 6. Competitor Saturation Map
+## 6. Competitor Saturation Map  (Stage 5 output)
 <per competitor: what they saturate, the absence that becomes your signal, one-sentence positioning line>
 
-## 7. Three Alternative Campaign Shapes
+## 7. Three Alternative Campaign Shapes  (Stage 5 output — end the turn here; await shape selection)
 <three shapes with tradeoffs>
 
-## 8. First-30-Days Action List
+## 8. First-30-Days Action List  (Stage 5b output — only after shape selection)
 <week 1–4 concrete actions, scaled to stated capacity with cuts named>
 
-## 9. Ad Copy + Boost Rules  (if paid applies)
+## 9. Ad Copy + Boost Rules  (Stage 5b output, if paid applies)
 <creative direction + 24–48h gate + frequency cap + refusal note if categorical>
 
-## 10. Lift-Test / Measurement Plan
+## 10. Lift-Test / Measurement Plan  (Stage 5b output)
 <one concrete experiment with threshold>
 
-## 11. Anti-Vanity Metric Dashboard
+## 11. Anti-Vanity Metric Dashboard  (Stage 5b output)
 <track list / ignore list>
 ```
 
@@ -596,6 +713,33 @@ Produce the final deliverable in this exact order so the user can scan it and ac
   narrative coherence, and provenance signals the adversary cannot manufacture without
   being caught.
 
+## Failure Modes Quick Reference
+
+One-page summary of the per-stage Contracts above. Use this when reviewing an
+output to check whether a declared failure-mode action was actually taken.
+
+| Stage | Trigger | Required action |
+|---|---|---|
+| 1 | Always-capture field missing under Mode C | Ask in the question batch; do not default silently |
+| 1 | Missing field changes Stage 3 / Stage 4 outcome | Escalate into the batch even if normally defaulted |
+| 2 | Competitor unnamed in brief | Use `[incumbent]` / category descriptor; never invent |
+| 2 | Cannot generate 5 distinct archetypes | Say so; present what you have; do not pad |
+| 3 | Preconditions score 0–2 | Refuse full playbook; route to building preconditions |
+| 3 | Asymmetry numbers absent | Ask heuristic questions; do not assume a level |
+| 3a | **MMF score 0–1/3** | **Produce only Section 3a + refusal; STOP — do not generate Sections 4–11** |
+| 3a | MMF score 2/3 | Insert validation cycle before Section 4 |
+| 3a | User does not know a signal | Treat as a "no" |
+| 4 | Categorical asymmetry + broad cold-paid request | Refuse; route to Tier 1/2 + counter-positioning |
+| 4 | Sector = `other` | Flag rider mismatch; proceed with closest rider |
+| 4 | Function ↔ sector-rider conflict | Surface both paths; do not collapse silently |
+| 5 | **End of stage without shape selection** | **Repeat the ask; STOP — do not produce Sections 8–11** |
+| 5 | User cannot tell Self-story | Drop founder-led shape; route to community / earned-media / search |
+| 5b | Entered without named shape | Ask for selection; do not produce any Section 8–11 |
+| 5b | Drafted effort exceeds capacity | Cut lowest-ROI actions; name the cuts |
+| 5b | Earned-media targets unknown | Flag week-1 research with method; do not invent outlets |
+| 5b | Paid does not apply in stack | Omit Section 9; do not produce placeholder copy |
+| 5b | Categorical asymmetry + paid in stack | Produce counter-positioning refusal in Section 9, not cold-paid creative |
+
 ## References (read when relevant)
 
 - `references/campaign-archetypes.md` — 15+ archetypes the ideation engine draws from.
@@ -603,6 +747,6 @@ Produce the final deliverable in this exact order so the user can scan it and ac
 - `references/channel-tier-stack.md` — Tier 1–4 channels with 2025–2026 benchmark data.
 - `references/authenticity-playbook.md` — founder voice, kitchen-table framing,
   counter-positioning, narrative coherence.
-- `references/lift-test-templates.md` — geo-holdout and conversion-lift experiment templates.
+- `references/lift-test-templates.md` — six lift-test templates (geo-holdout, conversion-lift, synthetic-control, micro-lift, brand-keyword holdout, zero-budget UTM).
 - `references/sector-riders.md` — six sector-specific overlays applied in Stage 4.
 - `references/hungarian-case-study.md` — Tisza vs. Fidesz 2026 worked example.
