@@ -1,6 +1,6 @@
 # bencium-marketplace
 
-A Claude Code plugin marketplace with 13 skills for design, architecture, and productivity by [bencium.io](https://bencium.io).
+A Claude Code plugin marketplace with 14 skills for design, marketing, architecture, and productivity by [bencium.io](https://bencium.io).
 
 ## Installation
 
@@ -54,6 +54,12 @@ The SKILL.md format is compatible with 40+ AI coding tools that support markdown
 | **design-audit** | Systematic visual UI/UX audits producing phased, implementation-ready design plans. Purely visual -- does not touch functionality. |
 | **typography** | Professional typography rules enforcing correct quote marks, dashes, spacing, hierarchy. Auto-applies to generated HTML/CSS/React code. |
 | **relationship-design** | AI-first interfaces that build ongoing relationships through memory, trust evolution, and collaborative planning. |
+
+### Marketing (1 skill)
+
+| Skill | Description |
+|-------|-------------|
+| **organic-first-campaign** | Grassroots-first campaign designer for startups, NGOs, and solo brands being outspent by incumbents. Audits spend asymmetry, assembles an organic-first channel stack, refuses to fabricate competitor names, and outputs a lift-test plan instead of vanity metrics. See [the landing page](organic-first-campaign/index.html). |
 
 ### Productivity (3 skills)
 
