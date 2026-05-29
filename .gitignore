@@ -17,3 +17,6 @@ insurgent-campaign/skills/insurgent-campaign/REFACTOR-NOTES.md
 insurgent-campaign/The_Organic_Playbook.mp4
 insurgent-campaign/*.mp4
 insurgent-campaign/*.mov
+
+# Landing page — deployed separately at insurgent.bencium.io, kept local only
+insurgent-campaign/index.html
