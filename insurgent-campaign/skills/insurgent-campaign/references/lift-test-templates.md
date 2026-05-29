@@ -301,6 +301,6 @@ measurement. Until then, this template is what the user runs to keep Stage 5b ho
 
 ### Why this template belongs in Stage 5b
 
-Zero-budget campaigns are the default case for the organic-first skill. Without a
+Zero-budget campaigns are the default case for the insurgent skill. Without a
 zero-budget template, Stage 5b would either demand a paid test the user cannot run or
 quietly drop the measurement requirement. Template 6 fills that gap.

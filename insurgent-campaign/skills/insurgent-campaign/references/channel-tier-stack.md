@@ -15,16 +15,16 @@ when the bottleneck is awareness and demand is already addressable.
 
 | Function | What it does | Best-fit channels | When to use |
 |---|---|---|---|
-| **Demand capture** | Meet existing demand at the moment someone is looking | Google Search (non-brand, long-tail), Bing Search, SEO content for intent queries, directory listings | The user's bottleneck is *getting found when people already want the thing*. Demand exists; the job is not to create it, only to capture it. Strongest for lesser-known challengers on non-brand queries. **Weak for brand-keyword bidding** — traffic arrives organically anyway (see Template 4 in `lift-test-templates.md`). |
+| **Demand capture** | Meet existing demand at the moment someone is looking | Google Search (non-brand, long-tail), Bing Search, SEO content for intent queries, directory listings | The user's bottleneck is *getting found when people already want the thing*. Demand exists; the job is not to create it, only to capture it. Strongest for lesser-known challengers on non-brand queries. **Weak for brand-keyword bidding** — traffic arrives organically anyway (see Template 5 in `lift-test-templates.md`). |
 | **Paid amplification** | Accelerate reach of already-working organic content | Meta ads (retargeting + lookalikes), TikTok Spark Ads, LinkedIn promoted posts, YouTube ads against warm audiences | The user has an organic winner (24–48h traction gate passed — saves, shares, sustained watch time) and wants to reach the next audience ring faster. Works indirectly more than directly — Meta's own tooling now measures downstream *search lift* from paid social, a tacit admission the platform click is not the whole mechanism. Never use paid amplification as a substitute for organic resonance; amplifying a dud just spends money faster. |
-| **Trust compounding** | Build credibility, community, and distribution the competitor cannot buy | Founder / leader social presence, community nodes (Slack/Discord/WhatsApp/local chapters), newsletters, earned media, volunteer / advocate networks, referral systems | The user's bottleneck is *trust* — people can find them, sometimes click, but do not convert, subscribe, donate, or refer. Slow, compounding, the only function that produces a moat. Every organic-first campaign leads with this. |
+| **Trust compounding** | Build credibility, community, and distribution the competitor cannot buy | Founder / leader social presence, community nodes (Slack/Discord/WhatsApp/local chapters), newsletters, earned media, volunteer / advocate networks, referral systems | The user's bottleneck is *trust* — people can find them, sometimes click, but do not convert, subscribe, donate, or refer. Slow, compounding, the only function that produces a moat. Every insurgent campaign leads with this. |
 
 **How to route:** in Stage 4 of the skill, the first question is *which function does
 this campaign need?* — not *which channel looks appealing?* A mild-asymmetry user with a
 trust bottleneck should not be routed to paid amplification just because they can afford
 it. A severe-asymmetry user with a pure demand-capture problem (existing search volume,
 no awareness) might correctly spend a disproportionate share on non-brand Google Search
-despite the overall organic-first allocation, because that is the right function for
+despite the overall organic-led allocation, because that is the right function for
 their specific bottleneck.
 
 Map each tier below to a primary function: Tier 1 is almost entirely trust-compounding,

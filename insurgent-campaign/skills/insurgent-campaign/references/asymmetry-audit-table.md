@@ -9,7 +9,7 @@ ad-copy decisions, refusal rules.
 | Level | Ratio (competitor : user) | What it looks like | Primary channel stance |
 |---|---|---|---|
 | **Mild** | 1:2 to 1:5 | They spend 2–5× what you spend. Typical incumbent vs. challenger. | Hybrid: full Tier 1–3 stack, selective Tier 4 with lift tests. |
-| **Severe** | 1:5 to 1:50 | They spend 5–50× what you spend. Typical startup vs. well-funded competitor, NGO vs. corporate, challenger party vs. establishment. | Organic-first: Tier 1–2 heavy, targeted Tier 3, avoid broad Tier 4. |
+| **Severe** | 1:5 to 1:50 | They spend 5–50× what you spend. Typical startup vs. well-funded competitor, NGO vs. corporate, challenger party vs. establishment. | Organic-led: Tier 1–2 heavy, targeted Tier 3, avoid broad Tier 4. |
 | **Categorical** | 1:50+ (or non-comparable — state capture, foreign support, infinite pockets) | You cannot be in a spending race at all. Different game entirely. | Full asymmetric: Tier 1–2 only, volunteer/community networks, earned media, counter-positioning. Refuse broad cold-paid. |
 
 ## If the user gave numbers
@@ -56,7 +56,7 @@ If "yes" to 3–4, severe. If "yes" to 5–6, categorical.
 
 ## Severe asymmetry — playbook summary
 
-- Organic-first. 80/20 in favor of organic is often safer than 70/30.
+- Organic-led. 80/20 in favor of organic is often safer than 70/30.
 - Tier 1 and Tier 2 do the heavy lifting. Tier 3 is used surgically — warm retargeting,
   long-tail search, amplification of proven Tier 2 winners only.
 - Avoid broad Tier 4 (cold Meta, generic search, display). The CPA and lift-test math

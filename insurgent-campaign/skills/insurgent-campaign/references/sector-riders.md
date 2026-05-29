@@ -1,6 +1,6 @@
 # Sector Riders
 
-Six sector-specific overlays for the organic-first playbook. A rider does not
+Six sector-specific overlays for the insurgent playbook. A rider does not
 replace the function-first routing in Stage 4 — it **layers on top** of it,
 adjusting archetype defaults, surfacing the sector's common failure mode, and
 biasing channel weighting.

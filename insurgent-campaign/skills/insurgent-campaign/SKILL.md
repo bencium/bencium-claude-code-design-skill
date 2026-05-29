@@ -1,5 +1,5 @@
 ---
-name: organic-first-campaign
+name: insurgent-campaign
 description: >
   Grassroots-first campaign design for anyone being outspent — startups vs. incumbents,
   NGOs vs. corporate comms, movements vs. state-backed machines, solo brands vs.
@@ -14,11 +14,11 @@ description: >
   about to burn money on a channel that will not persuade.
 ---
 
-# Organic-First Campaign
+# Insurgent Campaign
 
 A campaign-design skill for organizations and people who cannot win by outspending. It ideates
 campaign concepts across every major archetype, audits the user's spend asymmetry against
-their competition, assembles an organic-first channel stack, sets strict boost gates on any
+their competition, assembles an insurgent channel stack, sets strict boost gates on any
 paid spend, and produces a lift-test plan so the user measures incremental impact rather
 than vanity metrics.
 
@@ -279,7 +279,7 @@ Report back one sentence: `Your asymmetry is <level>. This means <what it means 
 strategy>.` Do not hedge. Do not offer a "balanced" recommendation if the user is at
 categorical — it would be misleading.
 
-Then run a **Preconditions Check**. The organic-first playbook wins when preconditions are
+Then run a **Preconditions Check**. The insurgent playbook wins when preconditions are
 present; asymmetry alone is not enough. Score the user's situation against the six factors
 that made the Hungarian case work (see `references/hungarian-case-study.md` for the full
 mechanism). Ask or infer:
@@ -301,14 +301,14 @@ mechanism). Ask or infer:
 
 Score 0–6. Tell the user the count plainly and what it implies:
 
-- **5–6 preconditions:** run the organic-first playbook at full scale. Proceed to Stage 4.
+- **5–6 preconditions:** run the insurgent playbook at full scale. Proceed to Stage 4.
 - **3–4 preconditions:** proceed, but flag the missing ones as campaign sub-goals — the
   user will need to build them during the campaign (e.g., find a credible voice, surface
   the grievance) for organic to compound.
 - **0–2 preconditions:** refuse to execute the playbook at full scale. **Building the
   preconditions is the campaign.** Recruit the credible voice, consolidate the coalition,
   surface and name the grievance, find the felt-pain story. Until those are present, the
-  organic-first playbook will underperform and burn the volunteer/community energy it
+  insurgent playbook will underperform and burn the volunteer/community energy it
   depends on. Say this out loud. Do not soften it.
 
 ### Stage 3a — Message-Market-Fit Gate
@@ -355,7 +355,7 @@ Scoring:
 - **0–1/3 — Refuse the full campaign plan.** MMF is the bottleneck, not
   distribution. Route the user to a discovery cycle: 5 structured customer
   conversations, a pre-order or paid-waitlist test, a small-room live demo.
-  Explain plainly: *"The organic-first playbook scales trust. It cannot
+  Explain plainly: *"The insurgent playbook scales trust. It cannot
   manufacture demand for a product, event, or cause people do not already
   want. Running a full campaign now will burn the volunteer/community energy
   that Stage 5 depends on. Come back when at least 2/3 of these signals are
@@ -407,7 +407,7 @@ by cost/asymmetry second.
   (e.g., consumer brands lean on UGC flywheels; political campaigns lean on ground
   game and counter-media; NGOs lean on volunteer networks + earned media on
   named-beneficiary stories).
-- **Failure-mode warning** — the sector-specific way the organic-first playbook
+- **Failure-mode warning** — the sector-specific way the insurgent playbook
   underperforms when misapplied, which becomes a standing warning in Stage 5's
   anti-vanity dashboard.
 
@@ -619,7 +619,7 @@ produced against the *one* selected shape — not all three.
 Produce the final deliverable in this exact order so the user can scan it and act:
 
 ```
-# Organic-First Campaign Plan — <user / project name>
+# Insurgent Campaign Plan — <user / project name>
 
 ## 0. Assumptions  (required under Mode C — default mode; omit under Mode A/B)
 <table: field → assumed value, flagging every default applied from Stage 1 so the user can confirm or adjust inline at the end>
@@ -661,6 +661,19 @@ Produce the final deliverable in this exact order so the user can scan it and ac
 <track list / ignore list>
 ```
 
+**Completeness — do not compress the final deliverable.** This is the payload, not a
+summary of it; the user should never have to run follow-up rounds to pull out the full
+plan. Fill every applicable section in full prose, not headline fragments. For each
+recommendation include the *why* — the mechanism, the tradeoff, the diminishing-returns
+or authenticity logic behind it — not just the conclusion; the reasoning is what lets the
+user hold the discipline after the run ends. Concretely: each campaign concept carries its
+full thesis + archetype + primary tier + authenticity hook + MVP; the channel stack names
+weekly effort per channel; the action list spells out week-by-week actions with the cuts
+named; the lift test states hypothesis, control/test groups, duration, incremental metric,
+and decision threshold. Brevity in *structure* (scannable headings, tables) is the goal;
+brevity in *content* is a failure. If a section does not apply (e.g. no paid in the stack),
+state why in one line rather than dropping it silently.
+
 ## Principles to Hold Throughout
 
 - **Do not sell reach as persuasion.** Reach above the first 5–6 impressions does not persuade;
@@ -696,7 +709,7 @@ Produce the final deliverable in this exact order so the user can scan it and ac
 - **If MMF is failing, the campaign is the wrong problem to solve. Say so.** Distribution
   amplifies signal; it cannot manufacture it. If the MMF gate (Stage 3a) returns 0–1 / 3,
   refuse the full campaign plan and route the user to a discovery / validation cycle.
-  Running a full organic-first campaign against a broken offer burns the volunteer,
+  Running a full insurgent campaign against a broken offer burns the volunteer,
   community, and founder-attention capital the playbook depends on.
 - **Do not over-generalize the Hungarian case.** Organic beats paid saturation *when
   preconditions are present*: credible insider, accumulated grievance, consolidated

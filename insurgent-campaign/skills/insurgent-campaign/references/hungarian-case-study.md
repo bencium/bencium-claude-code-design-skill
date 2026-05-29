@@ -4,7 +4,7 @@ The 2026 Hungarian parliamentary election is the most extreme empirical test ava
 the proposition that paid media saturation can substitute for trust, narrative coherence,
 and grassroots networks. The skill uses it as a worked example — not as the skill's
 identity (per the user's framing decision), but as the background evidence for why the
-organic-first playbook works under pressure.
+insurgent playbook works under pressure.
 
 ## The spending asymmetry
 
@@ -225,4 +225,4 @@ For an underdog in any sector, the strategic implication is two-part:
 - Political Capital — Political ad spend share data (2025)
 - Mérték Media Monitor — state advertising distribution research
 
-For the full long-form essay, see `/Users/bencium/.claude/plugins/marketplaces/bencium-marketplace/tisza/when-money-loses-paid-vs-organic-advertising.md`.
+For the full long-form essay, see *When Money Loses: Paid vs. Organic Advertising* (bencium.io).

@@ -59,7 +59,7 @@ The SKILL.md format is compatible with 40+ AI coding tools that support markdown
 
 | Skill | Description |
 |-------|-------------|
-| **organic-first-campaign** | Grassroots-first campaign designer for startups, NGOs, and solo brands being outspent by incumbents. Audits spend asymmetry, assembles an organic-first channel stack, refuses to fabricate competitor names, and outputs a lift-test plan instead of vanity metrics. See [the landing page](organic-first-campaign/index.html). |
+| **insurgent-campaign** | Grassroots-first campaign designer for startups, NGOs, and solo brands being outspent by incumbents. Audits spend asymmetry, assembles an insurgent channel stack, refuses to fabricate competitor names, and outputs a lift-test plan instead of vanity metrics. See [the landing page](insurgent-campaign/index.html). |
 
 ### Productivity (3 skills)
 
