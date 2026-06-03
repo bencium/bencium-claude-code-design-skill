@@ -132,6 +132,16 @@
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
       "category": "productivity",
       "keywords": ["bence"]
+    },
+    {
+      "name": "bencium-harness",
+      "source": { "source": "git-subdir", "url": "bencium/bencium-harness", "path": "bencium-harness" },
+      "description": "Lightweight AI-assisted build harness for Claude Code: scaffold + living roadmap + acceptance gate + mandatory plan/spec gate + verify (independent evaluator + gamed-test guard) + deploy/rollback. A memory that survives /clear. 9 commands, no infra.",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "homepage": "https://github.com/bencium/bencium-harness",
+      "repository": "https://github.com/bencium/bencium-harness",
+      "category": "productivity",
+      "keywords": ["bence", "harness", "build-loop", "verification", "context-engineering"]
     }
   ]
 }
