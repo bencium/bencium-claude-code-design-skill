@@ -142,6 +142,15 @@
       "repository": "https://github.com/bencium/bencium-harness",
       "category": "productivity",
       "keywords": ["bence", "harness", "build-loop", "verification", "context-engineering"]
+    },
+    {
+      "name": "hungarian-humanizer",
+      "source": "./hungarian-humanizer",
+      "description": "Detect and remove AI-generated markers from Hungarian text so it reads like a native speaker wrote it. 26 patterns (12 Hungarian-specific + 14 universal) plus 4 style markers.",
+      "version": "1.0.0",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "category": "productivity",
+      "keywords": ["bence", "hungarian", "writing", "humanizer", "ai-detection"]
     }
   ]
 }

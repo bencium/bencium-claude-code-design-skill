@@ -1,0 +1,7 @@
+{
+  "name": "hungarian-humanizer",
+  "version": "1.0.0",
+  "description": "Detect and remove AI-generated markers from Hungarian text so it reads like a native speaker wrote it. 26 patterns (12 Hungarian-specific + 14 universal) plus 4 style markers.",
+  "author": { "name": "bencium.io", "url": "https://bencium.io" },
+  "keywords": ["hungarian", "writing", "humanizer", "ai-detection", "editing"]
+}
