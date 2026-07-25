@@ -134,14 +134,26 @@
       "keywords": ["bence"]
     },
     {
-      "name": "bencium-harness",
-      "source": { "source": "git-subdir", "url": "bencium/bencium-harness", "path": "bencium-harness" },
-      "description": "Lightweight AI-assisted build harness for Claude Code: scaffold + living roadmap + acceptance gate + mandatory plan/spec gate + verify (independent evaluator + gamed-test guard) + deploy/rollback. A memory that survives /clear. 9 commands, no infra.",
+      "name": "bencium-loop",
+      "source": { "source": "git-subdir", "url": "bencium/bencium-loop", "path": "bencium-loop" },
+      "description": "Lightweight AI-assisted build loop for Claude Code: scaffold + living roadmap + acceptance gate + mandatory plan/spec gate + verify (independent evaluator + gamed-test guard) + deploy/rollback. A memory that survives /clear. 9 commands, no infra.",
+      "version": "0.9.0",
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
-      "homepage": "https://github.com/bencium/bencium-harness",
-      "repository": "https://github.com/bencium/bencium-harness",
+      "homepage": "https://github.com/bencium/bencium-loop",
+      "repository": "https://github.com/bencium/bencium-loop",
       "category": "productivity",
-      "keywords": ["bence", "harness", "build-loop", "verification", "context-engineering"]
+      "keywords": ["bence", "loop", "build-loop", "verification", "context-engineering"]
+    },
+    {
+      "name": "bencium-harness",
+      "source": { "source": "git-subdir", "url": "bencium/bencium-loop", "path": "bencium-loop" },
+      "description": "DEPRECATED — renamed to bencium-loop. Install bencium-loop@bencium-marketplace instead; this alias will be removed.",
+      "version": "0.9.0",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "homepage": "https://github.com/bencium/bencium-loop",
+      "repository": "https://github.com/bencium/bencium-loop",
+      "category": "productivity",
+      "keywords": ["bence", "deprecated"]
     },
     {
       "name": "hungarian-humanizer",

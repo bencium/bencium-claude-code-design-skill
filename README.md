@@ -1,6 +1,6 @@
 # bencium-marketplace
 
-A Claude Code plugin marketplace with 14 skills for design, marketing, architecture, and productivity by [bencium.io](https://bencium.io).
+A Claude Code plugin marketplace with 16 skills for design, marketing, architecture, and productivity by [bencium.io](https://bencium.io).
 
 ## Installation
 
@@ -61,13 +61,15 @@ The SKILL.md format is compatible with 40+ AI coding tools that support markdown
 |-------|-------------|
 | **insurgent-campaign** | Grassroots-first campaign designer for startups, NGOs, and solo brands being outspent by incumbents. Audits spend asymmetry, assembles an insurgent channel stack, refuses to fabricate competitor names, and outputs a lift-test plan instead of vanity metrics. See [the landing page](insurgent-campaign/index.html). |
 
-### Productivity (3 skills)
+### Productivity (5 skills)
 
 | Skill | Description |
 |-------|-------------|
+| **bencium-loop** | Lightweight AI-assisted build loop -- scaffold, living roadmap, plan/spec gate, verify gate with independent evaluator, deploy/rollback. A memory that survives `/clear`. 9 commands, no infra. Installs from its own repo, [bencium/bencium-loop](https://github.com/bencium/bencium-loop). |
 | **adaptive-communication** | Detects user communication style (high-context relational vs low-context transactional) and adapts responses. |
 | **negentropy-lens** | Decision-support framework evaluating systems through entropy (decay) vs negentropy (growth), surfacing tacit knowledge gaps. |
 | **bencium-aeo** | Answer Engine Optimization for AI search visibility. Optimize content for ChatGPT, Claude, Gemini, AI Overviews citations. |
+| **hungarian-humanizer** | Detect and remove AI-generated markers from Hungarian text so it reads like a native speaker wrote it. 26 patterns (12 Hungarian-specific + 14 universal) plus 4 style markers. |
 
 ### Development (4 skills)
 
