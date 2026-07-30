@@ -163,6 +163,15 @@
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
       "category": "productivity",
       "keywords": ["bence", "hungarian", "writing", "humanizer", "ai-detection"]
+    },
+    {
+      "name": "emotion-statusline",
+      "source": "./emotion-statusline",
+      "description": "Statusline that shows Claude's classified emotional state (behavioral, Haiku-scored) with a reward-hacking warning on 'desperate', based on Anthropic's emotion-concepts-function research.",
+      "version": "1.0.0",
+      "author": { "name": "bencium.io", "url": "https://bencium.io" },
+      "category": "productivity",
+      "keywords": ["bence", "statusline", "observability", "hooks", "emotion"]
     }
   ]
 }

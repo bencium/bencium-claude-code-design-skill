@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/classify-emotion.sh",
+            "timeout": 15,
+            "async": true,
+            "description": "Classify Claude's emotional state from this turn's behavior and cache it for the statusline"
+          }
+        ]
+      }
+    ]
+  }
+}
