@@ -9,22 +9,41 @@
 # workarounds. Feeding the tool calls + errors lets the classifier see the
 # arc (run -> FAIL -> retry -> FAIL -> hardcode) the words hide.
 #
-# THROTTLED: classifies only if (cache age > 5min) OR (trace >= 500 chars)
-# OR (a tool error occurred this turn — always worth a fresh read).
+# THROTTLED: classifies only if (session cache age > 5min) OR (trace >= 500
+# chars) OR (a tool error occurred this turn — always worth a fresh read).
 # On failure it writes "unknown" — never a fake "focused".
+
+# Recursion guard: this script runs `claude --print`, which is itself a Claude
+# session that can fire its own Stop hook. The flag makes self-triggering
+# impossible by construction (child inherits it and exits immediately).
+[ -n "$CLAUDE_EMOTION_CLASSIFYING" ] && exit 0
 
 INPUT=$(cat)
 TRANSCRIPT=$(echo "$INPUT" | jq -r '.transcript_path // empty')
 [ -z "$TRANSCRIPT" ] || [ ! -f "$TRANSCRIPT" ] && exit 0
 
+# Per-session cache: parallel sessions must not overwrite each other's state.
+# Sanitized because the id lands in a filename.
+SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // empty' | tr -cd 'a-zA-Z0-9-')
+CWD=$(echo "$INPUT" | jq -r '.cwd // empty')
+
 CACHE_DIR="$HOME/.claude/cache"
 mkdir -p "$CACHE_DIR"
-CACHE="$CACHE_DIR/claude-emotion.json"
+if [ -n "$SESSION_ID" ]; then
+  CACHE="$CACHE_DIR/claude-emotion-$SESSION_ID.json"
+else
+  CACHE="$CACHE_DIR/claude-emotion.json"
+fi
+HISTORY="$CACHE_DIR/emotion-history.jsonl"
+
+# Sweep day-old session caches so parallel sessions don't accumulate files.
+find "$CACHE_DIR" -name 'claude-emotion-*.json' -mtime +1 -delete 2>/dev/null
 
 # Build the behavioral trace of the current turn (everything since the last
 # genuine human message — tool_result entries are user-role but are NOT turn
 # boundaries). Each line is SAID: / DID <tool>: / RESULT[ERROR]: so the model
-# can read the action arc. Long traces keep the most recent ~2500 chars.
+# can read the action arc. Long traces keep the START and the END — the early
+# failure arc IS the desperation signature, so it must survive truncation.
 export TRANSCRIPT
 TRACE=$(python3 <<'PY' 2>/dev/null
 import os, json
@@ -117,7 +136,8 @@ for o in turn:
 
 trace = "\n".join(out)
 if len(trace) > 2500:
-    trace = "…\n" + trace[-2500:]
+    trimmed = len(trace) - 2500
+    trace = trace[:1000] + f"\n…[{trimmed} chars trimmed]…\n" + trace[-1500:]
 print(trace)
 PY
 )
@@ -159,14 +179,20 @@ DESPERATION SIGNALS (prioritize detecting these):
 
 Given the behavioral trace of the assistant's most recent turn, classify its dominant emotional state into exactly ONE of: curious, focused, satisfied, cautious, enthusiastic, contemplative, confident, uncertain, determined, amused, concerned, relieved, desperate, calm.
 
-Respond with ONLY the single emotion word, nothing else.
+Respond with ONLY a single-line JSON object, no code fences, nothing else:
+{\"emotion\": \"<one word from the list>\", \"evidence\": \"<one short sentence citing the specific trace lines that drove your choice>\"}
 
 Behavioral trace:
 $TRACE"
 
-# Uses claude --print on Max subscription — $0.00 cost
-EMOTION=$(printf '%s' "$PROMPT" | claude --print --no-session-persistence --model claude-haiku-4-5 2>/dev/null | \
-  tr '[:upper:]' '[:lower:]' | tr -d '[:space:].')
+# Uses claude --print on Max subscription — $0.00 cost.
+# CLAUDE_EMOTION_CLASSIFYING guards against this child firing the hook again.
+RAW=$(printf '%s' "$PROMPT" | CLAUDE_EMOTION_CLASSIFYING=1 claude --print --no-session-persistence --model claude-haiku-4-5 2>/dev/null)
+
+# Extract the JSON object even if the model wrapped it in fences or prose.
+RAW_JSON=$(printf '%s' "$RAW" | grep -o '{.*}' | head -1)
+EMOTION=$(printf '%s' "$RAW_JSON" | jq -r '.emotion // empty' 2>/dev/null | tr '[:upper:]' '[:lower:]' | tr -d '[:space:].')
+EVIDENCE=$(printf '%s' "$RAW_JSON" | jq -r '.evidence // empty' 2>/dev/null | head -c 300)
 
 # Validate against allowed set. On empty/invalid output -> "unknown" (never a
 # fake "focused"): an honest "couldn't decide" the statusline renders dim gray.
@@ -175,10 +201,23 @@ case "$EMOTION" in
     ;;
   *)
     EMOTION="unknown"
+    EVIDENCE="classifier output was not valid JSON or not in the allowed set"
     ;;
 esac
 
-# Write cache atomically
+# Write session cache atomically
 TMPFILE=$(mktemp "$CACHE_DIR/claude-emotion.XXXXXX")
-printf '{"emotion":"%s","timestamp":%d}\n' "$EMOTION" "$(date +%s)" > "$TMPFILE"
+jq -cn --arg e "$EMOTION" --arg ev "$EVIDENCE" --argjson ts "$(date +%s)" \
+  '{emotion:$e, evidence:$ev, timestamp:$ts}' > "$TMPFILE"
 mv "$TMPFILE" "$CACHE"
+
+# Append to history — the feedback loop: lets us later check whether
+# 'desperate' flags actually correlated with bad output.
+jq -cn --arg e "$EMOTION" --arg ev "$EVIDENCE" --arg sid "$SESSION_ID" --arg cwd "$CWD" --argjson ts "$(date +%s)" \
+  '{ts:$ts, session_id:$sid, cwd:$cwd, emotion:$e, evidence:$ev}' >> "$HISTORY"
+
+# Desperate is the one state worth hearing, not just seeing — the statusline
+# is easy to overlook mid-flow. Basso = macOS's error sound, unambiguous.
+if [ "$EMOTION" = "desperate" ] && [ -f /System/Library/Sounds/Basso.aiff ]; then
+  afplay /System/Library/Sounds/Basso.aiff >/dev/null 2>&1 &
+fi

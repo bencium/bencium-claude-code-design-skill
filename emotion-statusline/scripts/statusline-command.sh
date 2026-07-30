@@ -99,7 +99,13 @@ fi
 emotion_label=''
 emotion_color=''
 
+# Prefer this session's cache (written per-session so parallel sessions don't
+# show each other's state); fall back to the legacy global file.
+session_id=$(echo "$input" | jq -r '.session_id // empty' | tr -cd 'a-zA-Z0-9-')
 EMOTION_CACHE="$HOME/.claude/cache/claude-emotion.json"
+if [ -n "$session_id" ] && [ -f "$HOME/.claude/cache/claude-emotion-$session_id.json" ]; then
+  EMOTION_CACHE="$HOME/.claude/cache/claude-emotion-$session_id.json"
+fi
 if [ -f "$EMOTION_CACHE" ]; then
   cache_age=$(( $(date +%s) - $(stat -f %m "$EMOTION_CACHE" 2>/dev/null || echo 0) ))
   if [ "$cache_age" -lt 600 ]; then

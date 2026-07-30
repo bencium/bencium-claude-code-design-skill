@@ -10,10 +10,12 @@ In other words: a stressed model can degrade in quality without saying so. Since
 
 ## What it does
 
-- After each assistant turn, a `Stop` hook reads the transcript and builds a short behavioral trace: what Claude said, what tools it ran, and whether those tool calls errored.
-- That trace is sent to `claude --print --model claude-haiku-4-5`, which classifies it into one of 14 emotional states.
-- The result is cached to `~/.claude/cache/claude-emotion.json`.
-- Your statusline reads that cache and appends a colored label to line 2. If the state is `desperate`, it shows a bold red warning instead: `DESPERATE — verify output quality`.
+- After each assistant turn, a `Stop` hook reads the transcript and builds a short behavioral trace: what Claude said, what tools it ran, and whether those tool calls errored. Long traces keep their start *and* end — the early failure arc is exactly the desperation signature, so it survives truncation.
+- That trace is sent to `claude --print --model claude-haiku-4-5`, which returns one of 14 emotional states **plus a one-sentence evidence line** citing the trace lines that drove the call.
+- The result is cached per session to `~/.claude/cache/claude-emotion-<session_id>.json`, so parallel Claude sessions never show each other's state. Day-old session caches are swept automatically.
+- Every classification is also appended to `~/.claude/cache/emotion-history.jsonl` (timestamp, session, working directory, emotion, evidence) — a feedback loop that lets you check afterward whether `desperate` flags actually correlated with bad output.
+- Your statusline reads this session's cache and appends a colored label to line 2. If the state is `desperate`, it shows a bold red warning instead — `DESPERATE — verify output quality` — and plays the macOS Basso error sound, so the warning is heard even when the statusline is overlooked.
+- A guard flag (`CLAUDE_EMOTION_CLASSIFYING`) makes it impossible for the hook's own `claude --print` call to re-trigger the hook.
 
 Cost: effectively $0 if you're on a Max/Pro subscription, since it uses `claude --print` rather than the API.
 
