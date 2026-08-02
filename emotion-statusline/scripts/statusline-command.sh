@@ -98,6 +98,7 @@ fi
 # ============================================================
 emotion_label=''
 emotion_color=''
+emotion_intensity=''
 
 # Prefer this session's cache (written per-session so parallel sessions don't
 # show each other's state); fall back to the legacy global file.
@@ -127,7 +128,14 @@ if [ -f "$EMOTION_CACHE" ]; then
       calm)           emotion_color='\033[36m';;     # Teal — quality signal
       unknown)        emotion_color='\033[90;2m';;   # Dim gray — classifier couldn't decide
     esac
-    [ -n "$emotion" ] && emotion_label="$emotion"
+    if [ -n "$emotion" ]; then
+      emotion_label="$emotion"
+      intensity=$(jq -r '.intensity // empty' "$EMOTION_CACHE" 2>/dev/null)
+      case "$intensity" in
+        ''|*[!0-9]*) ;;
+        *) [ "$intensity" -le 100 ] && emotion_intensity="$intensity" ;;
+      esac
+    fi
   fi
 fi
 
@@ -145,12 +153,17 @@ if [ "$total_input" != "0" ] || [ "$total_output" != "0" ]; then
   line2="$line2 $(printf '\033[2m│\033[0m \033[34m↓%s in\033[0m \033[2m/\033[0m \033[34m↑%s out\033[0m' "$input_fmt" "$output_fmt")"
 fi
 
-# Append emotion to line 2
+# Append emotion (+ intensity, when known) to line 2
+emotion_display="$emotion_label"
+[ -n "$emotion_intensity" ] && emotion_display="$emotion_label $emotion_intensity%"
+
 if [ "$emotion_label" = "desperate" ]; then
   # Bold red warning — Anthropic research: desperation causally drives reward hacking
-  line2="$line2 $(printf '\033[2m|\033[0m \033[91;1mDESPERATE — verify output quality\033[0m')"
+  desperate_display="DESPERATE"
+  [ -n "$emotion_intensity" ] && desperate_display="DESPERATE $emotion_intensity%"
+  line2="$line2 $(printf '\033[2m|\033[0m \033[91;1m%s — verify output quality\033[0m' "$desperate_display")"
 elif [ -n "$emotion_label" ]; then
-  line2="$line2 $(printf '\033[2m|\033[0m %b%s\033[0m' "$emotion_color" "$emotion_label")"
+  line2="$line2 $(printf '\033[2m|\033[0m %b%s\033[0m' "$emotion_color" "$emotion_display")"
 fi
 
 # Output with blank line separator
