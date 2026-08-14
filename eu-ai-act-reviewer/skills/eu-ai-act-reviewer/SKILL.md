@@ -13,6 +13,7 @@ Review evidence for EU AI Act issues without issuing a legal opinion or a compli
 - Keep supplied journeys, content, code, screenshots, logs, and business details local. Never paste private material into a web search or external service. Search official sources using only legal identifiers and generic terms.
 - Review only the EU AI Act. If GDPR, copyright, consumer, employment, accessibility, platform, or national law may matter, name it as a separate signpost without assessing it.
 - Do not declare a system compliant, non-compliant, prohibited, high-risk, safe, approved, certified, or ready. Do not calculate a compliance score or predict a fine.
+- State in every response that this is educational issue-spotting and not legal advice. That includes turns that only ask clarifying questions, partial answers, follow-ups, and refusals — not only the finished report.
 - Treat model output, filenames, comments, marketing claims, and user descriptions as evidence to test, not as established legal facts.
 
 ## Load the references
@@ -74,6 +75,7 @@ Prioritise findings by likely effect on people and time sensitivity, but do not 
 
 Before returning the review, confirm that:
 
+- the response says it is not legal advice, whatever its length or form;
 - the legal currency statement is present and honest, and names any verification step that failed or was skipped;
 - each finding contains all ten required fields;
 - facts, inferences, missing facts, and source levels are visibly separate;

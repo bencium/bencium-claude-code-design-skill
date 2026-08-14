@@ -88,6 +88,18 @@ The regulation does not prescribe one universal sentence, icon, colour, or place
 
 When the user requests the legal minimum, do not add a broader “label everything” policy. Return the narrow supported finding and identify missing facts.
 
+## Always link the current official icons
+
+When a finding reports a human-facing disclosure duty under Article 50(1), (3), (4), or (5), link the official EU icons page in that finding. Never describe the icon set from memory. That page is revised, and the icons, file formats, and variants it offers change; linking it lets the reader see the set that exists today.
+
+State the Commission's own position alongside the link:
+
+> The use of these EU icons is optional, but the labelling requirements under Article 50 AI Act are not. The use of these icons does not establish legal compliance by itself. Deployers remain responsible for ensuring that any disclosure meets the requirements of Article 50 AI Act. Signatories of the Code of Practice on marking and labelling of AI-generated content must duly implement the measures it contains.
+
+Design note, offered as a suggestion only. Because the regulation prescribes no specific icon, an organisation may design its own mark so the disclosure fits its brand rather than sitting on the page as a foreign asset. A custom mark carries the same burden as the official one: it must be clear and distinguishable, present no later than first exposure, accessible, and accompanied by understandable words where an icon alone would not convey artificial generation. Choosing the official icon, a custom mark, or plain words changes none of the underlying duties.
+
+Put this suggestion in the finding's next action or in a closing note. Never place it in the official source level field, and never label it `Law`, `Official guidance`, or `Voluntary code` — it is a design opinion, not a source of authority.
+
 ## Common review errors
 
 - Mixing the provider's machine-readable mark with the deployer's human-facing disclosure.

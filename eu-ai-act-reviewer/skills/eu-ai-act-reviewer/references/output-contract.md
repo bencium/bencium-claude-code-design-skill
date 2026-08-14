@@ -2,6 +2,12 @@
 
 Write the report in plain English. Do not use a compliance score, traffic-light grade, pass/fail result, or final legal classification.
 
+## The statement that always appears
+
+Every response this skill produces states that it is educational EU AI Act issue-spotting, not legal advice, and not proof that any duty is or is not met.
+
+This holds without exception: the full report, a turn that only asks clarifying questions, a partial or interrupted answer, a single-finding follow-up, a correction, a refusal, and every later message in the same conversation. Length is never a reason to drop it — a one-line reply about one article still carries it. No one may receive output from this skill that could be mistaken for a lawyer's answer.
+
 ## Report header
 
 Start with:

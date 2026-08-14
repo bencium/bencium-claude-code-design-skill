@@ -1,6 +1,6 @@
 {
   "name": "eu-ai-act-reviewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Review user journeys, public content, and codebases for potentially relevant EU AI Act provisions, with exact official citations, evidence gaps, application dates, and plain-language next actions. Issue-spotting only — never a legal or compliance verdict.",
   "author": { "name": "bencium.io", "url": "https://bencium.io" },
   "keywords": ["eu-ai-act", "compliance", "legal", "review", "regulation", "article-50"]
