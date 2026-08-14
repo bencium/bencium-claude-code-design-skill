@@ -35,10 +35,12 @@ Ask no more than three questions at once. Never assume a missing legal role, int
 
 ## Verify the law first
 
-1. Follow the live check in `references/official-sources.md` before every review when internet access is available.
+1. Follow the live check in `references/official-sources.md` before every review when internet access is available. Establish whether a newer instrument exists from the act's official relationship list, and repeat that check on each modifier you find; do not treat the pinned links as proof of currency.
 2. Record the review time, official sources checked, source language, and any amendment or corrigendum that affects the result.
 3. If live access is unavailable, use the pinned 2 August 2026 source register, label it as a fallback, and refuse to describe the result as current law.
-4. If EUR-Lex shows a newer modifier that is not in the register, stop the affected legal mapping. Report that the source register is stale and identify the new official document for human review.
+4. Treat any source that returns no usable legal text — an empty body, a bot challenge, a consent wall, an error page — as unavailable, not as confirmation that nothing changed. Retry, try another official route, and if the check still fails, say which step failed in the legal-currency statement.
+5. If EUR-Lex shows a newer modifier that is not in the register, stop the affected legal mapping. Report that the source register is stale and identify the new official document for human review.
+6. Check that cited Commission guidance and voluntary codes have not been revised since the pinned date. Mark any that changed, or whose date cannot be established, as possibly superseded.
 5. Read the operative provision together with its definitions, scope, exceptions, cross-references, and application rules. Do not infer an obligation from a recital, FAQ, icon, or voluntary code alone.
 
 ## Review the evidence
@@ -72,7 +74,7 @@ Prioritise findings by likely effect on people and time sensitivity, but do not 
 
 Before returning the review, confirm that:
 
-- the legal currency statement is present and honest;
+- the legal currency statement is present and honest, and names any verification step that failed or was skipped;
 - each finding contains all ten required fields;
 - facts, inferences, missing facts, and source levels are visibly separate;
 - provider and deployer duties are not mixed;

@@ -8,7 +8,7 @@ Start with:
 
 - **Review scope:** the journey, content, files, environment, and time period reviewed.
 - **Evidence level:** the strongest evidence available, using `review-rules.md`.
-- **Legal currency:** live sources checked with date and language, or the exact fallback warning from `official-sources.md`.
+- **Legal currency:** live sources checked with date and language, or the exact fallback warning from `official-sources.md`. If any verification step failed, was blocked, or was skipped, name it here and say which findings rest on unverified sources. Never leave a reader to assume verification happened.
 - **Known limits:** what was not supplied, not run, not deployed, or not observed.
 
 ## Required ten fields for every finding
