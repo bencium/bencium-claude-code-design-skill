@@ -19,8 +19,8 @@
     {
       "name": "bencium-innovative-ux-designer",
       "source": "./bencium-innovative-ux-designer",
-      "description": "Distinctive, production-grade frontend interfaces with high design quality. Creative, polished code that avoids generic AI aesthetics.",
-      "version": "2.0.0",
+      "description": "Develop an independent visual language through ten isolated typography-only directions, then turn the human-locked direction into concrete production artifacts.",
+      "version": "3.0.4",
       "author": { "name": "bencium.io", "url": "https://bencium.io" },
       "category": "design",
       "keywords": ["bence"]

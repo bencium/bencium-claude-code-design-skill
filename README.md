@@ -131,4 +131,4 @@ See [`spinner-verbs.json`](spinner-verbs.json) for the full list.
 
 ## License
 
-MIT
+[MIT](LICENSE)
