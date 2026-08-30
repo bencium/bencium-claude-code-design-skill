@@ -87,7 +87,7 @@ Every direction must integrate:
 5. **Font behavior:** genuine weight, width, grade, optical size, italic, slant, or variable-font axes; never artificial deformation.
 6. **Typographic detail:** intentional letter spacing, word spacing, line height, line length, kerning, ligatures, hyphenation, punctuation, alignment, and line breaks.
 7. **Language coverage:** considered numerals, diacritics, abbreviations, and multilingual text where present.
-8. **Palette behavior:** one flat canvas plus primary, secondary, and accent letterform colors used in clear proportions and relationships, never shown as disconnected swatches.
+8. **Palette behavior:** one flat canvas plus one to four active letterform colors used in clear proportions and relationships, never shown as disconnected swatches. Where present, primary, secondary, tertiary, and accent roles must have different jobs in hierarchy, rhythm, or language behavior.
 9. **Space and placement:** deliberate outer margins, internal padding, gaps, gutters, text-block widths, maximum widths, column count and proportions, indents, hanging punctuation, baseline offsets, alignment, vertical placement, and edge relationships.
 10. **Whitespace and rhythm:** deliberate silence, density, symmetry or asymmetry, repetition of supplied language, placement, and scale changes.
 11. **Hierarchy:** an intentional reading path that remains legible at normal size and convincing at thumbnail size.
@@ -101,6 +101,15 @@ These decisions must form one coherent system inside each direction. Across the 
 - outer-margin and internal-padding system;
 - alignment, columns, placement, and reading path;
 - density, language rhythm, repetition, and use of empty space.
+
+The complete A-through-J set must include at least one credible example of each letterform color depth:
+
+- one active text color on the flat ground;
+- two active text colors with primary and secondary roles;
+- three active text colors with a distinct tertiary or accent role;
+- four active text colors with separate primary, secondary, tertiary, and accent roles.
+
+The flat canvas is the ground and does not count toward this one-to-four letterform color depth. The remaining directions may use any of the four depths when their subject-derived premises require them. This is coverage across the authored set, not a parameter matrix or a reason to assign arbitrary palette sizes. Every active color must appear in the supplied copy at a deliberate proportion and do real compositional work. Do not add palette labels, swatches, dummy copy, or meaningless highlighted words.
 
 Do not satisfy this list by assigning ten arbitrary values. Every choice must follow from that direction's own premise.
 
@@ -140,7 +149,7 @@ Create one concise Markdown capsule beside every direction. It records the direc
 - exact font or combination, primary source, license status, and fallback status;
 - hierarchy and type roles;
 - size, case, weight, width, grade, optical size, italic or slant, tracking, spacing, line, punctuation, and language rules;
-- canvas and text-color values with their roles;
+- canvas and every active text-color value with its primary, secondary, tertiary, or accent role and approximate proportion;
 - margin, padding, gap, gutter, column, text-block, alignment, edge, density, repetition, overlap, cropping, and whitespace rules;
 - signature typographic relationship;
 - candidate invariants, allowed variation, and prohibited normalization;
@@ -216,6 +225,10 @@ Build what the project actually needs rather than another abstract direction. De
 Shapes, lines, photography, illustration, generated imagery, icons, material effects, or motion may enter only after the lock and only when required by the artifact or approved by the human. Derive them from the locked typographic context and prevent them from importing a second style.
 
 For interfaces, build real components with real states, content, responsive behavior, keyboard access, visible focus, and recoverability. A component library must be usable implementation, not a decorative component sheet. For graphic artifacts, use real dimensions, content, and medium constraints.
+
+Preserve the artifact scope from the original prompt. If the prompt requested three items, rebuild those same three with real copy after the first Round 2 proof, rather than inventing more variants. Give the rebuilt set to the human and ask whether the locked direction's character survived the translation. Keep the direction locked while repairing an artifact; do not reopen A through J unless the human explicitly asks.
+
+After explicit approval, freeze the approved artifacts and their generation rules. Record the invariant rules, allowed variation, and reopening conditions. Create a self-contained HTML style guide from the locked direction, tell the human that it exists, and link the file. The guide must carry all applicable rules from the locked capsule and production constitution, not merely show colors and font samples. Include copyable prompt examples for continuing the work in the current or a new thread. State that any further artifact can now be requested from the approved visual language. Do not create further artifacts until the human requests them.
 
 Use `ROUND-2-CONTEXT.md` in every Round 2 handoff or continuation. If a new task or production process cannot access the project files, include the capsule in its input. Do not replace it with a short aesthetic adjective.
 

@@ -119,6 +119,12 @@ Icons may be sourced after explicit commitment. An existing icon family can impl
 
 V3 defaults to zero preliminary questions. When the existing brief names the subject and its intended effect, audience, tension, or proposition, the user's own language is enough to begin.
 
+Give your goal before Round 1. Give it as purpose, not aesthetic direction:
+
+> This is for [subject and audience]. It should help them understand, feel, or do [goal].
+
+The same goal influences all ten directions by affecting language dominance, hierarchy, rhythm, and which subject evidence each direction translates. It must not make the ten directions visually similar. You don’t need to provide final dimensions, every channel, all assets, budget, or finished campaign copy before Round 1.
+
 Only a fundamentally unclear or risky brief can trigger questions, and then V3 asks no more than two short questions once. It makes reversible assumptions for anything else and proceeds. Final copy, complete biographies, permissions, dimensions, channel lists, schedules, budgets, legal details, and production specifications wait until the human has reacted to the typography. The evidence capsule is a seed, not an intake form or a moodboard.
 
 ### 2. Seal the studio
@@ -130,6 +136,8 @@ The author records the allowed sources and closes the visual-reference firewall.
 V3 creates A through J as ten ultra-minimal typography-led HTML design directions. They share the same working copy and may share an optional browser viewport for fair comparison, but they do not share a fixed canvas, artifact ratio, layout, or palette. Every direction owns its complete flat background and letterform palette, typography, scale, case, hierarchy, composition, margins, padding, alignment, density, rhythm, reading path, language behavior, and empty space.
 
 “Typography-only” describes what can appear on the page: letterforms and one flat canvas background. It does not mean ten typography samples. The ten outputs must be ten genuinely different designs, and every one must differ materially in color as well as type and space.
+
+The set must demonstrate real palette depth rather than repeating two-color ideas. Across A through J, at least one direction uses one active letterform color, one uses two, one uses three, and one uses four. The flat canvas is the ground and is counted separately. A two-color direction establishes primary and secondary text roles; a three-color direction adds a meaningful tertiary or accent role; a four-color direction gives primary, secondary, tertiary, and accent colors different jobs. The remaining directions use whichever depth their own premises require. This is set-level coverage rather than a mechanical matrix: colors must change hierarchy, rhythm, or language behavior, and may not appear as swatches, labels, dummy copy, or arbitrary highlights.
 
 V3 does not use a divergence matrix, parameter quotas, dice rolls, style menus, or mechanical rotation of formal properties. Each design begins from its own subject-derived premise and a blank HTML file. If two directions become equivalent after changing the font or colors, share a page skeleton, or read in the same order, one of them is rebuilt.
 
@@ -155,7 +163,7 @@ It explores space and placement:
 - intentional line breaks and text wrapping;
 - controlled overlap, cropping, or vertical type when it remains readable and professionally typeset.
 
-It explores color only through one flat canvas background and primary, secondary, or accent letterform colors. There are no colored panels, bands, boxes, circles, or decorative background areas.
+It explores color only through one flat canvas background and one to four active letterform colors with deliberate primary, secondary, tertiary, and accent roles where present. There are no colored panels, bands, boxes, circles, or decorative background areas.
 
 It explores language behavior through sequencing, dominance, non-semantic repetition of supplied words, and line rhythm. Type and space may make the voice continuous, interrupted, compressed, ceremonial, conversational, forceful, restrained, or quiet without rewriting the user's words.
 
@@ -201,6 +209,10 @@ Round 2 injects the locked concept capsule as governing context and builds what 
 Shapes, lines, imagery, icons, material effects, and motion may enter only after the lock and only when the artifact requires or the human approves them. They must grow from the locked typography-led HTML design direction rather than importing another style.
 
 For interfaces, a Round 2 component library must contain real usable components, content, states, responsive behavior, keyboard access, visible focus, and recoverability. It is not a decorative component sheet. For graphic work, Round 2 uses real dimensions, content, and medium constraints.
+
+The original prompt controls the artifact set. If it asked for three items, V3 rebuilds those same three with the real copy rather than inventing extra variants. The human inspects the rebuilt outputs and decides whether the locked direction's character survived. Rendering success alone is not approval.
+
+After explicit approval, V3 freezes the approved artifacts and their generation rules as the production baseline. It explains the next steps and creates a self-contained `STYLEGUIDE.html` in the chosen visual direction. The guide includes every applicable rule for typography, font sources and licensing, color, hierarchy, composition, spacing, margins, padding, rhythm, whitespace, language, responsive variation, shapes, imagery, icons, motion, interaction, accessibility, invariants, permitted variation, prohibited normalization, generation, assets, proof status, and reopening. It also includes copyable prompt examples for creating another artifact, adapting an approved artifact, revising without reopening the direction, extending the system, and continuing safely in a new thread. V3 links the guide to the human and states that further artifacts may now be requested from the approved visual language; it creates those additional artifacts only when requested.
 
 The direction can reopen only through an explicit human decision based on new evidence, a cultural concern, an accessibility or implementation failure, a changed business need, or a direct override.
 
@@ -286,7 +298,7 @@ It does not ask what a famous designer would do. It does not roll dice for a sty
 
 ## Status
 
-V3 is a ground-up replacement for V2. Version 3.1.3 preserves the pre-matrix Round 1 architecture and makes the output contract explicit: ten typography-led HTML design directions with materially different color, typography, and space systems, sharing working copy and only an optional human comparison viewport. Claude checks source only; Round 1 visual judgement belongs exclusively to the human. Sibling packages remain outside this change.
+V3 is a ground-up replacement for V2. Version 3.1.4 preserves the pre-matrix Round 1 architecture, requires the A-through-J set to demonstrate one-, two-, three-, and four-color letterform systems, and adds the complete Round 2 closeout: rebuild the originally requested artifact set with real copy, return it for human judgement, freeze approved artifacts and generation rules, explain next steps, create and link a comprehensive HTML style guide, and allow further artifacts to be requested from the locked visual language. Sibling packages remain outside this change.
 
 The governing sequence is:
 

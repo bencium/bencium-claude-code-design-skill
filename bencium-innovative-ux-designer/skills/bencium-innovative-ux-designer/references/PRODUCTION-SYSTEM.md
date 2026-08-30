@@ -106,6 +106,69 @@ Choose a small set of real artifacts that test the language where it will live. 
 
 One master artifact is not proof that the language can travel. One component library is not proof that it has character. Test both identity and use.
 
+Use the original prompt to determine the artifact set and count. If it requested three items, rebuild those same three with the real copy. Do not substitute new concepts or expand the set without approval. Give the rebuilt artifacts to the human and ask whether the locked direction's character survived. Human approval, not successful rendering, authorizes freezing.
+
+## Freeze and continue
+
+After explicit human approval:
+
+- freeze the approved source files, outputs, and generation rules as the production baseline;
+- record invariant traits, allowed variations, rejected mutations, and reopening conditions;
+- distinguish approved content from any remaining placeholders;
+- preserve the font, asset, and license status without overstating what is cleared;
+- explain the immediate next steps in plain language;
+- create and link a human-readable HTML style guide based on the locked visual direction;
+- tell the human that they may request any further artifact from the approved language.
+
+Do not create additional artifacts merely because they are possible. Wait for an explicit request. New artifacts inherit the frozen constitution and generation rules; they do not reopen creative direction unless the human says so.
+
+## HTML style guide
+
+After the approved artifacts and generation rules are frozen, create `STYLEGUIDE.html` as a self-contained, browser-openable document. Use lean HTML and CSS, preserve the no-SVG rule, and express the guide through the locked visual language rather than a neutral documentation template.
+
+Include every applicable production rule already established by the locked capsule and constitution:
+
+- subject-derived premise, source boundary, and intended character;
+- exact fonts, sources, license status, fallbacks, language coverage, roles, styles, axes, sizes, weights, widths, grades, optical sizes, case, tracking, word spacing, line height, line length, kerning, ligatures, hyphenation, punctuation, numerals, diacritics, and multilingual behavior;
+- color values, roles, proportions, combinations, contrast boundaries, and non-color cues;
+- hierarchy, reading path, copy sequencing, dominance, repetition, and language behavior;
+- margins, padding, gaps, gutters, columns, text-block widths, indents, alignment, baseline behavior, edge relationships, density, rhythm, whitespace, overlap, cropping, and vertical type;
+- shape, line, edge, material, imagery, icon, and motion rules when the approved artifacts use them;
+- interaction, responsive behavior, states, accessibility, and recoverability rules when the system is interactive;
+- artifact formats, real-content rules, generation commands, and allowed contextual adaptation;
+- locked invariants, permitted variation, prohibited normalization, rejected mutations, and reopening conditions;
+- asset provenance, font and media licensing, verification status, remaining placeholders, open production risks, and what has not been tested.
+
+Use real examples from the approved artifacts when they clarify a rule, but do not turn the guide into a gallery or introduce new design ideas. The guide records the system; it does not redesign it.
+
+Tell the human that `STYLEGUIDE.html` was created, link the file, summarize what it governs, and state that any further artifact may now be requested from the locked visual language.
+
+## Handoff prompt examples
+
+Include these as copyable examples in `STYLEGUIDE.html` and adapt the bracketed fields to the project without rewriting user-provided copy:
+
+**Create another artifact**
+
+> Read `ROUND-2-CONTEXT.md` and `STYLEGUIDE.html`. The visual direction is locked. Create [artifact and quantity] for [real format or channel] using the exact copy below. Preserve the frozen invariants and generation rules. Do not generate alternative directions or import a new style. [Exact copy]
+
+**Adapt an approved artifact**
+
+> Adapt [approved artifact path or name] to [dimensions, medium, or channel]. Keep the visual direction locked and preserve its hierarchy, typography, color behavior, rhythm, and signature relationships. Change only what the new format requires. Report any rule that cannot survive the adaptation before replacing it.
+
+**Revise without reopening**
+
+> Revise [artifact path or name] to solve [specific problem]. Keep the chosen direction locked. Preserve [named qualities that must survive]. Do not propose another concept or change unrelated generation rules. Return the revised artifact for human judgement and state exactly what changed.
+
+**Continue in a new thread**
+
+> Read [absolute path to `ROUND-2-CONTEXT.md`] and [absolute path to `STYLEGUIDE.html`] before working. Treat them as the governing context. The visual direction and approved generation rules are frozen. Create [requested artifact] with the exact content and production constraints below. Do not reopen A through J unless I explicitly ask. [Exact content and constraints]
+
+**Extend the system**
+
+> Using `ROUND-2-CONTEXT.md`, `STYLEGUIDE.html`, and the approved artifacts, add rules only for [new artifact type, state, medium, imagery, motion, or interaction]. Preserve all existing invariants. Update the HTML style guide with only the newly approved rules after I accept the result.
+
+Keep the examples short enough to copy. Explain that paths, artifact names, quantities, formats, exact copy, and production constraints should replace the brackets.
+
 ## Project-local ledger
 
 Offer the ledger after the direction is locked and create it only with human approval. Keep it small and editable. Store it with the project, never as a global gallery or cross-client inspiration store.
@@ -136,3 +199,5 @@ Deliver actual source files when the workspace supports them. Otherwise provide:
 - a short list of unresolved work in priority order.
 
 State the proof level precisely. A production system is available only when the necessary rules, assets, rights, implementation, and verification for the agreed scope exist.
+
+End the handover by naming the next human decision. Before approval, ask the human to judge the rebuilt real-copy artifacts. After approval and freezing, create and link `STYLEGUIDE.html`, tell the human that another concrete artifact may be requested from the locked visual language, and include copyable prompt examples for the current or a new thread.

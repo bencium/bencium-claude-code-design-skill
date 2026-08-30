@@ -32,6 +32,7 @@ Claude verifies Round 1 as source only. Do not open or render the HTML. Confirm 
 - `A.html` through `J.html` exist as ten separate dependency-free designs;
 - `index.html` links to all ten neutrally without restyling, cropping, ranking, or turning them into cards or controls;
 - every direction uses the same working copy and declares its own palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace rules;
+- across the source set, at least one direction uses one active letterform color, one uses two, one uses three, and one uses four, with the flat canvas recorded separately and every visible color assigned a real role rather than a swatch or arbitrary highlight;
 - the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or HTML `<canvas>` element;
 - `capsules/A.md` through `capsules/J.md` exist but remain withheld until the human gives an unprimed visual response;
 - Round 1 contains no PNG, WebP, JPEG, PDF, screenshot, contact sheet, thumbnail, or other image export.
@@ -100,6 +101,9 @@ State:
 - what passed;
 - what failed or remains untested;
 - which proof level has been reached;
+- whether the requested artifact set still contains placeholders or has been rebuilt with real copy;
+- whether the human approved the rebuilt artifacts and their generation rules were frozen;
+- whether `STYLEGUIDE.html` exists, uses the locked visual language, contains every applicable production rule and copyable continuation prompts, and was linked to the human;
 - the next human decision or production action.
 
 Do not call work complete because files exist, code compiles, or one ideal screenshot looks good.

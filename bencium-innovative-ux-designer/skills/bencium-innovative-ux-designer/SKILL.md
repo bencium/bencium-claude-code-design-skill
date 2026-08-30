@@ -2,7 +2,7 @@
 name: bencium-innovative-ux-designer
 description: Develop an independent visual language and turn the human-chosen direction into a production-ready graphic, brand, campaign, publication, web, or product system. Use when originality and differentiation matter enough to escape generic AI and Big Tech aesthetics. Guides a minimum-evidence start, ten isolated typography-led HTML design directions made only from type, color, and space, visual-first human judgement, explicit commitment, and concrete Round 2 production. Do not use for routine UI fixes, small components, or applying an existing design system.
 metadata:
-  version: 3.1.3
+  version: 3.1.4
 ---
 
 # Innovative UX Designer V3
@@ -46,6 +46,9 @@ Internally identify the furthest state the human has explicitly approved:
 - one direction shortlisted or selected;
 - one direction explicitly locked;
 - Round 2 artifacts or production system built;
+- requested artifact set rebuilt with real copy;
+- rebuilt artifacts accepted and generation rules frozen;
+- HTML style guide built and linked to the human;
 - Round 2 verification completed.
 
 Continue from that state. Do not restart the journey when the human already approved a premise or direction. Do not infer commitment from enthusiasm.
@@ -58,6 +61,12 @@ Treat the existing message as sufficient when it gives:
 
 - **Subject:** what is being designed and enough real context to avoid a generic substitute;
 - **Intent:** an audience, desired effect, central tension, or meaningful proposition.
+
+The preferred starting input is one high-level purpose statement, not an aesthetic direction or a production questionnaire:
+
+> This is for [subject and audience]. It should help them understand, feel, or do [goal].
+
+If the user has not supplied a usable subject and intent, ask for this one statement and begin when they answer. If they already supplied it in ordinary language, do not ask them to reformat or repeat it. This shared purpose influences language dominance, hierarchy, rhythm, and which subject evidence each direction translates, but it must not make A through J visually similar.
 
 The user's own wording is a valid formal seed. Do not demand separate history, story, material, or content evidence when the brief already offers language or tension that can generate form.
 
@@ -90,7 +99,7 @@ The ten directions share the same working copy and may share an optional compari
 - deliberate weight, width, grade, optical size, italic or slant, using genuine font variants or variable-font axes;
 - deliberate letter spacing, word spacing, line height, line length, kerning, ligatures, hyphenation, punctuation, alignment, and line breaks;
 - considered treatment of numerals, diacritics, abbreviations, multilingual text, captions, dates, and attributions where the supplied content contains them;
-- a flat color palette expressed only through the canvas and letterforms, with clear ground, primary-text, supporting-text, and accent-text relationships where needed;
+- a flat color palette expressed only through the canvas and letterforms, with clear ground, primary-text, secondary-text, tertiary-text, and accent-text relationships where the direction uses them;
 - outer margins, internal padding, gaps, gutters, text-block widths, maximum widths, columns, indents, hanging punctuation, baseline offsets, edge relationships, and vertical placement;
 - negative space, density, symmetry or asymmetry, repetition of language, and placement used as compositional material;
 - controlled overlap, cropping, or vertical type only when the typography remains readable and professionally typeset;
@@ -107,7 +116,7 @@ Create a concise concept capsule alongside every direction. Record:
 - the subject-derived premise in neutral language;
 - the exact font or font combination, source, license status, and fallback status;
 - the size scale, case, weight, width, spacing, alignment, line-break, margin, padding, gap, and whitespace rules;
-- the flat canvas and text-color values with their roles;
+- the flat canvas and every active text-color value, its primary, secondary, tertiary, or accent role, and its approximate proportion;
 - the signature typographic relationship;
 - the elements that must remain invariant if the direction continues;
 - provisional assumptions and unresolved risks;
@@ -130,6 +139,8 @@ Each direction must independently decide:
 - how the language varies without losing itself.
 
 The ten directions may share only the real content, evidence capsule, and essential legibility or functional boundaries. They must not share a layout skeleton, font combination, size scale, case strategy, palette, alignment logic, reading path, or whitespace rhythm. Every direction must differ materially in color as well as typography and space. Do not use a divergence matrix, numeric quotas, dice, style menus, or mechanical parameter rotation to manufacture those differences. Begin every direction from its own subject-derived premise and a blank HTML file.
+
+Across A through J, include at least one credible one-color, two-color, three-color, and four-color letterform system. Count active letterform colors, not the single flat canvas background: a one-color direction uses one text color on its ground; a two-color direction establishes primary and secondary text roles; a three-color direction adds a distinct tertiary or accent role; and a four-color direction gives primary, secondary, tertiary, and accent colors different jobs. The other six directions may use any of these depths when their premises justify them. This is set-level coverage, not a divergence matrix: do not assign palette sizes mechanically or let color count substitute for a distinct premise. Every role must be visible in the supplied copy, used in a deliberate proportion, and change hierarchy, rhythm, or language behavior. Do not add swatches, labels, dummy text, or random highlighted words to prove that a color exists.
 
 Reject and rebuild any direction that:
 
@@ -184,6 +195,10 @@ Shapes, lines, imagery, icons, material effects, and motion may enter only in Ro
 
 For interfaces, build real components with real states, content, responsive behavior, keyboard access, visible focus, and recoverability rather than a decorative component sheet. For graphic artifacts, use real format constraints and verify the intended size and medium. Continue with HTML and CSS source plus rendered raster previews when practical. Do not switch to SVG for complex shapes or production adaptation.
 
+Use the original prompt as the authority for the requested artifact set. If it requested three items, rebuild those same three items with the real copy; do not turn them into three new directions or silently add more. When real copy is missing, ask for it or ask whether the placeholder should remain temporarily. After rebuilding, give the artifacts to the human and ask whether the locked direction's character survived. Do not freeze the work or claim human acceptance until the human explicitly approves it.
+
+When the human approves the rebuilt artifacts, freeze the approved files and their generation rules as the production baseline. Record what is invariant, what may vary, and what requires an explicit reopening decision. Then create a self-contained HTML style guide based on the locked direction and link it to the human. The guide must include every applicable rule from the concept capsule and production constitution: premise and source boundary; typography and font licensing; color; hierarchy; composition; spacing; margins; padding; gaps; gutters; columns; alignment; density; rhythm; whitespace; language behavior; responsive or contextual variation; shapes, lines, material, imagery, icons, motion, and interaction when applicable; accessibility and recoverability boundaries; invariants; allowed variation; prohibited normalization; asset and license status; generation rules; proof status; open issues; and reopening conditions. Render the guide in the locked visual language without importing a new style. Include copyable prompt examples showing how to request another artifact, adapt an approved artifact, revise without reopening the direction, and continue in a new thread using `ROUND-2-CONTEXT.md` and `STYLEGUIDE.html`. Tell the human that they may request further artifacts from this visual language at any time. Do not create additional artifacts until requested.
+
 Reopen the locked direction only for new evidence, cultural harm, an accessibility or implementation failure, a changed business need, or an explicit human override. Offer a small project-local ledger, but create it only with approval.
 
 ## Build the production system
@@ -206,4 +221,4 @@ Never call a Round 1 direction production-ready. Never discard an original conce
 
 ## Completion response
 
-Lead with what now exists and the current proof level. For Round 1, link the actual HTML files and state that visual review remains with the human. For Round 2, show the concrete artifact as appropriate. State any remaining production, licensing, accessibility, or verification work. End with the one decision or action the human must take next; if none remains, say that clearly.
+Lead with what now exists and the current proof level. For Round 1, link the actual HTML files and state that visual review remains with the human. For Round 2, show the concrete artifact as appropriate, explain the next steps, and distinguish placeholder, rebuilt, human-approved, and frozen states. State any remaining production, licensing, accessibility, or verification work. After approval and freezing, create and link the required HTML style guide, state that the human may request further artifacts without generating them automatically, and provide a small set of copyable continuation prompts. End with the one decision or action the human must take next; if none remains, say that clearly.
