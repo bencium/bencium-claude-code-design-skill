@@ -111,6 +111,8 @@ The complete A-through-J set must include at least one credible example of each 
 
 The flat canvas is the ground and does not count toward this one-to-four letterform color depth. The remaining directions may use any of the four depths when their subject-derived premises require them. This is coverage across the authored set, not a parameter matrix or a reason to assign arbitrary palette sizes. Every active color must appear in the supplied copy at a deliberate proportion and do real compositional work. Do not add palette labels, swatches, dummy copy, or meaningless highlighted words.
 
+When a direction uses primary, secondary, tertiary, or accent colors, their different roles should be visible during the first visual encounter. A color does not count merely because it exists in the CSS or appears on one insignificant fragment. Each role should govern enough meaningful supplied text to affect hierarchy, rhythm, language, or reading order—without arbitrary highlighting.
+
 Do not satisfy this list by assigning ten arbitrary values. Every choice must follow from that direction's own premise.
 
 Use lean HTML and CSS only. The HTML body may contain only the text needed for the direction and neutral structural containers. CSS may control typography, placement, whitespace, a single flat background, and letterform colors.
@@ -167,6 +169,7 @@ Do not open or render the directions. Check the HTML, CSS, working copy, and cap
 - its capsule cannot trace the premise to subject evidence;
 - its source reuses another direction's page skeleton, palette, font combination, hierarchy, or spatial rules;
 - changing only its font or color values would make its source substantially equivalent to another direction;
+- a claimed primary, secondary, tertiary, or accent color exists only in CSS or on an insignificant fragment instead of governing enough meaningful supplied text to affect hierarchy, rhythm, language, or reading order;
 - required font, color, hierarchy, spacing, language, or licensing facts are missing from its capsule.
 
 Rebuild only the failed direction. Do not make the others safer to match it.

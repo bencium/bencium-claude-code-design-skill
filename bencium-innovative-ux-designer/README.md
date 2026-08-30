@@ -165,6 +165,8 @@ It explores space and placement:
 
 It explores color only through one flat canvas background and one to four active letterform colors with deliberate primary, secondary, tertiary, and accent roles where present. There are no colored panels, bands, boxes, circles, or decorative background areas.
 
+When a direction uses primary, secondary, tertiary, or accent colors, their different roles should be visible during the first visual encounter. A color does not count merely because it exists in the CSS or appears on one insignificant fragment. Each role should govern enough meaningful supplied text to affect hierarchy, rhythm, language, or reading order—without arbitrary highlighting.
+
 It explores language behavior through sequencing, dominance, non-semantic repetition of supplied words, and line rhythm. Type and space may make the voice continuous, interrupted, compressed, ceremonial, conversational, forceful, restrained, or quiet without rewriting the user's words.
 
 ### 4. Keep Round 1 typographic and visual-first
@@ -298,7 +300,7 @@ It does not ask what a famous designer would do. It does not roll dice for a sty
 
 ## Status
 
-V3 is a ground-up replacement for V2. Version 3.1.4 preserves the pre-matrix Round 1 architecture, requires the A-through-J set to demonstrate one-, two-, three-, and four-color letterform systems, and adds the complete Round 2 closeout: rebuild the originally requested artifact set with real copy, return it for human judgement, freeze approved artifacts and generation rules, explain next steps, create and link a comprehensive HTML style guide, and allow further artifacts to be requested from the locked visual language. Sibling packages remain outside this change.
+V3 is a ground-up replacement for V2. Version 3.1.5 preserves the pre-matrix Round 1 architecture, requires the A-through-J set to demonstrate one-, two-, three-, and four-color letterform systems whose claimed roles are perceptible in meaningful supplied text, and includes the complete Round 2 closeout: rebuild the originally requested artifact set with real copy, return it for human judgement, freeze approved artifacts and generation rules, explain next steps, create and link a comprehensive HTML style guide, and allow further artifacts to be requested from the locked visual language. Sibling packages remain outside this change.
 
 The governing sequence is:
 

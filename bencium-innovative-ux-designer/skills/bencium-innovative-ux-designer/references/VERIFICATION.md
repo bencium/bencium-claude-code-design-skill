@@ -33,6 +33,7 @@ Claude verifies Round 1 as source only. Do not open or render the HTML. Confirm 
 - `index.html` links to all ten neutrally without restyling, cropping, ranking, or turning them into cards or controls;
 - every direction uses the same working copy and declares its own palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace rules;
 - across the source set, at least one direction uses one active letterform color, one uses two, one uses three, and one uses four, with the flat canvas recorded separately and every visible color assigned a real role rather than a swatch or arbitrary highlight;
+- in every multi-color direction, each claimed primary, secondary, tertiary, or accent color governs enough meaningful supplied text to affect hierarchy, rhythm, language, or reading order rather than existing only in CSS or on an insignificant fragment;
 - the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or HTML `<canvas>` element;
 - `capsules/A.md` through `capsules/J.md` exist but remain withheld until the human gives an unprimed visual response;
 - Round 1 contains no PNG, WebP, JPEG, PDF, screenshot, contact sheet, thumbnail, or other image export.

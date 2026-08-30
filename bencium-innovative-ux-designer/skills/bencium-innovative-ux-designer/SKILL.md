@@ -2,7 +2,7 @@
 name: bencium-innovative-ux-designer
 description: Develop an independent visual language and turn the human-chosen direction into a production-ready graphic, brand, campaign, publication, web, or product system. Use when originality and differentiation matter enough to escape generic AI and Big Tech aesthetics. Guides a minimum-evidence start, ten isolated typography-led HTML design directions made only from type, color, and space, visual-first human judgement, explicit commitment, and concrete Round 2 production. Do not use for routine UI fixes, small components, or applying an existing design system.
 metadata:
-  version: 3.1.4
+  version: 3.1.5
 ---
 
 # Innovative UX Designer V3
@@ -142,6 +142,8 @@ The ten directions may share only the real content, evidence capsule, and essent
 
 Across A through J, include at least one credible one-color, two-color, three-color, and four-color letterform system. Count active letterform colors, not the single flat canvas background: a one-color direction uses one text color on its ground; a two-color direction establishes primary and secondary text roles; a three-color direction adds a distinct tertiary or accent role; and a four-color direction gives primary, secondary, tertiary, and accent colors different jobs. The other six directions may use any of these depths when their premises justify them. This is set-level coverage, not a divergence matrix: do not assign palette sizes mechanically or let color count substitute for a distinct premise. Every role must be visible in the supplied copy, used in a deliberate proportion, and change hierarchy, rhythm, or language behavior. Do not add swatches, labels, dummy text, or random highlighted words to prove that a color exists.
 
+When a direction uses primary, secondary, tertiary, or accent colors, their different roles should be visible during the first visual encounter. A color does not count merely because it exists in the CSS or appears on one insignificant fragment. Each role should govern enough meaningful supplied text to affect hierarchy, rhythm, language, or reading order—without arbitrary highlighting.
+
 Reject and rebuild any direction that:
 
 - could accept a different brand name without meaningful change;
@@ -149,6 +151,7 @@ Reject and rebuild any direction that:
 - contains anything other than type, flat canvas and text colors, and whitespace;
 - depends on illustration, geometry, imagery, a logo mark, effects, texture, or motion for character;
 - is merely a font swap, palette swap, safer version, or louder version of another direction;
+- claims a primary, secondary, tertiary, or accent color that exists only in CSS or on an insignificant fragment rather than governing meaningful supplied text;
 - hides or omits the font combination, size scale, case, palette, hierarchy, spacing, or whitespace evidence;
 - uses novelty that has no traceable relationship to the evidence capsule.
 
