@@ -1,10 +1,10 @@
 {
   "name": "bencium-innovative-ux-designer",
-  "version": "2.0.0",
-  "description": "Distinctive, production-grade frontend interfaces with high design quality. Creative, polished code that avoids generic AI aesthetics.",
+  "version": "3.0.4",
+  "description": "Develop an independent visual language through ten isolated typography-only directions, then turn the human-locked direction into concrete production artifacts.",
   "author": {
     "name": "bencium.io",
     "url": "https://bencium.io"
   },
-  "keywords": ["ux-design", "frontend", "creative-design", "ui"]
+  "keywords": ["visual-language", "typography", "creative-direction", "brand-design", "ux-design"]
 }

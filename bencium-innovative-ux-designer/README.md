@@ -280,7 +280,7 @@ It does not ask what a famous designer would do. It does not roll dice for a sty
 
 ## Status
 
-V3 is a ground-up replacement for V2. The work is confined to `bencium-innovative-ux-designer`; the marketplace catalogue, plugin manifest, and sibling packages are outside this change.
+V3 is a ground-up replacement for V2. The work is confined to `bencium-innovative-ux-designer`; its Claude plugin manifest now carries the same V3.0.4 version as the skill. The marketplace catalogue and sibling packages remain outside this change.
 
 The governing sequence is:
 
