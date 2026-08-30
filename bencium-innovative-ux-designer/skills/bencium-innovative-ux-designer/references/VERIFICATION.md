@@ -8,15 +8,43 @@ Use real content and real rendering. Mock material can support early prototyping
 
 Report these independently:
 
-1. **Typography direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
-2. **Direction locked:** the human explicitly made one concept capsule the governing context for Round 2.
+1. **Typographic direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
+2. **Direction locked:** the human explicitly made one direction capsule the governing context for Round 2.
 3. **Round 2 artifact system available:** the agreed concrete artifacts, reusable rules, assets, licenses, implementation, and verification exist.
 
 Do not collapse source complete, render complete, system complete, and human acceptance into one claim.
 
+## Round 1 exclusion check
+
+The round-one exclusions are checkable in the source, so check them. Prose
+self-inspection is run by the same author that wrote the file; this is not.
+
+Run this before the ten specimens are shown to anyone:
+
+```bash
+grep -nE 'border|box-shadow|gradient|background-image|border-radius|filter:|@keyframes|animation|<svg|<canvas|skew|scaleX|transform:' round-1/*.html
+```
+
+Expected result: no matches.
+
+Two reviewed exceptions may appear and are permitted:
+
+- `::first-letter`, `::first-line`, and `content`-based hanging punctuation — typesetting detail, not shape imitation;
+- `writing-mode` for vertical type, which is not a transform and will not match the pattern above.
+
+Any other match is a rebuild of that direction, not a justification. Do not
+argue an exclusion away; the exclusion list exists because every one of these
+properties is how a typographic specimen quietly becomes a graphic.
+
+Also confirm by inspection what grep cannot see: no direction simulates a
+poster, campaign, website, packaging, or social-media artifact, and no
+letterform has been stretched, warped, or distorted rather than set in a genuine
+font variant or axis.
+
 ## SVG invariant
 
-Before completing any phase, inspect the generated files and source. The skill must not have created:
+The SVG ban runs past round one. Before completing any phase, inspect the
+generated files and source. The skill must not have created:
 
 - `.svg` files;
 - inline `<svg>` markup;

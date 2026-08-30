@@ -1,6 +1,6 @@
 # Production System
 
-Read this only after the human has explicitly locked one typographic direction. Inject its Round 1 concept capsule as the governing context for concrete Round 2 artifacts and production rules.
+Read this only after the human has explicitly locked one typographic direction. Inject its Round 1 direction capsule as the governing context for concrete Round 2 artifacts and production rules.
 
 ## No SVG
 
@@ -26,7 +26,7 @@ Write the constitution before creating tokens or components. It should state:
 - typography behavior and acquisition status;
 - color-generating logic;
 - spatial rhythm and density;
-- the locked margins, padding, gaps, gutters, type roles, scale, case, alignment, and whitespace behavior from the concept capsule;
+- the locked margins, padding, gaps, gutters, type roles, scale, case, alignment, and whitespace behavior from the direction capsule;
 - shape, line, edge, and boundary behavior;
 - materiality and permitted imperfection;
 - imagery behavior, if approved;
