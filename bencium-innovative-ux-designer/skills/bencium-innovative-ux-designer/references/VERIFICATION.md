@@ -2,49 +2,21 @@
 
 Verification asks whether the chosen language survives its real medium. It does not decide whether the language deserves to exist; the human makes that judgement.
 
-Use real content and real rendering. Mock material can support early prototyping only when clearly labelled. It cannot prove production quality.
+Use real content and real rendering when verifying concrete Round 2 artifacts. Mock material can support early prototyping only when clearly labelled. It cannot prove production quality.
 
 ## Proof levels
 
 Report these independently:
 
-1. **Typographic direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
-2. **Direction locked:** the human explicitly made one direction capsule the governing context for Round 2.
+1. **Typography direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
+2. **Direction locked:** the human explicitly made one concept capsule the governing context for Round 2.
 3. **Round 2 artifact system available:** the agreed concrete artifacts, reusable rules, assets, licenses, implementation, and verification exist.
 
 Do not collapse source complete, render complete, system complete, and human acceptance into one claim.
 
-## Round 1 exclusion check
-
-The round-one exclusions are checkable in the source, so check them. Prose
-self-inspection is run by the same author that wrote the file; this is not.
-
-Run this before the ten specimens are shown to anyone:
-
-```bash
-grep -nE 'border|box-shadow|gradient|background-image|border-radius|filter:|@keyframes|animation|<svg|<canvas|skew|scaleX|transform:' round-1/*.html
-```
-
-Expected result: no matches.
-
-Two reviewed exceptions may appear and are permitted:
-
-- `::first-letter`, `::first-line`, and `content`-based hanging punctuation — typesetting detail, not shape imitation;
-- `writing-mode` for vertical type, which is not a transform and will not match the pattern above.
-
-Any other match is a rebuild of that direction, not a justification. Do not
-argue an exclusion away; the exclusion list exists because every one of these
-properties is how a typographic specimen quietly becomes a graphic.
-
-Also confirm by inspection what grep cannot see: no direction simulates a
-poster, campaign, website, packaging, or social-media artifact, and no
-letterform has been stretched, warped, or distorted rather than set in a genuine
-font variant or axis.
-
 ## SVG invariant
 
-The SVG ban runs past round one. Before completing any phase, inspect the
-generated files and source. The skill must not have created:
+Before completing any phase, inspect the generated files and source. The skill must not have created:
 
 - `.svg` files;
 - inline `<svg>` markup;
@@ -52,6 +24,21 @@ generated files and source. The skill must not have created:
 - instructions naming SVG as an editable master, intermediate format, or export target.
 
 Document any approved third-party SVG as immutable external input. Its presence does not authorize editing, tracing, inlining, redistribution, or derived SVG output.
+
+## Round 1 HTML verification
+
+Round 1 is verified as source and browser-openable HTML, not as a set of image exports. Confirm that:
+
+- `A.html` through `J.html` exist and open as ten separate dependency-free designs;
+- `index.html` links to all ten neutrally without restyling, cropping, ranking, or turning them into cards or controls;
+- every direction uses the same working copy but has its own materially different palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace logic;
+- every visible pixel comes from letterforms or one flat canvas background;
+- the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or canvas;
+- the type remains readable and professionally composed at normal and narrow browser widths;
+- `capsules/A.md` through `capsules/J.md` exist but remain withheld until the human gives an unprimed visual response;
+- Round 1 contains no PNG, WebP, JPEG, PDF, screenshot, contact sheet, thumbnail, or other image export.
+
+The author may inspect the pages in a browser, but must not turn screenshots into Round 1 deliverables. Do not claim that a source check proves production quality; Round 1 is intentionally pre-production.
 
 ## Interface verification
 
@@ -75,9 +62,9 @@ Use WCAG 2.2 as the baseline: [WCAG overview](https://www.w3.org/WAI/standards-g
 
 Accessibility is a boundary, not a reason to import a platform appearance. Native behavior and recoverability matter; a universal card, grid, palette, type scale, or modal structure does not follow from WCAG.
 
-## Graphic design verification
+## Round 2 graphic production checks
 
-Render or export the artifact in its intended medium and check:
+Do not make rendered verification a gate for selecting or locking graphic design. When the human asks for a production-ready graphic export, check the applicable delivery facts:
 
 - final dimensions, resolution, orientation, crop, safe area, and bleed;
 - hierarchy at intended viewing distance and realistic display conditions;
@@ -90,7 +77,7 @@ Render or export the artifact in its intended medium and check:
 - alternate crops and channel formats without losing the locked direction;
 - a physical proof or representative device proof when the risk warrants it.
 
-Graphic work does not require interface tests. It still requires rendered evidence before production quality is claimed.
+Graphic work does not require interface tests or a mandatory screenshot proof. State which production facts were checked and which remain with the human, printer, fabricator, or other specialist.
 
 ## Composition integrity
 
@@ -110,7 +97,7 @@ When an artifact fails, identify whether the constitution is weak or the impleme
 
 State:
 
-- what was rendered and where;
+- for Round 1, which HTML files were created and opened; for Round 2, what was rendered and where;
 - which real content and conditions were tested;
 - what passed;
 - what failed or remains untested;

@@ -1,6 +1,6 @@
 # Isolation Protocol
 
-Use this protocol while collecting evidence and creating the first ten typographic directions. Its purpose is to reduce active visual cross-pollination long enough for the subject's own formal logic to emerge.
+Use this protocol while collecting evidence and creating the first ten typography-led HTML design directions. Its purpose is to reduce active visual cross-pollination long enough for the subject's own formal logic to emerge.
 
 ## Create a source boundary
 
@@ -62,12 +62,16 @@ Round one may use an existing font because typography must be seen to judge a di
 
 1. Derive the required behavior before browsing: languages, glyph coverage, width, contrast, rhythm, weight range, optical sizes, technical formats, medium, licensing scope, and budget.
 2. Reversible use of a clearly licensed open-source font may proceed without a preliminary question when no account, purchase, license acceptance, or redistribution risk is involved. Ask once before any paid acquisition, trial agreement, account creation, license acceptance, or other commitment.
-3. Search independent foundries and libraries in Spain, Greece, Central and Eastern Europe, Latin America, the Netherlands, Scandinavia, Switzerland, the United Kingdom, and independent United States studios.
+3. Search independent foundries and libraries in Spain, Greece, Central and Eastern Europe, Latin America, the Netherlands, Scandinavia, Switzerland, the United Kingdom, and independent United States studios. Include both independent open-source libraries and paid foundries.
 4. Treat geography as a discovery route, never as proof of quality or a shortcut to a regional look.
 5. Exclude Google Fonts. Do not use a typeface because it appears unusual in a catalogue.
 6. Verify the primary source, designer or foundry, license, price, allowed uses, formats, language coverage, variable-font support, webfont terms, and redistribution restrictions.
 7. Record the licensing facts in the direction capsule. Reveal them after the first visual response and before any paid acquisition. Do not buy, download, embed, copy, or redistribute a paid font without explicit approval.
 8. Keep a fallback path if acquisition is declined. A fallback may preserve functional metrics temporarily, but it is not proof of the final typography.
+
+Do not restrict Round 1 to fonts already installed with macOS, Windows, Linux, a browser, or the current machine. System-installed faces are technical fallbacks only; convenience or local availability cannot define a direction. Do not replace the required independent search with a list of familiar operating-system fonts.
+
+Do not reveal font names, foundry names, or licensing prestige before the human's first visual response. Record those facts in the withheld direction capsule, then disclose them for any direction the human wants to consider.
 
 ## Icons and conventions
 

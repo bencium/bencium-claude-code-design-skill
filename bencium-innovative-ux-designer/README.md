@@ -2,7 +2,7 @@
 
 ## A closed studio for independent visual languages
 
-Innovative UX Designer V3 is a ground-up rebuild made to escape the statistical middle produced by generative AI. Contemporary design had already converged through global platforms, shared references, and standardized tools; large language and image models turn that convergence into probability, then generate its most likely combinations at enormous scale. V3 does not begin with style names, moodboards, galleries, templates, design tokens, or a catalogue of fashionable effects. It begins with the subject itself, temporarily closes the door on contemporary visual culture, and develops ten independent typographic directions before a human locks one.
+Innovative UX Designer V3 is a ground-up rebuild made to escape the statistical middle produced by generative AI. Contemporary design had already converged through global platforms, shared references, and standardized tools; large language and image models turn that convergence into probability, then generate its most likely combinations at enormous scale. V3 does not begin with style names, moodboards, galleries, templates, design tokens, or a catalogue of fashionable effects. It begins with the subject itself, temporarily closes the door on contemporary visual culture, and develops ten independent HTML design directions made only from typography, color, and space before a human locks one.
 
 V3 is for identity, graphic design, campaigns, publications, digital experiences, and interfaces whose value depends on having a voice of their own. It is not a machine for decorating ordinary layouts.
 
@@ -125,24 +125,13 @@ Only a fundamentally unclear or risky brief can trigger questions, and then V3 a
 
 The author records the allowed sources and closes the visual-reference firewall. Any necessary functional inspection is separated from creative influence. Existing technology may reveal what the work must support, but it may not supply the visual answer.
 
-### 3. Create ten genuinely different typographic directions
+### 3. Create ten genuinely different design directions
 
-V3 creates A through J as ten ultra-minimal typographic directions. Every direction uses identical copy and the same neutral canvas, but establishes a fundamentally different relationship between type, scale, case, color, placement, rhythm, language, and empty space.
+V3 creates A through J as ten ultra-minimal HTML design directions. Every direction uses identical copy for fair judgement, but owns its complete flat canvas and letterform palette, typography, scale, case, hierarchy, composition, margins, padding, alignment, density, rhythm, reading path, language behavior, and empty space.
 
-Ten fonts on one layout is not ten directions, and prose alone will not prevent it. Before any HTML is written, V3 fills a divergence matrix — ten rows, one column per formal axis:
+“Typography-only” describes what can appear on the page: letterforms and one flat canvas background. It does not mean ten typography samples. The ten outputs must be ten genuinely different designs, and every one must differ materially in color as well as type and space.
 
-```text
-     premise  align   case    cols  density  scale  colour  vert  overlap  voice
-A             left    lc      1     quiet    1:8    ...           ...      restrained
-B             right   SC      2     dense    1:2    ...           ...      forceful
-C             just    mixed   3     quiet    1:14   ...           ...      ceremonial
-D             centred UC      1     dense    1:3    ...           ...      interrupted
-...
-```
-
-No column may repeat a value more than twice across the ten rows. A row sharing more than three cells with another row is rebuilt from the evidence capsule, and the other row is left alone — a direction is never made safer to create separation. Each premise is used once. Fonts are chosen *after* the matrix is filled, so the typeface answers a composition that already exists instead of substituting for one.
-
-The matrix is internal working state, never shown at the first presentation; seeing the axes would prime the human's judgement of the specimens.
+V3 does not use a divergence matrix, parameter quotas, dice rolls, style menus, or mechanical rotation of formal properties. Each design begins from its own subject-derived premise and a blank HTML file. If two directions become equivalent after changing the font or colors, share a page skeleton, or read in the same order, one of them is rebuilt.
 
 Round one explores typography:
 
@@ -166,7 +155,7 @@ It explores space and placement:
 - intentional line breaks and text wrapping;
 - controlled overlap, cropping, or vertical type when it remains readable and professionally typeset.
 
-It explores color only through one flat canvas background and primary, secondary, or accent letterform colors. Color may change between textual roles and inside a word when the change carries meaning or hierarchy. There are no colored panels, bands, boxes, circles, or decorative background areas.
+It explores color only through one flat canvas background and primary, secondary, or accent letterform colors. There are no colored panels, bands, boxes, circles, or decorative background areas.
 
 It explores language behavior through sequencing, dominance, non-semantic repetition of supplied words, and line rhythm. Type and space may make the voice continuous, interrupted, compressed, ceremonial, conversational, forceful, restrained, or quiet without rewriting the user's words.
 
@@ -185,45 +174,29 @@ Round one has hard exclusions:
 - no simulated poster, campaign, website, packaging, or social-media artifact;
 - no SVG or canvas.
 
-Those exclusions are checkable in the source, so V3 checks them mechanically before anyone sees the specimens, rather than trusting the author that just wrote them to self-inspect:
+The ten directions are built as dependency-free `A.html` through `J.html`, with a neutral `index.html` linking to them. The actual HTML files are the Round 1 deliverables. Round 1 does not create PNG, WebP, JPEG, PDF, screenshots, contact sheets, or image previews. A consistent browser viewport may support fair comparison, but it is an evaluation condition rather than a fixed canvas or shared layout.
 
-```bash
-grep -nE 'border|box-shadow|gradient|background-image|border-radius|filter:|@keyframes|animation|<svg|<canvas|skew|scaleX|transform:' round-1/*.html
-```
-
-A match is a rebuild of that direction, not a justification. Three things stay available because they are typesetting rather than decoration: `::first-letter`, `::first-line`, and hanging punctuation — the pseudo-element exclusion covers shape imitation, not typographic detail — plus `writing-mode` for vertical type, and ordinary overflow cropping.
-
-The ten directions are built in dependency-free HTML and CSS and rendered at the same viewing size. The first presentation contains only the specimens and neutral labels A through J. No code, direction names, explanations, font prestige, swatches, matrix, or persuasive rationale appears before the human reacts.
+The first presentation links or opens the ten HTML designs with neutral labels A through J. No code, concept names, explanations, font prestige, swatches, or persuasive rationale appears before the human reacts.
 
 Round one must look professionally resolved in typography, alignment, spacing, cropping, optical balance, and rendering. Controlled overlap, ordinary cropping, vertical text, and repetition are allowed because they remain typographic, but they must never turn letterforms into abstract illustration.
 
-Round one has a fixed file layout, so a later session can find the locked context without guessing:
-
-```text
-round-1/
-  A.html … J.html        one specimen each
-  index.html             all ten at equal viewing size
-  capsules/A.md … J.md   withheld until the human reacts
-ROUND-2-CONTEXT.md       written at project root on lock
-```
-
-Alongside its specimen, each direction gets a concise written capsule. It records the subject-derived premise, fonts and license status, size and case logic, detailed type behavior, colors, margins, padding, gaps, columns, alignment, whitespace, signature relationship, invariants, assumptions, risks, and instructions for translating the direction into concrete artifacts. The capsule is saved during Round 1 but withheld from the first visual encounter.
+Each direction also creates a concise written concept capsule. It records the subject-derived premise, fonts and license status, size and case logic, detailed type behavior, colors, margins, padding, gaps, columns, alignment, whitespace, signature relationship, invariants, assumptions, risks, and instructions for translating the direction into concrete artifacts. The capsule is saved during Round 1 but withheld from the first visual encounter.
 
 ### 5. Let the human judge
 
 The human can shortlist a direction, identify a specific living quality worth preserving, ask for one bounded typography-only change, lock one, or reject all ten.
 
-After the unprimed visual response, V3 reveals the neutral direction capsules only for the directions the human wants to consider. If all ten are rejected, V3 returns to the premise and evidence capsule before creating another set of ten. It does not increase the batch beyond ten.
+After the unprimed visual response, V3 reveals the neutral concept capsules only for the directions the human wants to consider. If all ten are rejected, V3 returns to the premise and evidence capsule before creating another set of ten. It does not increase the batch beyond ten.
 
 ### 6. Lock one direction
 
 Interest, praise, and a shortlist are not a lock. V3 waits for an explicit instruction such as “commit,” “lock this,” or “this is it.”
 
-After the lock, V3 ends the other nine directions and stops proposing alternatives. It preserves the selected HTML, preview, and capsule, adds the human's corrections, and writes `ROUND-2-CONTEXT.md`. That document becomes the authority for later work.
+After the lock, V3 ends the other nine directions and stops proposing alternatives. It preserves the selected HTML and capsule, adds the human's corrections, and writes `ROUND-2-CONTEXT.md`. That document becomes the authority for later work.
 
 ### 7. Create concrete Round 2 artifacts
 
-Round 2 injects the locked direction capsule as governing context and builds what the project actually needs. This can include a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
+Round 2 injects the locked concept capsule as governing context and builds what the project actually needs. This can include a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
 
 Shapes, lines, imagery, icons, material effects, and motion may enter only after the lock and only when the artifact requires or the human approves them. They must grow from the typographic direction rather than importing another style.
 
@@ -256,8 +229,8 @@ V3 is graceful with a strong unfinished idea. A designer can recognize an origin
 
 It reports three proof levels separately:
 
-1. **Typographic direction selected:** A Round 1 specimen has survived unprimed human judgement.
-2. **Direction locked:** The human has explicitly made one direction capsule the authority for Round 2.
+1. **Typography direction selected:** A Round 1 specimen has survived unprimed human judgement.
+2. **Direction locked:** The human has explicitly made one concept capsule the authority for Round 2.
 3. **Round 2 artifact system available:** The concrete artifacts, rules, assets, tokens, licenses, implementation, verification, and proof needed for repeated use exist.
 
 V3 must never withhold a strong concept because its complete system is unfinished. It must also never call an exciting specimen production-ready when the production system does not yet exist.
@@ -270,21 +243,21 @@ V3 uses WCAG 2.2 as the baseline for interfaces and digital artifacts. Keyboard 
 
 Direct manipulation may coexist with buttons, numeric inputs, and precise keyboard alternatives. A modal does not automatically close on an outside click when doing so could destroy work. Adaptive themes and hidden features require a product reason and human approval.
 
-## Rendered evidence is required
+## Production evidence begins in Round 2
 
-A source file is not proof of a design.
+Round 1 is judged through the actual browser-openable HTML files. It does not manufacture screenshot deliverables or claim production quality.
 
-For interfaces, V3 verifies a real render with real content at relevant widths, then checks keyboard and focus behavior, long text, important states, reduced motion, contrast, and data preservation.
+For Round 2 interfaces, V3 verifies the running interface with real content at relevant widths, then checks keyboard and focus behavior, long text, important states, reduced motion, contrast, and data preservation.
 
-For graphic design, V3 verifies the work at its intended size and medium, including crop, bleed, hierarchy, contrast, type behavior, export quality, and viewing distance.
+For Round 2 graphic design, the human may request exports or medium-specific proof when the job needs them. The skill does not impose interface-style rendered verification on graphic work.
 
-Rendering does not turn the author into a compliance clerk. It reveals whether the committed idea survives reality.
+Verification must match the actual artifact and the proof being claimed.
 
 ## V3 never creates SVG
 
 The ban applies to every phase, not only the first concepts. V3 does not author, generate, edit, trace, convert to, export, or recommend SVG for artwork, logos, icons, diagrams, editable masters, intermediate files, inline web markup, or final deliverables.
 
-Lean HTML and CSS remain the editable source for graphic concepts and digital compositions when practical. V3 renders PNG for lossless review and delivery, uses WebP or JPEG when their trade-offs are appropriate, and produces verified PDF for print.
+Lean HTML and CSS remain the editable source for graphic concepts and digital compositions when practical. Round 2 may export PNG for lossless review and delivery, use WebP or JPEG when their trade-offs are appropriate, and produce PDF for print. These formats never replace the ten Round 1 HTML files.
 
 If a logo, fabrication path, or other deliverable genuinely requires a professionally constructed scalable vector master, V3 writes the approved construction brief and states that qualified human vector work remains. It does not manufacture false production quality by emitting path code.
 
@@ -313,7 +286,7 @@ It does not ask what a famous designer would do. It does not roll dice for a sty
 
 ## Status
 
-V3 is a ground-up replacement for V2. V3.1.0 adds the divergence matrix and the mechanical exclusion check, moves every round-one rule into a single authority (`references/TYPOGRAPHIC-DIRECTIONS.md`), and fixes the marketplace catalogue, which had been left at 2.0.0 while the plugin manifest moved on. Sibling packages remain outside this change.
+V3 is a ground-up replacement for V2. Version 3.1.1 restores the pre-matrix Round 1 architecture and makes the output contract explicit: ten complete HTML designs with materially different color, typography, and space systems. Sibling packages remain outside this change.
 
 The governing sequence is:
 
@@ -322,7 +295,7 @@ real evidence
     -> temporary isolation
     -> ten independent typographic directions
     -> visual-first human judgement
-    -> relevant direction capsules revealed
+    -> relevant concept capsules revealed
     -> one direction explicitly locked
     -> locked capsule injected into Round 2
     -> concrete artifacts and production system
