@@ -25,20 +25,18 @@ Before completing any phase, inspect the generated files and source. The skill m
 
 Document any approved third-party SVG as immutable external input. Its presence does not authorize editing, tracing, inlining, redistribution, or derived SVG output.
 
-## Round 1 HTML verification
+## Round 1 source verification
 
-Round 1 is verified as source and browser-openable HTML, not as a set of image exports. Confirm that:
+Claude verifies Round 1 as source only. Do not open or render the HTML. Confirm from the files that:
 
-- `A.html` through `J.html` exist and open as ten separate dependency-free designs;
+- `A.html` through `J.html` exist as ten separate dependency-free designs;
 - `index.html` links to all ten neutrally without restyling, cropping, ranking, or turning them into cards or controls;
-- every direction uses the same working copy but has its own materially different palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace logic;
-- every visible pixel comes from letterforms or one flat canvas background;
+- every direction uses the same working copy and declares its own palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace rules;
 - the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or HTML `<canvas>` element;
-- the type remains readable and professionally composed at normal and narrow browser widths;
 - `capsules/A.md` through `capsules/J.md` exist but remain withheld until the human gives an unprimed visual response;
 - Round 1 contains no PNG, WebP, JPEG, PDF, screenshot, contact sheet, thumbnail, or other image export.
 
-The author may inspect the pages in a browser, but must not turn screenshots into Round 1 deliverables. Do not claim that a source check proves production quality; Round 1 is intentionally pre-production.
+Do not use Claude in Chrome, Chrome, browser automation, Computer Use, Playwright, Puppeteer, screenshots, image analysis, or another rendering tool to inspect A through J. The human alone opens and visually judges Round 1. Source validation does not prove legibility, composition, optical balance, professional typesetting, visual independence, or production quality.
 
 ## Interface verification
 
@@ -97,7 +95,7 @@ When an artifact fails, identify whether the constitution is weak or the impleme
 
 State:
 
-- for Round 1, which HTML files were created and opened; for Round 2, what was rendered and where;
+- for Round 1, which HTML files were created and source-checked, with visual review explicitly left to the human; for Round 2, what was rendered and where;
 - which real content and conditions were tested;
 - what passed;
 - what failed or remains untested;

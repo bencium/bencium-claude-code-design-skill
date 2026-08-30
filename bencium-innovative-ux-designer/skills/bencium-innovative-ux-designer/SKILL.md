@@ -2,7 +2,7 @@
 name: bencium-innovative-ux-designer
 description: Develop an independent visual language and turn the human-chosen direction into a production-ready graphic, brand, campaign, publication, web, or product system. Use when originality and differentiation matter enough to escape generic AI and Big Tech aesthetics. Guides a minimum-evidence start, ten isolated typography-led HTML design directions made only from type, color, and space, visual-first human judgement, explicit commitment, and concrete Round 2 production. Do not use for routine UI fixes, small components, or applying an existing design system.
 metadata:
-  version: 3.1.2
+  version: 3.1.3
 ---
 
 # Innovative UX Designer V3
@@ -32,6 +32,7 @@ Create a visual language that could only have emerged from this subject and cont
 11. **Protect creative momentum.** Default to zero preliminary questions. Begin direction work whenever the existing brief supports a reversible, non-harmful interpretation.
 12. **Never create SVG.** Do not author, generate, edit, trace, convert to, export, or recommend SVG at any phase. This covers concepts, later rounds, production artwork, logos, icons, illustrations, diagrams, editable masters, intermediate files, and inline `<svg>` markup.
 13. **Carry the concept forward as text.** Every round-one direction has a concise written concept capsule created alongside it. Keep those capsules out of the first visual encounter, then use the human-locked capsule as the governing context for Round 2.
+14. **Round-one visual judgement is human-only.** After writing A through J, do not open, render, screenshot, inspect, compare, or judge them with Claude in Chrome, Chrome, browser automation, Computer Use, image analysis, or any other rendering tool. Claude may check source only; the human opens the HTML and supplies the first visual judgement.
 
 Read [references/ISOLATION-PROTOCOL.md](references/ISOLATION-PROTOCOL.md) before collecting creative evidence or looking for fonts. Read [references/CONCEPT-ROUNDS.md](references/CONCEPT-ROUNDS.md) before checking evidence or generating directions. Read [references/PRODUCTION-SYSTEM.md](references/PRODUCTION-SYSTEM.md) only after one direction has been explicitly locked. Read [references/VERIFICATION.md](references/VERIFICATION.md) before showing the Round 1 HTML files or claiming a Round 2 production result is complete.
 
@@ -142,7 +143,9 @@ Reject and rebuild any direction that:
 
 ## Present visual evidence first
 
-Create `A.html` through `J.html` and a neutral `index.html`, then open or link the actual HTML files for the human. Round 1 delivers HTML, not PNG, WebP, JPEG, PDF, screenshots, contact sheets, or any other image export. A consistent browser viewport may be used for fair comparison, but it must not become a fixed canvas or shared design template.
+Create `A.html` through `J.html` and a neutral `index.html`, then link the actual HTML files for the human to open. Round 1 delivers HTML, not PNG, WebP, JPEG, PDF, screenshots, contact sheets, or any other image export. The human may use a consistent browser viewport for fair comparison, but it must not become a fixed canvas or shared design template.
+
+Stop after source-level validation. Do not open the HTML yourself or use Claude in Chrome, Chrome, browser automation, Computer Use, Playwright, Puppeteer, screenshots, image analysis, or any rendering tool to inspect or compare A through J. Do not claim that typography, composition, legibility, optical balance, or visual independence passed inspection. Those are human judgements.
 
 Do not show code, a written premise, a style label, a font name, a reference, or a persuasive explanation before the human reacts. Do not stage the directions as buttons, forms, cards, navigation, dashboards, landing-page sections, device mockups, fake product controls, posters, illustrations, scenes, logos, or production mockups. Do not claim production readiness.
 
@@ -203,4 +206,4 @@ Never call a Round 1 direction production-ready. Never discard an original conce
 
 ## Completion response
 
-Lead with what now exists and the current proof level. Link the actual Round 1 HTML files or show the concrete Round 2 artifact, as appropriate. State any remaining production, licensing, accessibility, or verification work. End with the one decision or action the human must take next; if none remains, say that clearly.
+Lead with what now exists and the current proof level. For Round 1, link the actual HTML files and state that visual review remains with the human. For Round 2, show the concrete artifact as appropriate. State any remaining production, licensing, accessibility, or verification work. End with the one decision or action the human must take next; if none remains, say that clearly.

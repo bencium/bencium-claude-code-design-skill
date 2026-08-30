@@ -174,9 +174,9 @@ Round one has hard exclusions:
 - no simulated poster, campaign, website, packaging, or social-media artifact;
 - no SVG or HTML `<canvas>` element.
 
-The ten directions are built as dependency-free `A.html` through `J.html`, with a neutral `index.html` linking to them. The actual HTML files are the Round 1 deliverables. Round 1 does not create PNG, WebP, JPEG, PDF, screenshots, contact sheets, or image previews. A consistent browser viewport may support fair comparison, but it is an evaluation condition rather than a fixed canvas or shared layout.
+The ten directions are built as dependency-free `A.html` through `J.html`, with a neutral `index.html` linking to them. The actual HTML files are the Round 1 deliverables. Round 1 does not create PNG, WebP, JPEG, PDF, screenshots, contact sheets, or image previews. The human may use a consistent browser viewport for fair comparison, but it is an evaluation condition rather than a fixed canvas or shared layout.
 
-The first presentation links or opens the ten HTML designs with neutral labels A through J. No code, concept names, explanations, font prestige, swatches, or persuasive rationale appears before the human reacts.
+Claude source-checks the files, then stops. It does not open, render, screenshot, inspect, compare, or judge them through Claude in Chrome, Chrome, browser automation, Computer Use, Playwright, Puppeteer, image analysis, or another rendering tool. The first presentation links the ten HTML designs with neutral labels A through J for the human to open. No code, concept names, explanations, font prestige, swatches, or persuasive rationale appears before the human reacts.
 
 Round one must look professionally resolved in typography, alignment, spacing, cropping, optical balance, and rendering. Controlled overlap, ordinary cropping, vertical text, and repetition are allowed because they remain typographic, but they must never turn letterforms into abstract illustration.
 
@@ -245,7 +245,7 @@ Direct manipulation may coexist with buttons, numeric inputs, and precise keyboa
 
 ## Production evidence begins in Round 2
 
-Round 1 is judged through the actual browser-openable HTML files. It does not manufacture screenshot deliverables or claim production quality.
+Round 1 is judged only by the human through the actual browser-openable HTML files. Claude performs source checks but no browser or rendered inspection, does not manufacture screenshot deliverables, and does not claim visual or production quality.
 
 For Round 2 interfaces, V3 verifies the running interface with real content at relevant widths, then checks keyboard and focus behavior, long text, important states, reduced motion, contrast, and data preservation.
 
@@ -286,7 +286,7 @@ It does not ask what a famous designer would do. It does not roll dice for a sty
 
 ## Status
 
-V3 is a ground-up replacement for V2. Version 3.1.2 preserves the pre-matrix Round 1 architecture and makes the output contract explicit: ten typography-led HTML design directions with materially different color, typography, and space systems, sharing working copy and only an optional comparison viewport. Sibling packages remain outside this change.
+V3 is a ground-up replacement for V2. Version 3.1.3 preserves the pre-matrix Round 1 architecture and makes the output contract explicit: ten typography-led HTML design directions with materially different color, typography, and space systems, sharing working copy and only an optional human comparison viewport. Claude checks source only; Round 1 visual judgement belongs exclusively to the human. Sibling packages remain outside this change.
 
 The governing sequence is:
 

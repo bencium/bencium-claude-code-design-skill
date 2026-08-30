@@ -118,7 +118,7 @@ Use the same working copy across all ten directions. An optional shared browser 
 
 The direction is not a moodboard, style tile, swatch sheet, annotated foundation board, abstract illustration, interface, component sheet, or finished brand guideline. It should feel like a disciplined typographic proposition: resolved enough for human judgement, open enough to become a visual language after selection.
 
-Typography, alignment, spacing, cropping, optical balance, and rendering must be professionally resolved. Do not add category labels, a direction name, or an explanation before visual judgement.
+Author the typography, alignment, spacing, cropping, optical balance, and browser behavior with professional intent, but do not claim they succeeded visually before the human judges the HTML. Do not add category labels, a direction name, or an explanation before visual judgement.
 
 ## Round 1 file contract
 
@@ -149,27 +149,26 @@ Create one concise Markdown capsule beside every direction. It records the direc
 
 Write neutral operational prose. Do not use style names, mood words, prestige, external references, or persuasive claims. Save the capsules as part of Round 1, but withhold them from the first visual encounter.
 
-## Composition-level rejection pass
+## Pre-handoff source pass
 
-Inspect each direction directly in the browser at normal and narrow viewing widths. Do not save screenshots or raster previews. Reject it if any of these are true:
+Do not open or render the directions. Check the HTML, CSS, working copy, and capsules as source only. Reject and rebuild a direction before handoff when the source shows that:
 
-- another organization's name could replace the real one without breaking the work;
-- it contains any non-typographic element;
-- it simulates a poster, hero section, campaign asset, logo, moodboard, style tile, or other artifact genre;
-- the focal point comes from decoration or an effect rather than language and type;
-- typography, color, and space tell unrelated stories;
-- it shows color without palette behavior or typefaces without typographic behavior;
-- alignment, spacing, clipping, or optical balance looks accidental or unfinished;
-- it becomes equivalent to another direction when only the font or palette changes;
-- it needs a confident paragraph to seem intelligent;
-- it sacrifices necessary comprehension merely to look experimental;
-- its rules cannot produce a second composition in the same language.
+- supplied copy was changed, invented, or omitted;
+- an excluded HTML element, CSS property, asset, effect, or dependency entered Round 1;
+- its capsule cannot trace the premise to subject evidence;
+- its source reuses another direction's page skeleton, palette, font combination, hierarchy, or spatial rules;
+- changing only its font or color values would make its source substantially equivalent to another direction;
+- required font, color, hierarchy, spacing, language, or licensing facts are missing from its capsule.
 
 Rebuild only the failed direction. Do not make the others safer to match it.
 
+Do not claim that source inspection proves visual quality, legibility, optical balance, professional typesetting, or genuine visual independence. Only the human may judge those qualities after opening the HTML files.
+
 ## First presentation
 
-Open or link the ten HTML designs with equal visual status. Identify them only as A through J.
+Link the ten HTML designs with equal status for the human to open. Identify them only as A through J.
+
+Do not open, render, screenshot, inspect, compare, or judge the files with Claude in Chrome, Chrome, browser automation, Computer Use, Playwright, Puppeteer, image analysis, or any other rendering tool. Round 1 visual inspection belongs only to the human.
 
 Do not include:
 
