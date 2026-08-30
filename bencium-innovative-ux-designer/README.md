@@ -192,9 +192,9 @@ Each direction also creates a concise written concept capsule. It records the su
 
 ### 5. Let the human judge
 
-The human can shortlist a direction, identify a specific living quality worth preserving, ask for one bounded typography-only change, lock one, or reject all ten.
+The human can shortlist a direction, identify a specific living quality worth preserving, ask for one bounded typography-only change, lock one, or reject all ten. V3 tells the human explicitly that they do not have to choose from the first set and may ask for another ten whenever none deserves commitment.
 
-After the unprimed visual response, V3 reveals the neutral concept capsules only for the directions the human wants to consider. If all ten are rejected, V3 returns to the premise and evidence capsule before creating another set of ten. It does not increase the batch beyond ten.
+After the unprimed visual response, V3 reveals the neutral concept capsules only for the directions the human wants to consider. If all ten are rejected, V3 returns to the premise and evidence capsule before creating another set of ten. There is no fixed limit to the number of rounds, but each batch stays at ten so human judgement remains manageable. The skill never pressures the human to select a weak direction merely to advance the workflow.
 
 ### 6. Lock one direction
 

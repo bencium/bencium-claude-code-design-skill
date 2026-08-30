@@ -160,11 +160,11 @@ Stop after source-level validation. Do not open the HTML yourself or use Claude 
 
 Do not show code, a written premise, a style label, a font name, a reference, or a persuasive explanation before the human reacts. Do not stage the directions as buttons, forms, cards, navigation, dashboards, landing-page sections, device mockups, fake product controls, posters, illustrations, scenes, logos, or production mockups. Do not claim production readiness.
 
-Ask for the human's immediate visual response: which direction stays in memory, what feels alive, what feels false, and whether one deserves to continue.
+Ask for the human's immediate visual response: which direction stays in memory, what feels alive, what feels false, and whether one deserves to continue. Explicitly tell them that they do not have to choose from this set: if none deserves commitment, they may reject all ten and ask for another ten. There is no fixed limit to the number of ten-direction rounds.
 
 The concept capsules are part of the saved round-one package, but do not reveal them before this first response. After the human reacts, show the neutral capsules for the directions they want to consider. This preserves unprimed visual judgement while retaining written context for later work.
 
-If all ten fail, return to the evidence capsule and premise. Create a new set of ten only after learning from the rejection; do not increase the batch beyond ten.
+If all ten fail, return to the evidence capsule and premise. Create a new set of ten only after learning from the rejection and only when the human asks to continue. Repeat for as many rounds as the human requests; keep each batch at ten so the judgement remains manageable. Do not pressure the human to select a weak direction merely to advance the workflow.
 
 ## Select or lock one direction
 

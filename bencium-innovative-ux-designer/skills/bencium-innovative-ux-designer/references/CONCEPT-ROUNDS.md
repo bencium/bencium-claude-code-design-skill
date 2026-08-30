@@ -198,13 +198,15 @@ Ask the human for an immediate response in ordinary language. Useful questions a
 - What specific part feels true or false?
 - Does one deserve to be developed, or did the premise fail?
 
+Tell the human plainly that selection is optional. If none of the ten deserves commitment, they may reject the complete set and ask for another ten. There is no fixed limit to how many ten-direction rounds they may request.
+
 After the human gives this unprimed response, reveal the neutral concept capsules only for the directions they want to consider. Do not bury the human under all ten texts unless they request them.
 
 ## When no direction is selected
 
 Treat rejection as evidence. Identify whether the failure came from missing subject knowledge, a weak premise, false cultural assumptions, an inappropriate medium, insufficient divergence, or poor execution.
 
-Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of ten. Do not preserve a rejected direction. Do not increase the batch beyond ten.
+Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of ten when the human asks to continue. Do not preserve a rejected direction. Repeat as often as the human requests, but keep each batch at ten rather than making one unmanageable comparison set. Never pressure the human to choose merely to advance to Round 2.
 
 ## Selection and lock
 
