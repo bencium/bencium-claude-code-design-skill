@@ -1,6 +1,6 @@
 # Isolation Protocol
 
-Use this protocol while collecting evidence and creating the first three visual personalities. Its purpose is to reduce active visual cross-pollination long enough for the subject's own formal logic to emerge.
+Use this protocol while collecting evidence and creating the first ten typographic directions. Its purpose is to reduce active visual cross-pollination long enough for the subject's own formal logic to emerge.
 
 ## Create a source boundary
 
@@ -58,29 +58,30 @@ Extract the constraint, then close the source. Do not inherit its typography, sp
 
 ## Controlled font exception
 
-Round one may use an existing font because typography must be seen to judge a visual personality. Follow this order:
+Round one may use an existing font because typography must be seen to judge a direction. Follow this order:
 
 1. Derive the required behavior before browsing: languages, glyph coverage, width, contrast, rhythm, weight range, optical sizes, technical formats, medium, licensing scope, and budget.
-2. Ask the human before introducing a paid font, a new source, or a licensing commitment.
+2. Reversible use of a clearly licensed open-source font may proceed without a preliminary question when no account, purchase, license acceptance, or redistribution risk is involved. Ask once before any paid acquisition, trial agreement, account creation, license acceptance, or other commitment.
 3. Search independent foundries and libraries in Spain, Greece, Central and Eastern Europe, Latin America, the Netherlands, Scandinavia, Switzerland, the United Kingdom, and independent United States studios.
 4. Treat geography as a discovery route, never as proof of quality or a shortcut to a regional look.
 5. Exclude Google Fonts. Do not use a typeface because it appears unusual in a catalogue.
 6. Verify the primary source, designer or foundry, license, price, allowed uses, formats, language coverage, variable-font support, webfont terms, and redistribution restrictions.
-7. Present the licensing facts before acquisition. Do not buy, download, embed, copy, or redistribute a paid font without explicit approval.
+7. Record the licensing facts in the direction capsule. Reveal them after the first visual response and before any paid acquisition. Do not buy, download, embed, copy, or redistribute a paid font without explicit approval.
 8. Keep a fallback path if acquisition is declined. A fallback may preserve functional metrics temporarily, but it is not proof of the final typography.
 
 ## Icons and conventions
 
 Do not create a custom icon family merely to claim originality. After explicit human commitment, an existing open-source or paid family may be evaluated against the committed formal requirements.
 
-The same applies to printing conventions, production formats, and established interaction patterns. Use them as implementation knowledge after commitment. Never let their defaults choose the language.
+The same applies to printing conventions, production formats, and established interaction patterns. Use them as implementation knowledge after the direction is locked. Never let their defaults choose the language.
 
 ## Isolation audit
 
-Before presenting A, B, and C, verify:
+Before presenting A through J, verify:
 
-- every concept has a traceable subject-derived premise;
+- every direction has a traceable subject-derived premise;
 - no external visual reference entered the process;
-- no concept depends on a platform kit, template, or familiar style label;
+- no direction depends on a platform kit, template, or familiar style label;
 - any font search began from written requirements and has licensing evidence;
-- the three personalities evolved independently rather than by mutation from the first one.
+- every specimen contains only type, flat canvas and text colors, and whitespace;
+- the ten directions evolved independently rather than by mutation from the first one.

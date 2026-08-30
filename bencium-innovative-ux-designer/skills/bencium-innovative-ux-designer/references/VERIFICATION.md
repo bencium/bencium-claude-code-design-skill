@@ -8,9 +8,9 @@ Use real content and real rendering. Mock material can support early prototyping
 
 Report these independently:
 
-1. **Innovative concept accepted:** the human selected a premise from visual evidence.
-2. **Visual world committed:** the human explicitly locked the developed language.
-3. **Production system available:** the agreed reusable rules, assets, licenses, implementation, and verification exist.
+1. **Typography direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
+2. **Direction locked:** the human explicitly made one concept capsule the governing context for Round 2.
+3. **Round 2 artifact system available:** the agreed concrete artifacts, reusable rules, assets, licenses, implementation, and verification exist.
 
 Do not collapse source complete, render complete, system complete, and human acceptance into one claim.
 
@@ -59,7 +59,7 @@ Render or export the artifact in its intended medium and check:
 - delivery as verified PNG, WebP, JPEG, or PDF rather than generated SVG;
 - image rights, effective resolution, compression, and generated-image disclosure where applicable;
 - production tolerances, folds, binding, cutting, substrate, fabrication, or environmental placement;
-- alternate crops and channel formats without losing the committed personality;
+- alternate crops and channel formats without losing the locked direction;
 - a physical proof or representative device proof when the risk warrants it.
 
 Graphic work does not require interface tests. It still requires rendered evidence before production quality is claimed.

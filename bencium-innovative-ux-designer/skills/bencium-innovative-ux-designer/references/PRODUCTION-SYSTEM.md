@@ -1,6 +1,6 @@
 # Production System
 
-Read this only after the human has selected one visual personality. Formalize the selected language after explicit commitment; before commitment, produce only the development work needed for judgement.
+Read this only after the human has explicitly locked one typographic direction. Inject its Round 1 concept capsule as the governing context for concrete Round 2 artifacts and production rules.
 
 ## No SVG
 
@@ -26,6 +26,7 @@ Write the constitution before creating tokens or components. It should state:
 - typography behavior and acquisition status;
 - color-generating logic;
 - spatial rhythm and density;
+- the locked margins, padding, gaps, gutters, type roles, scale, case, alignment, and whitespace behavior from the concept capsule;
 - shape, line, edge, and boundary behavior;
 - materiality and permitted imperfection;
 - imagery behavior, if approved;
@@ -107,7 +108,7 @@ One master specimen is not proof that the language can travel. One component lib
 
 ## Project-local ledger
 
-Offer the ledger after commitment and create it only with human approval. Keep it small and editable. Store it with the project, never as a global gallery or cross-client inspiration store.
+Offer the ledger after the direction is locked and create it only with human approval. Keep it small and editable. Store it with the project, never as a global gallery or cross-client inspiration store.
 
 Record:
 
@@ -118,7 +119,7 @@ Record:
 - rejected mutations and why they failed;
 - accessibility, cultural, legal, and licensing boundaries;
 - conditions that may reopen the direction;
-- the explicit human commitment and later overrides.
+- the explicit human lock and later overrides.
 
 Do not store sensitive user material, licensed assets, private references, or personal data in shared agent memory.
 

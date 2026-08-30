@@ -4,7 +4,7 @@ Use this workflow to move from evidence to visual judgement without allowing exp
 
 ## Minimum-evidence gate
 
-The first concepts need a generative seed, not a completed creative brief. Default to zero questions. Proceed when the existing message provides:
+The first directions need a generative seed, not a completed creative brief. Default to zero questions. Proceed when the existing message provides:
 
 - **Subject:** enough real context to know what the work belongs to;
 - **Intent:** an audience, desired effect, central tension, or meaningful proposition.
@@ -28,7 +28,7 @@ Before round one, do not collect information merely because it will matter event
 
 Ask early only when omission would make the specimen harmful, falsely attribute a real person, expose private information, or make visual comparison impossible. Production readiness is not the goal of round one.
 
-Use the same provisional canvas size and working content across A, B, and C so the human judges visual language rather than completeness. Use anonymous roles or unmistakable placeholders when identities are unresolved. Never invent personal facts. Preserve exact user-provided copy; when no final wording exists, use minimal provisional working copy and disclose it after the first visual reaction.
+Use the same provisional canvas size and working content across A through J so the human judges typographic direction rather than completeness. Use anonymous roles or unmistakable placeholders when identities are unresolved. Never invent personal facts. Preserve exact user-provided copy; when no final wording exists, use minimal provisional working copy and disclose it after the first visual reaction.
 
 ## Evidence capsule
 
@@ -44,74 +44,100 @@ Record what is already known:
 - allowed and prohibited sources;
 - unresolved questions.
 
-Do not delay concept creation to fill every field. Privately derive several possible formal premises, then select three that depend on different subject relationships. Do not show written premises before the first visual reaction.
+Do not delay concept creation to fill every field. Privately derive at least ten possible typographic premises, then select ten that depend on different subject relationships. Do not show written premises before the first visual reaction.
 
 ## Constrained divergence
 
-Random dice rolls create arbitrary difference. V3 uses constrained divergence: every personality must answer the same real brief through a different causal premise.
+Random dice rolls create arbitrary difference. V3 uses constrained divergence: every direction must answer the same real brief through a different causal premise.
 
-For A, B, and C, independently establish:
+For A through J, independently establish:
 
 - the primary relationship taken from the evidence capsule;
-- the compositional law;
-- the behavior of language and typography;
-- the color-generating rule;
-- the rhythm and density rule;
-- the vocabulary of edges, lines, fields, shapes, and interruptions;
-- the material or imperfection rule;
+- the typographic compositional law;
+- the font choice or combination;
+- the size scale and hierarchy;
+- the uppercase, lowercase, or mixed-case rule;
+- the weight, width, spacing, alignment, and line-break behavior;
+- the flat canvas and text-color rule;
+- the whitespace, rhythm, and density rule;
 - the variation rule;
 - the emotional and cultural posture;
-- the motion law if the medium moves.
 
-Do not create A and then modify it into B and C. Begin each from the evidence capsule with no reuse of the other concepts' formal decisions.
+Do not create A and then modify it into B through J. Begin each from the evidence capsule with no reuse of the other directions' typographic decisions.
 
-## Round-one visual concepts
+## Round-one typographic directions
 
-Create one professional integrated composition for each personality using the same working content and the same neutral viewing size. The composition must make a visual language perceptible without turning it into an abstract illustration, a labelled design board, or a fake final campaign.
+Create one professional typography-only specimen for each direction using the same working content and the same neutral viewing size. The specimen must make a possible visual language perceptible without turning it into an artifact, illustration, labelled design board, or fake campaign.
 
-Every concept must integrate:
+Every direction must integrate:
 
-1. **Typographic voice:** real or provisional project language used as the main structure, with deliberate primary-message, supporting-message, and small contextual-detail behavior where the brief provides them.
-2. **Palette behavior:** colors used in clear proportions and relationships, never shown as disconnected swatches.
-3. **Shape grammar:** a small coherent family of fills, lines, bands, edges, boundaries, crops, or intersections with a repeatable structural role.
-4. **Spatial rhythm:** deliberate intervals, repetition, density, silence, scale changes, alignment, and directional movement.
-5. **Hierarchy:** an intentional path through primary, secondary, and minor information that remains legible at normal size and convincing at thumbnail size.
-6. **Signature relationship:** one memorable interaction between type, color, shape, and space derived from subject evidence and capable of extending into later artifacts.
+1. **Font voice:** one typeface or a deliberate combination, with clear display, supporting, and small-text roles where the working copy needs them.
+2. **Font relationship:** serif, sans, slab, script, display, monospaced, or hybrid behavior selected from subject-derived requirements rather than a style menu.
+3. **Size scale:** a distinct proportional relationship between primary, secondary, supporting, caption, date, number, attribution, and minor language where present.
+4. **Case behavior:** deliberate uppercase, lowercase, title case, sentence case, small capitals, or mixed case.
+5. **Font behavior:** genuine weight, width, grade, optical size, italic, slant, or variable-font axes; never artificial deformation.
+6. **Typographic detail:** intentional letter spacing, word spacing, line height, line length, kerning, ligatures, hyphenation, punctuation, alignment, and line breaks.
+7. **Language coverage:** considered numerals, diacritics, abbreviations, and multilingual text where present.
+8. **Palette behavior:** one flat canvas plus primary, secondary, and accent letterform colors used in clear proportions and relationships, never shown as disconnected swatches.
+9. **Space and placement:** deliberate outer margins, internal padding, gaps, gutters, text-block widths, maximum widths, column count and proportions, indents, hanging punctuation, baseline offsets, alignment, vertical placement, and edge relationships.
+10. **Whitespace and rhythm:** deliberate silence, density, symmetry or asymmetry, repetition of supplied language, placement, and scale changes.
+11. **Hierarchy:** an intentional reading path that remains legible at normal size and convincing at thumbnail size.
+12. **Signature relationship:** one memorable interaction between language, type, color, and space derived from subject evidence and capable of extending into later artifacts.
 
-Use lean HTML and CSS only. Do not use SVG, canvas, image generation, raster images, photography, illustration, icon libraries, UI libraries, animation libraries, or design-token packages in round one. CSS shapes must remain simple reusable primitives; do not draw scenes, mascots, symbols, or ornamental vector-style compositions with borders and pseudo-elements.
+Use lean HTML and CSS only. The HTML body may contain only the text needed for the specimen and neutral structural containers. CSS may control typography, placement, whitespace, a single flat canvas background, and letterform colors.
+
+Do not use CSS shapes, borders, rules, lines, boxes, panels, bands, circles, blobs, pseudo-elements, gradients, shadows, filters, masks, clipping paths, textures, patterns, icons, logos, punctuation used as decoration, SVG, canvas, image generation, raster images, photography, illustration, UI libraries, animation libraries, design-token packages, or motion. Nothing non-typographic may enter round one.
+
+Do not artificially stretch, warp, skew, or distort letterforms. Use genuine font variants and axes. Controlled overlap, ordinary overflow cropping, vertical type, and repetition of supplied words are allowed when they remain readable, professionally typeset, and semantically honest. Never turn letterforms into abstract illustration.
+
+Preserve every supplied word exactly. A direction may change sequence, dominance, line breaks, or repeat supplied language when doing so does not alter meaning. Explore whether the voice feels continuous, interrupted, compressed, ceremonial, conversational, forceful, restrained, or quiet by changing type and space rather than adding visual objects.
 
 The SVG ban continues after round one. Never convert a selected concept into SVG, use SVG as an editable master, or solve a difficult composition by generating path data.
 
-Use a plausible campaign, publication, packaging, environmental, or digital proportion when the likely medium is already obvious. This lets the human see the language working in a credible composition. Do not place it inside a device, billboard, frame, social-media interface, or other production mockup.
+Use one neutral proportion across all ten specimens. Do not simulate a poster, campaign, publication, package, interface, device, billboard, social-media post, or production mockup. Artifact conventions would contaminate judgement of the typography itself.
 
-The concept is not a moodboard, style tile, swatch sheet, annotated foundation board, abstract illustration, interface, component sheet, or finished brand guideline. It should feel like the first convincing appearance of a graphic language: resolved enough for human judgement, open enough to evolve after selection.
+The specimen is not a moodboard, style tile, swatch sheet, annotated foundation board, abstract illustration, interface, component sheet, or finished brand guideline. It should feel like a disciplined typographic proposition: resolved enough for human judgement, open enough to become a visual language after selection.
 
-Typography, alignment, spacing, clipping, optical balance, and rendering must be professionally resolved. Do not add category labels, a personality name, or an explanation before visual judgement.
+Typography, alignment, spacing, cropping, optical balance, and rendering must be professionally resolved. Do not add category labels, a direction name, or an explanation before visual judgement.
+
+## Concept capsules
+
+Create one concise Markdown capsule beside every specimen. It records the direction so later work does not depend on visual memory or an improvised prompt:
+
+- subject-derived premise;
+- exact font or combination, primary source, license status, and fallback status;
+- hierarchy and type roles;
+- size, case, weight, width, grade, optical size, italic or slant, tracking, spacing, line, punctuation, and language rules;
+- canvas and text-color values with their roles;
+- margin, padding, gap, gutter, column, text-block, alignment, edge, density, repetition, overlap, cropping, and whitespace rules;
+- signature typographic relationship;
+- candidate invariants, allowed variation, and prohibited normalization;
+- provisional assumptions and unresolved risks;
+- translation instructions for concrete Round 2 artifacts.
+
+Write neutral operational prose. Do not use style names, mood words, prestige, external references, or persuasive claims. Save the capsules as part of Round 1, but withhold them from the first visual encounter.
 
 ## Composition-level rejection pass
 
-Inspect each concept at thumbnail size, normal viewing size, and close range. Reject it if any of these are true:
+Inspect each direction at thumbnail size, normal viewing size, and close range. Reject it if any of these are true:
 
 - another organization's name could replace the real one without breaking the work;
-- it resembles abstract illustration, AI vector art, a generic poster formula, detached hero artwork, a moodboard, or decorative geometry;
-- the large-scale composition follows a familiar hero, centered stack, card grid, split screen, bento, or style-tile template;
-- the focal point comes from an effect rather than the premise;
+- it contains any non-typographic element;
+- it simulates a poster, hero section, campaign asset, logo, moodboard, style tile, or other artifact genre;
+- the focal point comes from decoration or an effect rather than language and type;
 - typography, color, and space tell unrelated stories;
-- “unusual” details decorate a conventional structure;
-- removing grain, distortion, shadow, animation, or texture removes all character;
-- the shapes cannot be reused without recreating the original composition;
-- it shows color without palette behavior, typefaces without typographic behavior, or shapes without a grammar;
+- it shows color without palette behavior or typefaces without typographic behavior;
 - alignment, spacing, clipping, or optical balance looks accidental or unfinished;
-- it resembles one of the other two personalities after color and font are ignored;
+- it becomes equivalent to another direction when only the font or palette changes;
 - it needs a confident paragraph to seem intelligent;
 - it sacrifices necessary comprehension merely to look experimental;
 - its rules cannot produce a second composition in the same language.
 
-Rebuild only the failed personality. Do not make the others safer to match it.
+Rebuild only the failed direction. Do not make the others safer to match it.
 
 ## First presentation
 
-Present three separate concept renders with equal visual status. Label them only A, B, and C.
+Present ten separate specimen renders with equal visual status. Label them only A through J.
 
 Do not include:
 
@@ -121,7 +147,7 @@ Do not include:
 - source explanations;
 - font names or foundry prestige;
 - implementation notes;
-- buttons, scoring controls, forms, a comparison dashboard, illustrations, device frames, or production mockups.
+- buttons, scoring controls, forms, a comparison dashboard, shapes, lines, illustrations, icons, device frames, or production mockups.
 
 Ask the human for an immediate response in ordinary language. Useful questions are:
 
@@ -130,37 +156,36 @@ Ask the human for an immediate response in ordinary language. Useful questions a
 - What specific part feels true or false?
 - Does one deserve to be developed, or did the premise fail?
 
-## When no concept is selected
+After the human gives this unprimed response, reveal the neutral concept capsules only for the directions they want to consider. Do not bury the human under all ten texts unless they request them.
+
+## When no direction is selected
 
 Treat rejection as evidence. Identify whether the failure came from missing subject knowledge, a weak premise, false cultural assumptions, an inappropriate medium, insufficient divergence, or poor execution.
 
-Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of three. Do not preserve a rejected composition. Do not increase batch size.
+Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of ten. Do not preserve a rejected specimen. Do not increase the batch beyond ten.
 
-## Round two
+## Selection and lock
 
-Once the human selects one personality, terminate the other two. Preserve the chosen personality's living qualities before fixing incomplete details.
+Interest, praise, a shortlist, or a request for refinement is not a lock. Before locking, keep any requested refinement typography-only and preserve the same Round 1 boundary.
 
-Produce:
+When the human explicitly locks one direction:
 
-1. an evolved master composition;
-2. a second composition using materially different real content;
-3. a close-detail specimen showing the type, edge, material, and imperfection behavior;
-4. a short motion specimen only when the intended medium benefits from motion.
+- terminate the other nine;
+- preserve its HTML, rendered preview, and capsule;
+- add the human's corrections and locked decisions without rewriting the original premise;
+- copy the capsule into `ROUND-2-CONTEXT.md`;
+- use that document as governing context for every concrete artifact.
 
-Build the evolved compositions in HTML and CSS and render them to PNG, WebP, or JPEG for judgement. Do not create SVG during development or handoff.
+## Round 2: concrete artifacts
 
-Photography, illustration, or generated imagery may enter only with human approval. Derive an imagery brief from the selected constitution and prevent the imagery from becoming the dominant source of style.
+Build what the project actually needs rather than another abstract specimen. Depending on the brief, Round 2 may produce a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
 
-Show the round visually. Then reveal a concise, neutral account of the premise, its subject evidence, formal rules, font facts, known weaknesses, and production implications.
+Shapes, lines, photography, illustration, generated imagery, icons, material effects, or motion may enter only after the lock and only when required by the artifact or approved by the human. Derive them from the locked typographic context and prevent them from importing a second style.
 
-## Commitment gate
+For interfaces, build real components with real states, content, responsive behavior, keyboard access, visible focus, and recoverability. A component library must be usable implementation, not a decorative component sheet. For graphic artifacts, use real dimensions, content, and medium constraints.
 
-Ask for one explicit state:
+Use `ROUND-2-CONTEXT.md` in every Round 2 handoff or continuation. If a new task or production process cannot access the project files, include the capsule in its input. Do not replace it with a short aesthetic adjective.
 
-- continue developing this personality;
-- reject it and reopen the premise;
-- commit and move to production.
+Build in the existing project stack when one exists. Continue with HTML and CSS plus rendered PNG, WebP, or JPEG evidence when practical. Never create SVG during development or handoff.
 
-Do not treat “I like it,” “approved,” “looks good,” or “continue” as a permanent commitment when the human has not clearly locked the direction. When meaning is ambiguous, ask one short question.
-
-After commitment, do not volunteer more directions. Record any later reopening reason and the human decision that authorized it.
+After the lock, do not volunteer more directions. Record any later reopening reason and the human decision that authorized it.

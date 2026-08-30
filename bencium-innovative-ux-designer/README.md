@@ -2,7 +2,7 @@
 
 ## A closed studio for independent visual languages
 
-Innovative UX Designer V3 is a ground-up rebuild made to escape the statistical middle produced by generative AI. Contemporary design had already converged through global platforms, shared references, and standardized tools; large language and image models turn that convergence into probability, then generate its most likely combinations at enormous scale. V3 does not begin with style names, moodboards, galleries, templates, design tokens, or a catalogue of fashionable effects. It begins with the subject itself, temporarily closes the door on contemporary visual culture, and develops three independent visual personalities before a human chooses one.
+Innovative UX Designer V3 is a ground-up rebuild made to escape the statistical middle produced by generative AI. Contemporary design had already converged through global platforms, shared references, and standardized tools; large language and image models turn that convergence into probability, then generate its most likely combinations at enormous scale. V3 does not begin with style names, moodboards, galleries, templates, design tokens, or a catalogue of fashionable effects. It begins with the subject itself, temporarily closes the door on contemporary visual culture, and develops ten independent typographic directions before a human locks one.
 
 V3 is for identity, graphic design, campaigns, publications, digital experiences, and interfaces whose value depends on having a voice of their own. It is not a machine for decorating ordinary layouts.
 
@@ -68,7 +68,7 @@ The designer remains responsible for the decisions that generation cannot settle
 
 - **Commitment:** Infinite alternatives make organizations afraid to decide. Designers crystallize a choice, align the organization around it, and earn authority by saying: “This is it. Stop generating.”
 
-Designers increasingly manage fleets of creative agents, but V3 deliberately uses one author during visual invention. A committee of agents would cross-pollinate too early, average disagreements, and turn authorship into consensus. One visual personality must be allowed to become stubborn before production expands.
+Designers increasingly manage fleets of creative agents, but V3 deliberately uses one author during visual invention. A committee of agents would cross-pollinate too early, average disagreements, and turn authorship into consensus. One direction must be allowed to become stubborn before production expands.
 
 ## The source law
 
@@ -109,7 +109,7 @@ The search begins from a written need such as width, rhythm, language coverage, 
 
 Google Fonts is excluded. Search independent open-source and paid foundries in Spain, Greece, Central and Eastern Europe, Latin America, the Netherlands, Scandinavia, Switzerland, the United Kingdom, and independent United States studios. These regions are discovery routes, not aesthetic stereotypes.
 
-Before a font is selected or acquired, V3 must show its source, designer or foundry, license, price, formats, language coverage, and usage restrictions. It may recommend a paid font, but it may not buy, download, embed, or distribute one without explicit human approval.
+V3 records each font's source, designer or foundry, license, price, formats, language coverage, and usage restrictions in the direction capsule, then reveals those facts after the first visual response. Clearly licensed open-source fonts may be used reversibly without interrupting Round 1. A paid font, trial agreement, account, license acceptance, or acquisition requires explicit human approval before it is bought, downloaded, embedded, or distributed.
 
 Icons may be sourced after explicit commitment. An existing icon family can implement the committed character, but it cannot determine that character.
 
@@ -119,65 +119,88 @@ Icons may be sourced after explicit commitment. An existing icon family can impl
 
 V3 defaults to zero preliminary questions. When the existing brief names the subject and its intended effect, audience, tension, or proposition, the user's own language is enough to begin.
 
-Only a fundamentally unclear or risky brief can trigger questions, and then V3 asks no more than two short questions once. It makes reversible assumptions for anything else and proceeds. Final copy, complete biographies, permissions, dimensions, channel lists, schedules, budgets, legal details, and production specifications wait until a visual personality survives. The evidence capsule is a seed, not an intake form or a moodboard.
+Only a fundamentally unclear or risky brief can trigger questions, and then V3 asks no more than two short questions once. It makes reversible assumptions for anything else and proceeds. Final copy, complete biographies, permissions, dimensions, channel lists, schedules, budgets, legal details, and production specifications wait until the human has reacted to the typography. The evidence capsule is a seed, not an intake form or a moodboard.
 
 ### 2. Seal the studio
 
 The author records the allowed sources and closes the visual-reference firewall. Any necessary functional inspection is separated from creative influence. Existing technology may reveal what the work must support, but it may not supply the visual answer.
 
-### 3. Create three genuinely different visual personalities
+### 3. Create ten genuinely different typographic directions
 
-V3 creates A, B, and C as three independent visual worlds. They are not palette changes or typography variations on one layout. They must differ fundamentally in:
+V3 creates A through J as ten ultra-minimal typographic directions. Every direction uses identical copy and the same neutral canvas, but establishes a fundamentally different relationship between type, scale, case, color, placement, rhythm, language, and empty space.
 
-- composition and hierarchy;
-- typographic behavior;
-- color logic;
-- space, rhythm, density, and scale;
-- shape, line, edge, and boundary vocabulary;
-- materiality, texture, and imperfection;
-- the relationship between words and form;
-- emotional and cultural posture;
-- motion premise when motion is relevant;
-- the rule that allows the language to vary without losing itself.
+Round one explores typography:
 
-The three concepts may share the subject's content and basic requirements. They may not share a layout skeleton, token set, palette, typeface, motif, component anatomy, or fashionable effect package.
+- font choice and font combinations;
+- serif, sans, slab, script, display, monospaced, or hybrid relationships selected from subject-derived requirements, never style categories;
+- weight, width, grade, optical size, italic or slant through genuine font variants or variable-font axes;
+- uppercase, lowercase, title case, sentence case, small capitals, and deliberate mixed case;
+- primary, secondary, supporting, caption, date, number, and attribution relationships;
+- type-size scales and the amount of contrast between levels;
+- letter spacing, word spacing, line height, line length, kerning, ligatures, hyphenation, and punctuation behavior;
+- numerals, diacritics, abbreviations, and multilingual text.
 
-### 4. Show the visual languages before explaining them
+It explores space and placement:
 
-The first presentation is visual and quiet. A, B, and C are shown as professional integrated graphic concepts. In each one, typography leads while palette, reusable shapes, spacing, rhythm, density, and hierarchy operate together as one language.
+- outer margins, internal padding, gaps, and gutters;
+- text-block widths, maximum widths, column count, and column proportions;
+- indents, hanging punctuation, and baseline offsets;
+- horizontal, centered, right, justified, or mixed alignment;
+- vertical placement and relationships to canvas edges;
+- dense or quiet composition, symmetrical or asymmetrical distribution, and large uninterrupted areas of whitespace;
+- intentional line breaks and text wrapping;
+- controlled overlap, cropping, or vertical type when it remains readable and professionally typeset.
 
-The first presentation must not use buttons, forms, cards, navigation bars, dashboards, generic landing-page sections, fake product controls, annotated design boards, swatch sheets, abstract illustration, or finished campaign mockups. Interface furniture would pull judgement toward conventional UI quality; abstract artwork would hide whether a reusable graphic language actually exists.
+It explores color only through one flat canvas background and primary, secondary, or accent letterform colors. There are no colored panels, bands, boxes, circles, or decorative background areas.
 
-The concepts are built in lean HTML and CSS only. SVG, canvas, photography, illustration, generated imagery, and visual libraries are excluded from round one. No swatches, category labels, annotations, confident rationale, style name, font biography, or persuasive explanation is shown until the human has reacted.
+It explores language behavior through sequencing, dominance, non-semantic repetition of supplied words, and line rhythm. Type and space may make the voice continuous, interrupted, compressed, ceremonial, conversational, forceful, restrained, or quiet without rewriting the user's words.
 
-Round one must look professionally resolved in typography, alignment, spacing, optical balance, and rendering. The human should experience the language directly while a professional can infer its palette, typographic logic, shape grammar, and rhythm.
+### 4. Keep Round 1 typographic and visual-first
+
+Every visible pixel in a Round 1 specimen must be either a letterform or the single flat canvas background. Invisible HTML and CSS layout may position and space the type.
+
+Round one has hard exclusions:
+
+- no shapes, lines, rules, borders, frames, panels, bands, blobs, or circles;
+- no illustration, imagery, photography, icons, symbols, or logo marks;
+- no gradients, textures, grain, shadows, glow, blur, filters, or decorative effects;
+- no pseudo-elements or punctuation used to imitate shapes;
+- no animation or motion;
+- no artificial stretching, warping, skewing, or distortion of letterforms;
+- no simulated poster, campaign, website, packaging, or social-media artifact;
+- no SVG or canvas.
+
+The ten directions are built in dependency-free HTML and CSS and rendered at the same viewing size. The first presentation contains only the specimens and neutral labels A through J. No code, concept names, explanations, font prestige, swatches, or persuasive rationale appears before the human reacts.
+
+Round one must look professionally resolved in typography, alignment, spacing, cropping, optical balance, and rendering. Controlled overlap, ordinary cropping, vertical text, and repetition are allowed because they remain typographic, but they must never turn letterforms into abstract illustration.
+
+Each direction also creates a concise written concept capsule. It records the subject-derived premise, fonts and license status, size and case logic, detailed type behavior, colors, margins, padding, gaps, columns, alignment, whitespace, signature relationship, invariants, assumptions, risks, and instructions for translating the direction into concrete artifacts. The capsule is saved during Round 1 but withheld from the first visual encounter.
 
 ### 5. Let the human judge
 
-The human can choose one direction, identify a specific living quality worth preserving, ask for one bounded change, or reject all three.
+The human can shortlist a direction, identify a specific living quality worth preserving, ask for one bounded typography-only change, lock one, or reject all ten.
 
-If all three are rejected, V3 returns to the premise and evidence capsule. It does not generate twenty more options. More output without a better premise increases noise rather than originality.
+After the unprimed visual response, V3 reveals the neutral concept capsules only for the directions the human wants to consider. If all ten are rejected, V3 returns to the premise and evidence capsule before creating another set of ten. It does not increase the batch beyond ten.
 
-### 6. Deepen one personality
+### 6. Lock one direction
 
-After the human selects A, B, or C, the other personalities end. The same author develops only the chosen world through:
+Interest, praise, and a shortlist are not a lock. V3 waits for an explicit instruction such as “commit,” “lock this,” or “this is it.”
 
-- one evolved master composition;
-- one composition using different real content;
-- one close-detail specimen exposing type, material, edges, and imperfection;
-- one short motion specimen when the medium makes motion meaningful.
+After the lock, V3 ends the other nine directions and stops proposing alternatives. It preserves the selected HTML, preview, and capsule, adds the human's corrections, and writes `ROUND-2-CONTEXT.md`. That document becomes the authority for later work.
 
-Generated imagery may enter here if it strengthens the chosen language and remains subordinate to it. It may not import a second aesthetic.
+### 7. Create concrete Round 2 artifacts
 
-### 7. Require explicit commitment
+Round 2 injects the locked concept capsule as governing context and builds what the project actually needs. This can include a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
 
-Approval, enthusiasm, and “this is promising” are not commitment. V3 waits for an explicit instruction such as “commit,” “lock this,” or “this is it.”
+Shapes, lines, imagery, icons, material effects, and motion may enter only after the lock and only when the artifact requires or the human approves them. They must grow from the typographic direction rather than importing another style.
 
-After commitment, V3 stops proposing alternatives. The direction can reopen only through an explicit human decision based on new evidence, a cultural concern, an accessibility or implementation failure, a changed business need, or a direct override.
+For interfaces, a Round 2 component library must contain real usable components, content, states, responsive behavior, keyboard access, visible focus, and recoverability. It is not a decorative component sheet. For graphic work, Round 2 uses real dimensions, content, and medium constraints.
 
-### 8. Turn the committed language into a production system
+The direction can reopen only through an explicit human decision based on new evidence, a cultural concern, an accessibility or implementation failure, a changed business need, or a direct override.
 
-Only after commitment does V3 formalize the language for repeated production. Depending on the project and available environment, the package can include:
+### 8. Turn Round 2 into a production system
+
+After the lock, V3 formalizes only what the concrete artifacts need for repeated production. Depending on the project and available environment, the package can include:
 
 - the visual constitution and its source boundary;
 - master and supporting specimens;
@@ -196,13 +219,13 @@ The production system records a discovered language. It must never retroactively
 
 ## Innovation comes before completeness
 
-V3 is graceful with a strong unfinished idea. A designer can recognize an original visual personality before every state, asset, and rule has been completed. The skill should help that idea continue instead of rejecting it for failing an enterprise-style completeness checklist.
+V3 is graceful with a strong unfinished idea. A designer can recognize an original typographic direction before every state, asset, and rule has been completed. The skill should help that idea continue instead of rejecting it for failing an enterprise-style completeness checklist.
 
 It reports three proof levels separately:
 
-1. **Innovative concept accepted:** A visual premise has survived human judgement.
-2. **Visual world committed:** The human has explicitly locked the developed personality.
-3. **Production system available:** The rules, assets, tokens, licenses, verification, and proof artifacts needed for repeated use exist.
+1. **Typography direction selected:** A Round 1 specimen has survived unprimed human judgement.
+2. **Direction locked:** The human has explicitly made one concept capsule the authority for Round 2.
+3. **Round 2 artifact system available:** The concrete artifacts, rules, assets, tokens, licenses, implementation, verification, and proof needed for repeated use exist.
 
 V3 must never withhold a strong concept because its complete system is unfinished. It must also never call an exciting specimen production-ready when the production system does not yet exist.
 
@@ -236,7 +259,7 @@ An existing user-supplied or licensed third-party SVG may be treated as immutabl
 
 ## The design ledger
 
-After commitment, the human may approve a small ledger stored with the project. It records:
+After the direction is locked, the human may approve a small ledger stored with the project. It records:
 
 - the premise and allowed evidence;
 - the language's signature traits;
@@ -264,11 +287,12 @@ The governing sequence is:
 ```text
 real evidence
     -> temporary isolation
-    -> three independent visual personalities
+    -> ten independent typographic directions
     -> visual-first human judgement
-    -> one personality developed
-    -> explicit human commitment
-    -> production system
+    -> relevant concept capsules revealed
+    -> one direction explicitly locked
+    -> locked capsule injected into Round 2
+    -> concrete artifacts and production system
     -> real rendered proof
 ```
 
