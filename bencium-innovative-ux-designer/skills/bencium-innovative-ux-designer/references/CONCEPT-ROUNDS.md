@@ -26,7 +26,7 @@ Before round one, do not collect information merely because it will matter event
 - printing specifications, implementation stacks, and vendor details;
 - full accessibility and regulatory requirements beyond any known immediate boundary.
 
-Ask early only when omission would make the specimen harmful, falsely attribute a real person, expose private information, or make visual comparison impossible. Production readiness is not the goal of round one.
+Ask early only when omission would make the direction harmful, falsely attribute a real person, expose private information, or make visual comparison impossible. Production readiness is not the goal of round one.
 
 Use the same working content across A through J so the human judges the visual language rather than completeness. Use anonymous roles or unmistakable placeholders when identities are unresolved. Never invent personal facts. Preserve exact user-provided copy; when no final wording exists, use minimal provisional working copy and disclose it after the first visual reaction.
 
@@ -74,7 +74,7 @@ After all ten exist, compare them as whole designs. Rebuild the weaker direction
 - expresses difference through one conspicuous parameter while the rest remains the same;
 - could exchange its premise with the other direction without forcing a redesign.
 
-## Round-one typographic directions
+## Round-one typography-led HTML design directions
 
 Create one professional typography-led HTML design for each direction using the same working content. Each must make a possible visual language perceptible without turning it into an artifact, illustration, labelled design board, or fake campaign.
 
@@ -104,9 +104,9 @@ These decisions must form one coherent system inside each direction. Across the 
 
 Do not satisfy this list by assigning ten arbitrary values. Every choice must follow from that direction's own premise.
 
-Use lean HTML and CSS only. The HTML body may contain only the text needed for the specimen and neutral structural containers. CSS may control typography, placement, whitespace, a single flat canvas background, and letterform colors.
+Use lean HTML and CSS only. The HTML body may contain only the text needed for the direction and neutral structural containers. CSS may control typography, placement, whitespace, a single flat background, and letterform colors.
 
-Do not use CSS shapes, borders, rules, lines, boxes, panels, bands, circles, blobs, pseudo-elements, gradients, shadows, filters, masks, clipping paths, textures, patterns, icons, logos, punctuation used as decoration, SVG, canvas, image generation, raster images, photography, illustration, UI libraries, animation libraries, design-token packages, or motion. Nothing non-typographic may enter round one.
+Do not use CSS shapes, borders, rules, lines, boxes, panels, bands, circles, blobs, pseudo-elements, gradients, shadows, filters, masks, clipping paths, textures, patterns, icons, logos, punctuation used as decoration, SVG, an HTML `<canvas>` element, image generation, raster images, photography, illustration, UI libraries, animation libraries, design-token packages, or motion. Nothing non-typographic may enter round one.
 
 Do not artificially stretch, warp, skew, or distort letterforms. Use genuine font variants and axes. Controlled overlap, ordinary overflow cropping, vertical type, and repetition of supplied words are allowed when they remain readable, professionally typeset, and semantically honest. Never turn letterforms into abstract illustration.
 
@@ -114,9 +114,9 @@ Preserve every supplied word exactly. A direction may change sequence, dominance
 
 The SVG ban continues after round one. Never convert a selected concept into SVG, use SVG as an editable master, or solve a difficult composition by generating path data.
 
-Do not impose a universal fixed canvas or artifact ratio. Each direction is a complete browser page with its own flat canvas color and composition. Use the same browser viewport when a fair side-by-side comparison is useful, but treat that viewport as an evaluation condition rather than a design template. Do not simulate a poster, campaign, publication, package, interface, device, billboard, social-media post, or production mockup.
+Use the same working copy across all ten directions. An optional shared browser viewport may be used when fair side-by-side comparison is useful, but it is an evaluation condition rather than a design template. Do not impose a shared fixed canvas, artifact ratio, layout, or palette. Each direction is a complete browser page with its own flat background color and composition. Do not simulate a poster, campaign, publication, package, interface, device, billboard, social-media post, or production mockup.
 
-The specimen is not a moodboard, style tile, swatch sheet, annotated foundation board, abstract illustration, interface, component sheet, or finished brand guideline. It should feel like a disciplined typographic proposition: resolved enough for human judgement, open enough to become a visual language after selection.
+The direction is not a moodboard, style tile, swatch sheet, annotated foundation board, abstract illustration, interface, component sheet, or finished brand guideline. It should feel like a disciplined typographic proposition: resolved enough for human judgement, open enough to become a visual language after selection.
 
 Typography, alignment, spacing, cropping, optical balance, and rendering must be professionally resolved. Do not add category labels, a direction name, or an explanation before visual judgement.
 
@@ -134,7 +134,7 @@ The `.html` files are the Round 1 design deliverables. Do not create PNG, WebP, 
 
 ## Concept capsules
 
-Create one concise Markdown capsule beside every specimen. It records the direction so later work does not depend on visual memory or an improvised prompt:
+Create one concise Markdown capsule beside every direction. It records the direction so later work does not depend on visual memory or an improvised prompt:
 
 - subject-derived premise;
 - exact font or combination, primary source, license status, and fallback status;
@@ -196,7 +196,7 @@ After the human gives this unprimed response, reveal the neutral concept capsule
 
 Treat rejection as evidence. Identify whether the failure came from missing subject knowledge, a weak premise, false cultural assumptions, an inappropriate medium, insufficient divergence, or poor execution.
 
-Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of ten. Do not preserve a rejected specimen. Do not increase the batch beyond ten.
+Ask the smallest number of new questions required, revise the evidence capsule, and create a new set of ten. Do not preserve a rejected direction. Do not increase the batch beyond ten.
 
 ## Selection and lock
 
@@ -212,7 +212,7 @@ When the human explicitly locks one direction:
 
 ## Round 2: concrete artifacts
 
-Build what the project actually needs rather than another abstract specimen. Depending on the brief, Round 2 may produce a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
+Build what the project actually needs rather than another abstract direction. Depending on the brief, Round 2 may produce a working component library and representative screens, campaign formats, publication pages, packaging, environmental pieces, presentations, motion, or another concrete artifact family.
 
 Shapes, lines, photography, illustration, generated imagery, icons, material effects, or motion may enter only after the lock and only when required by the artifact or approved by the human. Derive them from the locked typographic context and prevent them from importing a second style.
 

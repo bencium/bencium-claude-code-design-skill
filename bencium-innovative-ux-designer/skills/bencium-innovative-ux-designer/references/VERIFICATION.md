@@ -8,7 +8,7 @@ Use real content and real rendering when verifying concrete Round 2 artifacts. M
 
 Report these independently:
 
-1. **Typography direction selected:** the human identified a Round 1 specimen worth considering after unprimed visual judgement.
+1. **Typography-led HTML design direction selected:** the human identified a Round 1 direction worth considering after unprimed visual judgement.
 2. **Direction locked:** the human explicitly made one concept capsule the governing context for Round 2.
 3. **Round 2 artifact system available:** the agreed concrete artifacts, reusable rules, assets, licenses, implementation, and verification exist.
 
@@ -33,7 +33,7 @@ Round 1 is verified as source and browser-openable HTML, not as a set of image e
 - `index.html` links to all ten neutrally without restyling, cropping, ranking, or turning them into cards or controls;
 - every direction uses the same working copy but has its own materially different palette, typography, hierarchy, margins, padding, alignment, density, rhythm, reading path, and whitespace logic;
 - every visible pixel comes from letterforms or one flat canvas background;
-- the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or canvas;
+- the source contains no shapes, borders, rules, panels, pseudo-elements, gradients, effects, imagery, icons, motion, SVG, or HTML `<canvas>` element;
 - the type remains readable and professionally composed at normal and narrow browser widths;
 - `capsules/A.md` through `capsules/J.md` exist but remain withheld until the human gives an unprimed visual response;
 - Round 1 contains no PNG, WebP, JPEG, PDF, screenshot, contact sheet, thumbnail, or other image export.

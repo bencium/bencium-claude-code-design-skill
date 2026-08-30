@@ -1,6 +1,6 @@
 # Production System
 
-Read this only after the human has explicitly locked one typographic direction. Inject its Round 1 concept capsule as the governing context for concrete Round 2 artifacts and production rules.
+Read this only after the human has explicitly locked one typography-led HTML design direction. Inject its Round 1 concept capsule as the governing context for concrete Round 2 artifacts and production rules.
 
 ## No SVG
 
@@ -104,7 +104,7 @@ Do not use hover lift, marquee, counters, parallax, spring motion, or any other 
 
 Choose a small set of real artifacts that test the language where it will live. Use real content and real constraints. Depending on the project, this may include a campaign format, publication spread, package face, social crop, identity application, responsive page, complex workflow state, or motion sequence.
 
-One master specimen is not proof that the language can travel. One component library is not proof that it has character. Test both identity and use.
+One master artifact is not proof that the language can travel. One component library is not proof that it has character. Test both identity and use.
 
 ## Project-local ledger
 

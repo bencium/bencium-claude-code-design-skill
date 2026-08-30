@@ -87,5 +87,5 @@ Before presenting A through J, verify:
 - no external visual reference entered the process;
 - no direction depends on a platform kit, template, or familiar style label;
 - any font search began from written requirements and has licensing evidence;
-- every specimen contains only type, flat canvas and text colors, and whitespace;
+- every direction contains only type, one flat background, text colors, and whitespace;
 - the ten directions evolved independently rather than by mutation from the first one.

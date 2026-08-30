@@ -1,13 +1,13 @@
 ---
 name: bencium-innovative-ux-designer
-description: Develop an independent visual language and turn the human-chosen direction into a production-ready graphic, brand, campaign, publication, web, or product system. Use when originality and differentiation matter enough to escape generic AI and Big Tech aesthetics. Guides a minimum-evidence start, ten isolated HTML design directions made only from type, color, and space, visual-first human judgement, explicit commitment, and concrete Round 2 production. Do not use for routine UI fixes, small components, or applying an existing design system.
+description: Develop an independent visual language and turn the human-chosen direction into a production-ready graphic, brand, campaign, publication, web, or product system. Use when originality and differentiation matter enough to escape generic AI and Big Tech aesthetics. Guides a minimum-evidence start, ten isolated typography-led HTML design directions made only from type, color, and space, visual-first human judgement, explicit commitment, and concrete Round 2 production. Do not use for routine UI fixes, small components, or applying an existing design system.
 metadata:
-  version: 3.1.1
+  version: 3.1.2
 ---
 
 # Innovative UX Designer V3
 
-Create a visual language that could only have emerged from this subject and context. Temporarily isolate authorship from contemporary design culture, let one author develop ten independent HTML design directions through type, color, and space, show them visually before explaining them, and let the human decide when generation stops.
+Create a visual language that could only have emerged from this subject and context. Temporarily isolate authorship from contemporary design culture, let one author develop ten independent typography-led HTML design directions through type, color, and space, show them visually before explaining them, and let the human decide when generation stops.
 
 ## Authority
 
@@ -24,11 +24,11 @@ Create a visual language that could only have emerged from this subject and cont
 3. **Translate mechanisms, not appearances.** A rhythm, pressure, relationship, sequence, or natural behavior may become form. Another person's visual solution may not.
 4. **Show before explaining.** The human's first encounter with A through J is visual. Do not pre-sell directions with style names, confident rationales, or reference lists.
 5. **Make A through J genuinely independent.** They are ten complete design directions across typography, color, hierarchy, composition, spacing, and whitespace—not font swaps, palette swaps, or mutations of one layout. “Typography-only” limits the visible ingredients; it does not limit the dimensions of design.
-6. **Round one is typography only.** Use only words, letterforms, type sizes, font combinations, case, weight, width, spacing, alignment, line breaks, flat background and text colors, and whitespace. Never add shapes, lines, borders, rules, panels, illustration, imagery, icons, symbols, texture, effects, or motion.
+6. **Round one is typography only.** Use only words, letterforms, type sizes, font combinations, case, weight, width, spacing, alignment, line breaks, flat background and text colors, and whitespace. Never add shapes, lines, borders, rules, panels, illustration, imagery, icons, symbols, texture, effects, motion, or an HTML `<canvas>` element.
 7. **Require an explicit lock.** Praise and provisional approval do not lock a direction. After the human says “commit,” “lock this,” “this is it,” or equivalent, stop proposing alternatives.
 8. **Formalize after discovery.** Tokens, component anatomy, asset systems, and templates record the committed language; they never generate it.
 9. **Accessibility and recoverability are fixed boundaries.** Grids, type ratios, spacing rhythms, component shapes, and motion character are contextual.
-10. **Separate proof levels.** State whether a typography direction was selected, a direction was explicitly locked, or a Round 2 artifact system is available.
+10. **Separate proof levels.** State whether a typography-led HTML design direction was selected, a direction was explicitly locked, or a Round 2 artifact system is available.
 11. **Protect creative momentum.** Default to zero preliminary questions. Begin direction work whenever the existing brief supports a reversible, non-harmful interpretation.
 12. **Never create SVG.** Do not author, generate, edit, trace, convert to, export, or recommend SVG at any phase. This covers concepts, later rounds, production artwork, logos, icons, illustrations, diagrams, editable masters, intermediate files, and inline `<svg>` markup.
 13. **Carry the concept forward as text.** Every round-one direction has a concise written concept capsule created alongside it. Keep those capsules out of the first visual encounter, then use the human-locked capsule as the governing context for Round 2.
@@ -78,9 +78,9 @@ If a font is necessary for round one, first derive its formal and language requi
 
 ## Create A through J
 
-Use one author to produce ten professional HTML design directions labelled A through J. Build Round 1 with dependency-free HTML and CSS only. Technology is only a neutral rendering material.
+Use one author to produce ten professional typography-led HTML design directions labelled A through J. Build Round 1 with dependency-free HTML and CSS only. Technology is only a neutral rendering material.
 
-Each direction uses the same working copy for fair judgement, but it owns its complete browser-page composition and its own flat canvas color. It must reveal:
+The ten directions share the same working copy and may share an optional comparison viewport for fair judgement. They do not share a fixed canvas, artifact ratio, layout, or palette. Each direction owns its complete browser-page composition and its own flat background color. It must reveal:
 
 - font choice or font combination, with a clear relationship between display, supporting, and small text where the working copy needs them;
 - serif, sans, slab, script, display, monospaced, or hybrid relationships selected from subject-derived requirements rather than style categories;
@@ -95,13 +95,13 @@ Each direction uses the same working copy for fair judgement, but it owns its co
 - controlled overlap, cropping, or vertical type only when the typography remains readable and professionally typeset;
 - one memorable typographic relationship derived from subject evidence and capable of surviving into later artifacts.
 
-Round one must contain no non-typographic visual elements. Do not create CSS shapes or use borders, rules, lines, boxes, panels, bands, circles, blobs, pseudo-elements, gradients, shadows, filters, masks, clipping paths, textures, patterns, icons, logos, photography, illustration, generated imagery, or animation. Do not use punctuation as decorative geometry. Apart from a flat canvas color, color must live on text. The HTML body should contain only the text required for the specimen and neutral structural containers.
+Round one must contain no non-typographic visual elements. Do not create CSS shapes or use borders, rules, lines, boxes, panels, bands, circles, blobs, pseudo-elements, gradients, shadows, filters, masks, clipping paths, textures, patterns, icons, logos, photography, illustration, generated imagery, or animation. Do not use punctuation as decorative geometry. Apart from a flat background color, color must live on text. The HTML body should contain only the text required for the direction and neutral structural containers.
 
 Do not artificially stretch, warp, skew, or distort letterforms. Use genuine font styles, widths, weights, optical sizes, grades, italics, slants, and variable-font axes. Controlled overlap, ordinary overflow cropping, and vertical text are allowed only as readable typesetting, never as abstract letterform illustration.
 
 Do not show swatches, labelled type samples, category labels, annotations, grids, tokens, font names, or design-system explanations. The human should experience each direction directly while a professional can infer its palette, type combination, scale, case, hierarchy, spacing, and whitespace logic.
 
-Create a concise concept capsule for every direction at the same time as its visual specimen. Record:
+Create a concise concept capsule alongside every direction. Record:
 
 - the subject-derived premise in neutral language;
 - the exact font or font combination, source, license status, and fallback status;
@@ -195,11 +195,11 @@ Create actual working files when the environment permits. Otherwise give the hum
 
 Report the outcome honestly:
 
-- **Typography direction selected** means the human identified a direction worth considering after visual judgement.
+- **Typography-led HTML design direction selected** means the human identified a direction worth considering after visual judgement.
 - **Direction locked** means the human explicitly chose one capsule as the authority for Round 2.
 - **Round 2 artifact system available** means the required concrete artifacts, reusable rules, assets, licenses, implementation, and verification exist.
 
-Never call a specimen production-ready. Never discard an original concept merely because the full system remains unfinished.
+Never call a Round 1 direction production-ready. Never discard an original concept merely because the full system remains unfinished.
 
 ## Completion response
 
